@@ -1,0 +1,74 @@
+---
+title: "People"
+---
+
+
+```{r, message=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+people <- read_csv(here::here("people_db.csv"))
+```
+
+## Academic
+
+### Project leadership
+
+```{r}
+print_table <- function(x) {
+  x %>%
+    mutate(Name = paste0("[", name, "](mailto:", email, ")")) %>%
+    select(Name, role, org) %>%
+    arrange(desc(role), org, Name) %>%
+    knitr::kable("html") %>%
+    kableExtra::kable_styling("striped") %>%
+    kableExtra::column_spec(1, width = "30%") %>%
+    kableExtra::column_spec(2, width = "35%") %>%
+    kableExtra::column_spec(3, width = "35%")
+}
+
+people %>%
+  filter(grepl("PI", role)) %>%
+  print_table()
+```
+
+### Community College leadership
+
+```{r}
+people %>%
+  filter(grepl("Campus Coordinator", role)) %>%
+  print_table()
+```
+
+
+### Community engagement
+
+```{r}
+people %>%
+  filter(grepl("Jandon|Project Coordinator", role)) %>%
+  print_table()
+```
+
+
+## Assessment
+
+### Evaluator
+
+```{r}
+people %>%
+  filter(grepl("Evaluator", role)) %>%
+  print_table()
+```
+
+### External advisory board
+
+```{r}
+people %>%
+  filter(grepl("EAB", role)) %>%
+  print_table()
+```
+
+## WAV students
+
+Coming soon...
+
+

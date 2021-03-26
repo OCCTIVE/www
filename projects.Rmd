@@ -1,0 +1,78 @@
+---
+title: "The Data Science WAV"
+subtitle: "Experiential Learning with Local Community Organizations"
+---
+
+## Project abstract
+
+This project simultaneously addresses two problems: 1) the inability of [community-based and non-profit organizations](https://en.wikipedia.org/wiki/Community_organization) to tackle [data science](https://en.wikipedia.org/wiki/Data_science) problems; and 2) the lack of real world experience gained by students studying data science. The increased availability of data, combined with increased computing power at lower costs, has brought to the desktop tremendous analytical and problem solving capabilities. Yet many organizations are not able to take advantage of these developments because they often lack appropriate staffing to wrestle with complex data science problems. Meanwhile, as students increasingly gravitate toward data science programs, much of their course-based problem solving experience focuses on clean problems with simple data sets. This leaves them unprepared for the reality of the data science applications they will face in professional settings. This project addresses both issues by deploying teams of data science students to assist local organizations, thereby increasing the long-term capacity of the data science workforce.
+
+This is a multifaceted project that will provide immediate impact to local organizations and long-term benefit for students through valuable hands-on data science experience. There are two major components of the proposed project. First, [**Data Science WAV teams**](students.html) of four specially-trained undergraduate students will be deployed to community-based organizations to **W**rangle, **A**nalyze, and **V**isualize their data. Second, this project will offer summer faculty development workshops designed to help new instructors, especially those at community colleges, teach data science at their institutions. Curricular innovations that bring experiential data science learning into the curriculum will lead to sustained impact at the partnering academic institutions and in the larger [Pioneer Valley](https://en.wikipedia.org/wiki/Pioneer_Valley) region. This proposal is diverse across both institutions and student populations. It comprises one major research university ([The University of Massachusetts, Amherst](http://www.umass.edu)), four liberal arts colleges ([Amherst](http://www.amherst.edu), [Hampshire](http://www.hampshire.edu), [Mount Holyoke](http://www.mtholyoke.edu), and [Smith](http://www.smith.edu)), and three local community colleges ([Greenfield](http://www.gcc.mass.edu), [Holyoke](http://www.hcc.edu), and [Springfield Technical](http://www.stcc.edu)). The inclusion of two [women's colleges](https://en.wikipedia.org/wiki/Women%27s_college) (Smith and Mount Holyoke) and two [Hispanic-serving institutions](https://en.wikipedia.org/wiki/Hispanic-serving_institution) (Holyoke and Springfield Technical) will help ensure that a diverse student population is engaged in the project.
+
+### About the Data Science Corps
+
+[NSF's Harnessing the Data Revolution Data Science Corps](https://www.nsf.gov/pubs/2019/nsf19518/nsf19518.htm) program focuses on building capacity for harnessing the data revolution at the local, state, national, and international levels to help unleash the power of data in the service of science and society. Projects in this program are being jointly funded by the NSF's Harnessing the Data Revolution Big Idea; the Directorate for Computer and Information Science and Engineering, Division of Information and Intelligent Systems; the Directorate for Education and Human Resources, Division of Undergraduate Education; the Directorate for Mathematical and Physical Sciences, Division of Mathematical Sciences; and the Directorate for Social, Behavioral and Economic Sciences, Office of Multidisciplinary Activities and Division of Behavioral and Cognitive Sciences.
+
+```{r, echo=FALSE}
+library(htmltools)
+div(
+  img(src = "gfx/dsc-wav_medallion_black.png", width = "100px", float = "left")
+)
+```
+
+
+## Community projects
+
+Please see [our GitHub Organization](https://github.com/DSC-WAV) for more information about our projects. 
+
+
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+projects <- tibble::tribble(
+  ~sponsor, ~logo, ~url, ~text, ~media,
+  "ValleyBike", "https://paradisedistrict.org/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-12.33.22-PM.png", "https://www.valleybike.org/", "Students are building visualizations to assist planners and inform decisions about how to expand the program most appropriately and best serve under-resources neighborhoods and communities.", NA,
+  "Western Mass Health Equity Network", "https://www.umass.edu/sphhs/sites/default/files/WMHEN_pagecontent_img_0.jpg", "https://www.umass.edu/sphhs/wmhen", "Students have researched and used publicly available date to build a dashboard interface, facilitating the retrieval of multi-year data on health characteristics by neighborhood in  Springfield.", NA,
+  "Girls Inc of the Pioneer Valley", "https://pbs.twimg.com/profile_images/1108328151992672257/rbjDkoHs_400x400.png", "https://www.girlsincvalley.org/", "Students are working on a map for the organization to share with potential donors to demonstrate the accumulation of risk factors in the physical environment (air quality, water pollution, etc.) that face their target population on a daily basis", NA,
+  "VentureWell", "https://gust-production.s3.amazonaws.com/uploads/investor_group/logo_image/22442/VentureWell_logo_emblem.jpg", "https://venturewell.org/" , "Students are working to make data accessible by converting an archive of pdf grant applications to text, automating the loading of the files to a database, and making them searchable.", "gfx/VentureWellTeamPoster.pdf",
+  "The Nature Conservancy", "https://pbs.twimg.com/profile_images/1280864560228990976/YOnBWukx.jpg", "https://www.nature.org/en-us/", "Students are working to automate the import and analysis of patterns in images from wildlife cameras to assess whether a particular image includes an animal or not. The metadata for the images are read from a file and added to a growing database of available images.", NA
+)
+
+show_project <- function(df_row, orientation = "left") {
+  if (orientation == "left") {
+    logo_class = "col-sm-4"
+    text_class = "col-sm-8"
+  } else {
+    logo_class = "col-sm-8"
+    text_class = "col-sm-4"
+  }
+  div(
+    div(
+      img(src = df_row$logo, float = "left", width = "200px"), 
+      class = logo_class
+    ), 
+    div(
+      a(h4(df_row$sponsor), href = df_row$url),
+      p(df_row$text), 
+      class = text_class, 
+      if (!is.na(df_row$media)) {
+        p(
+          a("See poster", href = df_row$media)
+        )
+      }
+    ),
+    class = "row"
+  ) %>%
+    hr()
+}
+```
+
+  
+```{r, echo=FALSE}
+#projects %>%
+#  purrr::pmap(~show_project(sponsor = ..1, logo = ..2, text = ..3))
+show_project(projects[1, ])
+show_project(projects[2, ])
+show_project(projects[3, ])
+show_project(projects[4, ])
+show_project(projects[5, ])
+```

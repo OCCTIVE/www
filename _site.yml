@@ -1,0 +1,46 @@
+name: "www"
+output_dir: "docs"
+include: "gfx"
+exclude: ["makefile", "data"]
+navbar:
+  title: "DSC-WAV"
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "Projects"
+      icon: fa-project-diagram
+      href: projects.html
+    - text: "Workshops"
+      icon: fa-wrench
+      href: workshops.html
+    - text: "People"
+      icon: fa-users
+      menu:    
+        - text: "Personnel"
+          icon: fa-info
+          href: people.html
+        - text: "Students"
+          icon: fa-user-graduate
+          href: students.html
+        - text: Code of Conduct
+          icon: fa-file-signature
+          href: conduct.html
+    - text: "Outreach"
+      icon: fa-volume-up
+      href: outreach.html
+  right:
+    - icon: fa-github
+      href: https://github.com/DSC-WAV
+
+
+output:
+  html_document:
+    theme: spacelab
+    highlight: pygments
+    css: ["include/smith.css"]
+    toc: true
+    toc_float: true
+    include:
+      in_header: include/header.html
+      after_body: include/after_body.html

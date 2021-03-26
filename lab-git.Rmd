@@ -1,0 +1,91 @@
+---
+title: "GitHub"
+output:
+  html_document:
+    code_folding: show
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(eval = TRUE)
+posted <- Sys.time() > "2019-09-20 11:00:00 EDT"
+library(tidyverse)
+```
+
+In this lab, we will learn how to use GitHub for version control. 
+
+**Goal**: by the end of this lab, you will be able to commit, push, pull, and send pull requests.
+
+You may want to attempt this lab synchronously with your team and/or your faculty mentor. 
+
+---
+
+# What is version control?
+
+[Version control](https://en.wikipedia.org/wiki/Version_control) is a mechanism for collaborative software development that preserves histories. The major objective is to keep track of all the different changes that get made, so that nothing is lost and you can always go back to any previous state.
+
+Version control systems have been in use for a long time, and many different systems have been used. Currently, [`git`](https://en.wikipedia.org/wiki/Git) is the dominant verson control system. `git` is a standalone command line application. Interfaces to `git` include an official `git` GUI, and a built-in tab in RStudio. 
+
+Most of the things we do with GitHub can be done in RStudio, but it is occassionally necessary to use the command line (and you should embrace that!). 
+
+[GitHub](https://en.wikipedia.org/wiki/GitHub) is a website that hosts many `git` projects. We will be using GitHub extensively, mainly through [our dedicated GitHub organization](https://github.com/dsc-wav/). 
+
+For questions about `git` and `GitHub`, please see Jenny Bryan's excellent book on the subject: *[Happy Git and GitHub for the useR](https://happygitwithr.com/)*. In particular, please read the **[troubleshooting](https://happygitwithr.com/troubleshooting.html)** chapter when you run into trouble!
+
+# Making a contribution
+
+In this first group exercise, each student will work individually to send a pull request to the maintainer (me) of a single repository. When you make a contribution to someone else's repo, this is how you will do it. (See also https://happygitwithr.com/fork-and-clone.html)
+
+1. Fork [your project repo](https://github.com/dsc-wav/) on GitHub. 
+2. Clone **your fork** and make a new project in RStudio. 
+3. Add your name, with a link to your GitHub user page, to `README.md`. 
+4. Commit your changes. 
+5. Push.
+6. Send a pull request.
+
+<div class="alert alert-danger" role="alert">
+  <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+  **STOP**
+</div>
+
+Your faculty mentor or another teammate will resolve all pull requests.
+
+# Collaborating on a project
+
+## I can't push
+
+If you don't have permission to contribute to a repository directly, you will get an error message. 
+
+If you get an error message as you push, it is probably because [the repo is ahead of local copy](https://happygitwithr.com/push-rejected.html). This means that someone else has made changes to the repository, but you haven't incorporated those changes into your local copy. As a result, `git` is confused about what is the current state-of-the-art. 
+
+This may be the most common `git` error, but is usually resolvable by simply pulling before you push. 
+
+
+
+## I can't pull
+
+If you have uncommitted local changes, you won't be able to pull, because `git` doesn't know whether you want to accept the repository version of a file, or stick with yours. First commit or revert *each modified file*, and then pull again. 
+
+This group exercise will simulate [this experience](https://happygitwithr.com/pull-tricky.html). 
+
+1. Add another sentence about yourself to `README.md`. STOP. Do **NOT** commit. 
+2. First person: commit and push
+3. Everyone else:
+    #. Pull. **READ** the error message.
+    #. Commit or Revert
+    #. Pull
+    #. Push
+
+## Merge conflicts
+
+If two or more people commit changes to the same part of the same file, a merge conflict is inevitable. With good `git` hygiene and clear project roles, the probability of a merge conflict can be minimized. But they will happen and you need to know how to resolve them. 
+
+A side-by-side comparison of the set of changes is helpful. A [diff](https://en.wikipedia.org/wiki/File_comparison) is a way to view these changes. Several editors will perform this comparison. I use [`meld`](https://en.wikipedia.org/wiki/Meld_(software)). Another program is `opendiff`. You can use whatever you want!
+
+1. Edit someone else's entry in `README.md` 
+2. Commit.
+3. Push. **READ** the error message. 
+4. Use your text editor of choice to resolve the merge conflict. 
+5. Commit again. 
+
+

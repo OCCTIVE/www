@@ -1,0 +1,30 @@
+---
+title: "Workshops"
+---
+
+## Faculty development workshops
+
+For Five College and community college faculty to learn how to teach data science, or incorporate more data science concepts into existing courses. 
+
+#. ~~Summer 2020~~, June 22-26, 2020  *postponed to 2021*
+#. [Summer 2021](workshop_2021.html), June 14-18, 2021
+#. Summer 2022, TBD
+
+## WAV onboarding workshops
+
+For new WAV students to develop their communication and collaboration skills. 
+
+#. Cohort One onboarding workshop  
+    [Amherst College Science Center](https://www.amherst.edu/amherst-story/science_at_amherst/science-center/science-center-faqs) E212  
+    [25 East Dr](https://www.google.com/maps/place/Science+Center,+Amherst+College/@42.3709478,-72.5133184,15z/data=!4m5!3m4!1s0x0:0x92b156fcfa2be5b8!8m2!3d42.3709478!4d-72.5133184)  
+    Amherst, MA 01002  
+    Saturday, February 1st, 2020  
+    9 am to 4:30 pm
+#. Cohort Two onboarding workshop  
+    August 29th and September 12th, 2020  
+    via Zoom
+#. Cohort Three onboarding workshop  
+    early February, 2021  
+    [pre-onboarding tasks and resources](preonboarding.html)
+#. early September, 2021
+#. early February, 2022

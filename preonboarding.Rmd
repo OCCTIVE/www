@@ -1,0 +1,139 @@
+---
+title: "Pre-onboarding Tasks and Onboarding Resources"
+author: "Andrea Dustin"
+date:  "`r format(Sys.Date(), '%B %e, %Y')`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Welcome to our new cohort of participants in DSC-WAV! 
+Because of wide range of start dates across the Five Colleges this semester, much of the onboarding activity will be done on your institution's timeline instead of all together. 
+Some of the work can be done individually, and some of it will be done with your teammates. 
+
+Below, are listed the things you should complete before the semester begins...the **PRE-onboarding** tasks.
+
+## Pre-Onboarding Instructions
+
+### Getting Set Up
+
+1. Read the DSC-WAV [Code of Conduct](https://dsc-wav.github.io/www/conduct.html).
+
+2. Join [Slack](https://app.slack.com/client/TLY24TUUQ/CLY24U7NC/thread/CPR42SREG-1579122369.011200), and appropriate channels. 
+    * Post a greeting to your teammates and introduce yourself.
+    * Post your GitHub username (when you get one).
+    * Check out the `#questions` channel.  You can post any questions here. They will be visible to the whole program and anyone can reply. 
+    * Browse the `#general` and `#random` channels.  The `#general` channel is where you will find announcements related to the whole program. Feel free to post an event or article of interest, etc. in the `#random` channel.  Share a good resource you came across or an excellent visualization. If it's really helpful or interesting to you, consider sharing it.
+    * Add a picture to your profile.
+    * Click on your picture (upper right corner of the Slack window), choose "Preferences", and then "Advanced" and note that you can modify the setting so that when writing a message, pressing "Enter" doesn't send it; it just begins a new line. 
+
+1. Install [R](https://cran.r-project.org/) and [RStudio](https://rstudio.com/products/rstudio/download/) or update it. See [Ch 5](https://happygitwithr.com/install-r-rstudio.html) of Jenny Bryan's book, *Happy Git with R*.
+
+1. Create a GitHub account if you don't have one already, and 
+    1. send your username to Andrea Dustin
+    2. post your GitHub username in your Slack team channel (see below--you'll get there).
+
+1. Install `git` on laptop, using [Ch 6](https://happygitwithr.com/install-git.html#git-already-installed) of *Happy Git with R* to guide you.
+
+1. [Connect your DSC-WAV repository to RStudio]( https://happygitwithr.com/connect-intro.html), so that you can move information between them. (You have to have communicated your GitHub username a day or so before you will be able to do this. Andrea will try to get to them as they come in.)  Watch the GitHub videos in the next section. The first one will help with this task.
+
+### Survey for Evaluation purposes
+
+DSC-WAV wants to understand what you learn through this experience. To that end, we have a few questions about your experience before you begin.
+Please complete the survey before participation in the DSC-WAV program. ([pre-condition survey](https://umn.qualtrics.com/jfe/form/SV_0cVa24E0iKV9AOx )) 
+
+### Mandatory CITI training
+
+Complete the appropriate CITI training recommended by your institution. If you have any questions, please ask your faculty mentor or Andrea Dustin (via Slack). The course you will take is called **Basic Conduct of Research**, and it is the version for Social Sciences. Modules included will vary by institution. This training is **required by the National Science Foundation** for all participants in the DSC-WAV project.
+
+Once you complete the training, please send both the certificate and the completion report to Andrea Dustin.  It is helpful if you can rename the documents to have your last name in the title. (DustinA-citi-certificate, for example).
+
+* [UMass](https://www.umass.edu/research/compliance/human-subjects-irb/training-education-and-outreach/citi-training-human-subjects-research)
+
+* [Mount Holyoke](https://www.mtholyoke.edu/irb/member_training)
+
+* [Smith](https://www.smith.edu/academics/institutional-review-board/application-process#academics-institutional-review-board-application-required-training)
+
+* [Hampshire](https://www.hampshire.edu/dof/citi-training)
+
+* [Amherst](https://www.amherst.edu/offices/grants/rcr/rcr_course_modules_new)
+
+
+### Finding times to meet
+
+You agreed to commit 8--10 hours/week to this project throughout the term when you accepted this position. Gathering whole teams together is challenging. We ask you to be responsible and flexible in order to create the best conditions for effective collaboration.  You will need to connect routinely with your teammates **no fewer than three times per week**.  The most productive teams have regular access to one another, communicate often and set up group work sessions, even if they are virtual.  (They also find ways to have fun together.) 
+
+Before your onboarding meeting with your faculty mentor, prepare so that you will be able to schedule 3 regular meeting times per week with your teammates. If you have concerns about being able to meet this commitment, please talk to your faculty mentor now.
+
+Also, before you get together as a group, take a few minutes to think about the kind of teammate you love to have!! What are the qualities that person brings to the table? What's helpful? What do you value? Consider also your own strengths and what you will bring to the team to help it thrive.  You might take some time when you meet to talk together about these questions, so you can get to know one another. It's fantastic when you can bring your best self, your ideal team member, to team meetings.
+
+## Onboarding Materials
+
+Rather than gather to listen to presentations, we are going to provide them in brief video segments. I encourage you to take some notes to remind yourself of what the main takeaway points are at key moments across the semester, when you are preparing materials to communicate out to the client.  Some of these videos are from our faculty; some from guests who have spoken to the group, and some are some good resources available publicly. 
+
+(If you come across something you think other students might find useful, post a link in Slack in the `#general` or `#random` channels. Sharing helps everyone.)
+
+### GitHub Video Tutorials and Resources
+
+- [Stepping through creating and cloning a fork, setting the upstream connection, and creating a PR](https://www.youtube.com/watch?v=Y_qd67gT3iI&feature=youtu.be)  
+  **This is the recommended workflow!**  
+  *Nicholas Horton*
+  
+  [An Introduction to Git and GitHub](https://afredston.github.io/learn-git/learn-git.html)  
+  by Alexa Fredston
+  
+  This is distilled from several resources for a specific class. It is both a how-to and explains the motivation and benefits of using these version control tools. 
+
+- [Alternative approach for those using GitDesktop](https://youtu.be/n-3USZyz0_g)  
+  *not* the recommended workflow  
+  *Nicholas Horton*
+
+- [Using Issues in GitHub](https://guides.github.com/features/issues/): This site hosts a lot of instructional videos about using GitHub. You might want to revisit this site as you collaborate more with GitHub; you might refine your workflow with your teammates as you go.
+
+- [Using Project Boards in GitHub](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/about-project-boards)
+
+- [Handling git conflicts](https://smith.zoom.us/rec/play/hBmNNGLpjdOzjlnHUtuqX2XvAxL_nNp_tXtO4IzhiB5l-XVl7ubGiLFTAZ56U7m2_UHzcqa_JSeAlojk.U_towOYTv1ExsRnA?startTime=1602254301000&_x_zm_rtaid=wRxNPWkjR4ahN7CLdKPLDg.1606058167185.754cac616258df7e2d88afa6c3e25e33&_x_zm_rhtaid=160)  
+  *Ben Baumer*
+
+### Communication and Working with Clients
+
+- [Principles of Community Engagement](https://smith.zoom.us/rec/share/yvNZBYHN7CBJec_ftmfZSKMuIaTleaa8gClLrvEJzUzVVEntzUgiptEGC5UZKycF?startTime=1598882034000): You need a passcode to access the video. It is: `!t?=8P.d`  
+  *Denys Candy*, Director of the Jandon Center for Community Engagement
+
+- [Better Living through Code Review](https://youtu.be/1XFy_7nM-34)  
+  *Ben Baumer and Nicholas Horton*
+
+- [Getting the Project Requirements](https://youtu.be/wY57XxuDeS4)  
+  *Matt Rattigan*
+
+- [Communicating Results](https://youtu.be/9FPdlntz0oU)  
+  *Valerie Barr and Jaime Davila*
+
+
+### Scrum
+
+- [Introduction to Agile Development and Scrum](https://youtu.be/CYiqjtOiMrY)  
+  *Becky Sweger*, Principal Engineer, Atlassian  
+  Onboarding Workshop - Fall, 2020
+
+- [Introduction to Scrum](https://docs.google.com/presentation/d/1iBBQBAiTnN1MToYU6WlecPJzwJDwUXRSTcTgyb5InYI/edit#slide=id.g6e1b737b37_0_60)  
+  *Brian Krusell*, UMass  
+  Onboarding Workshop - Spring 2020
+
+- [Sprint Retrospectives](https://youtu.be/V7Z5XvJPSG4)  
+  *Becky Sweger*, Principal Engineer, Atlassian
+
+- [Atlassian Coach--Resources related to Scrum](https://www.atlassian.com/agile/scrum): There is lots to read here.  Make sure you understand the purpose and howtos of Sprint Planning, Stand Ups, Sprint Reviews and Retrospectives and also how User Stories can help a team to target development most usefully and strategically. 
+
+
+## Miscellaneous Resources
+
+Preparing to give a presentation? 
+Check out the some of these undergraduate presentations at eUSR: [https://www.causeweb.org/usproc/eusrc/2020/program](https://www.causeweb.org/usproc/eusrc/2020/program)
+
+- [How to create a better poster](https://www.youtube.com/watch?v=1RwJbhkCA58&t=13s)
+
+- [RStudio Cheatsheets](https://rstudio.com/resources/cheatsheets/) (one page syntax reminders) You can also find these right in the Help menu in RStudio.
+
+- [Implementing version control with Git and GitHub as a learning objective in statistics and data science courses](https://www.tandfonline.com/doi/full/10.1080/10691898.2020.1848485), Beckman, et al. *Journal of Statistics and Data Science Education*, 2021.

@@ -1,0 +1,47 @@
+---
+title: "<br/>"
+output:
+  html_document:
+    toc: false
+    toc_float: false
+---
+
+```{r, include=FALSE}
+library(bsplus)
+```
+
+<div class="jumbotron">
+
+![](gfx/dsc-wav_logo_color.png)
+
+A multi-institution, [NSF-funded](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&HistoricalAwards=false) data science workforce development project 
+
+
+
+<a class="btn btn-primary btn-lg" href="projects.html" role="button">Learn more...</a>
+
+</div>
+
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(htmltools)
+
+school_logos <- tibble::tribble(
+  ~school, ~logo,
+  "amherst", "https://pbs.twimg.com/profile_images/963462169517002753/q0OdNQov_400x400.jpg",
+  "hampshire", "https://pbs.twimg.com/profile_images/968216883286732801/jVsiELzc_400x400.jpg",
+  "mhc", "https://pbs.twimg.com/profile_images/1337418488227487745/ngRpXs_n.jpg",
+  "smith", "https://pbs.twimg.com/profile_images/1309115488010752000/wPNWQUt7.jpg",
+  "umass", "https://pbs.twimg.com/profile_images/3491577739/b653fe9d5dfadcf341b76fef56fa4a80.png",
+  "gcc", "https://pbs.twimg.com/profile_images/1085657492615442433/BVRbloKJ_400x400.jpg",
+  "hcc", "https://pbs.twimg.com/profile_images/1049721545160052736/qtORNFNe_400x400.jpg",
+  "stcc", "https://pbs.twimg.com/profile_images/1145385666131501056/dAegKY0z_400x400.png"
+)
+
+school_logos %>%
+#  filter(!str_detect(school, "cc")) %>%
+  pull(logo) %>%
+  purrr::map(~img(src = ., width = "100px", float = "left")) %>%
+  div()
+```
+

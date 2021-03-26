@@ -1,0 +1,73 @@
+---
+title: "Outreach"
+bibliography: refs.bib
+---
+
+We continue to generate public-facing work related to the DSC-WAV project. 
+
+## Educational materials
+
+- Screencasts about Scrum  
+  Benjamin S. Baumer, Smith College
+    - `r icons::fontawesome("video")` [Scrum roles](https://smith.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fdf30557-7d00-4db6-badc-accf015e1ce1)
+    - `r icons::fontawesome("video")` [Sprint mechanics](https://smith.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b8317a12-94f3-410f-a02b-acd200e4ad12)
+    - `r icons::fontawesome("video")` [Kanban boards](https://smith.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=674692c4-e1d7-4fb6-864c-acd200e77cc8)
+    - `r icons::fontawesome("video")` [User Stories](https://smith.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2e293ab4-9faf-4550-8f94-acd8011132b1)
+    - `r icons::fontawesome("video")` [Code Review](https://smith.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d7ac5093-9a9c-4beb-899c-ace50112f6df)
+
+## Papers
+
+- Commentary published in *Harvard Data Science Review* [@horton2021dscwav]
+- Abstract submitted to special issue on Data Science Education Research in *Foundations of Data Science* (pending)
+
+## Workshops
+
+- Breakout session in [2021 US Conference on Teaching Statistics](https://www.causeweb.org/cause/uscots/uscots21) (accepted)
+
+## Talks and Posters
+
+### Students
+
+- [Data Science Corps - Wrangle, Analyze, Visualize: Project VentureWell](https://ww2.amstat.org/meetings/wsds/2020/onlineprogram/ViewPresentation.cfm?file=309590.pdf)  
+  Emma Semenuk Scott, Smith College  
+  [Women in Data Science](https://ww2.amstat.org/meetings/wsds/2020/onlineprogram/AbstractDetails.cfm?AbstractID=309590)  
+  Oct 1, 2020  
+  (virtual poster)
+
+- Analysis of Abortion Rights Fund of Western Massachusetts Data  
+  Natalia Ianucci and Claire Bunn and Diane Caravela and Eunice Kim, Smith College  
+  [Voices of Data Science](https://groups.cs.umass.edu/voicesofds/)  
+  University of Massachusetts  
+  February 20, 2021  
+  (virtual poster)
+
+
+### Faculty
+
+- The DSC-WAV project: NSF-funded workforce development in data science  
+  Nicholas J. Horton, Amherst College  
+  Holyoke Community College  
+  Holyoke, MA  
+  Apr 13, 2020
+
+- [The DSC-WAV project: NSF-funded workforce development in data science](https://dsc-wav.github.io/www/talks/research_bytes/index.html
+)  
+  Benjamin S. Baumer, Smith College  
+  ResearchBytes  
+  Amherst, MA  
+  Dec 2, 2019
+
+## Software
+
+- [**dscstyle**](https://github.com/DSC-WAV/dscstyle) R package
+
+## Media
+
+- [WAV: Smith’s Data Science Corps](https://www.smith.edu/news/data-science-corps)
+- Data Science DSC-WAV STEM Dive entry:
+
+<iframe width="637" height="383" src="https://www.youtube.com/embed/J9vH9Zhuqys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- [Eben Afarikumah Raises the Bar for GCC's Computer Information Systems Program](https://www.gcc.mass.edu/marketing/2021/02/12/eben-afarikumah-raises-the-bar-for-gccs-computer-information-systems-program/#.YDUMyFmYUUE)
+
+## References
