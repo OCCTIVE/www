@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>The Data Science WAV</title>
+
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="57x57" href="gfx/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="gfx/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="gfx/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="gfx/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="gfx/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="gfx/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="gfx/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="gfx/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="gfx/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="gfx/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="gfx/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="gfx/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="gfx/favicon-16x16.png">
+<link rel="manifest" href="gfx/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="gfx/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+<link rel="stylesheet" href="include/smith.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 52px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h2 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h3 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h4 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h5 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h6 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">DSC-WAV</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="projects.html">
+    <span class="fas fa-project-diagram"></span>
+     
+    Projects
+  </a>
+</li>
+<li>
+  <a href="workshops.html">
+    <span class="fas fa-wrench"></span>
+     
+    Workshops
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-users"></span>
+     
+    People
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="people.html">
+        <span class="fas fa-info"></span>
+         
+        Personnel
+      </a>
+    </li>
+    <li>
+      <a href="students.html">
+        <span class="fas fa-user-graduate"></span>
+         
+        Students
+      </a>
+    </li>
+    <li>
+      <a href="conduct.html">
+        <span class="fas fa-file-signature"></span>
+         
+        Code of Conduct
+      </a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="outreach.html">
+    <span class="fas fa-volume-up"></span>
+     
+    Outreach
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/DSC-WAV">
+    <span class="fas fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">The Data Science WAV</h1>
+<h3 class="subtitle">Experiential Learning with Local Community Organizations</h3>
+
+</div>
+
+
+<div id="project-abstract" class="section level2">
+<h2>Project abstract</h2>
+<p>This project simultaneously addresses two problems: 1) the inability of <a href="https://en.wikipedia.org/wiki/Community_organization">community-based and non-profit organizations</a> to tackle <a href="https://en.wikipedia.org/wiki/Data_science">data science</a> problems; and 2) the lack of real world experience gained by students studying data science. The increased availability of data, combined with increased computing power at lower costs, has brought to the desktop tremendous analytical and problem solving capabilities. Yet many organizations are not able to take advantage of these developments because they often lack appropriate staffing to wrestle with complex data science problems. Meanwhile, as students increasingly gravitate toward data science programs, much of their course-based problem solving experience focuses on clean problems with simple data sets. This leaves them unprepared for the reality of the data science applications they will face in professional settings. This project addresses both issues by deploying teams of data science students to assist local organizations, thereby increasing the long-term capacity of the data science workforce.</p>
+<p>This is a multifaceted project that will provide immediate impact to local organizations and long-term benefit for students through valuable hands-on data science experience. There are two major components of the proposed project. First, <a href="students.html"><strong>Data Science WAV teams</strong></a> of four specially-trained undergraduate students will be deployed to community-based organizations to <strong>W</strong>rangle, <strong>A</strong>nalyze, and <strong>V</strong>isualize their data. Second, this project will offer summer faculty development workshops designed to help new instructors, especially those at community colleges, teach data science at their institutions. Curricular innovations that bring experiential data science learning into the curriculum will lead to sustained impact at the partnering academic institutions and in the larger <a href="https://en.wikipedia.org/wiki/Pioneer_Valley">Pioneer Valley</a> region. This proposal is diverse across both institutions and student populations. It comprises one major research university (<a href="http://www.umass.edu">The University of Massachusetts, Amherst</a>), four liberal arts colleges (<a href="http://www.amherst.edu">Amherst</a>, <a href="http://www.hampshire.edu">Hampshire</a>, <a href="http://www.mtholyoke.edu">Mount Holyoke</a>, and <a href="http://www.smith.edu">Smith</a>), and three local community colleges (<a href="http://www.gcc.mass.edu">Greenfield</a>, <a href="http://www.hcc.edu">Holyoke</a>, and <a href="http://www.stcc.edu">Springfield Technical</a>). The inclusion of two <a href="https://en.wikipedia.org/wiki/Women%27s_college">women’s colleges</a> (Smith and Mount Holyoke) and two <a href="https://en.wikipedia.org/wiki/Hispanic-serving_institution">Hispanic-serving institutions</a> (Holyoke and Springfield Technical) will help ensure that a diverse student population is engaged in the project.</p>
+<div id="about-the-data-science-corps" class="section level3">
+<h3>About the Data Science Corps</h3>
+<p><a href="https://www.nsf.gov/pubs/2019/nsf19518/nsf19518.htm">NSF’s Harnessing the Data Revolution Data Science Corps</a> program focuses on building capacity for harnessing the data revolution at the local, state, national, and international levels to help unleash the power of data in the service of science and society. Projects in this program are being jointly funded by the NSF’s Harnessing the Data Revolution Big Idea; the Directorate for Computer and Information Science and Engineering, Division of Information and Intelligent Systems; the Directorate for Education and Human Resources, Division of Undergraduate Education; the Directorate for Mathematical and Physical Sciences, Division of Mathematical Sciences; and the Directorate for Social, Behavioral and Economic Sciences, Office of Multidisciplinary Activities and Division of Behavioral and Cognitive Sciences.</p>
+<div>
+<img src="gfx/dsc-wav_medallion_black.png" width="100px" float="left"/>
+</div>
+</div>
+</div>
+<div id="community-projects" class="section level2">
+<h2>Community projects</h2>
+<p>Please see <a href="https://github.com/DSC-WAV">our GitHub Organization</a> for more information about our projects.</p>
+<p><hr>
+<div class="row">
+<div class="col-sm-4">
+<img src="https://paradisedistrict.org/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-12.33.22-PM.png" float="left" width="200px"/>
+</div>
+<div class="col-sm-8">
+<a href="https://www.valleybike.org/">
+<h4>ValleyBike</h4>
+</a>
+<p>Students are building visualizations to assist planners and inform decisions about how to expand the program most appropriately and best serve under-resources neighborhoods and communities.</p>
+</div>
+</div>
+</hr><hr>
+<div class="row">
+<div class="col-sm-4">
+<img src="https://www.umass.edu/sphhs/sites/default/files/WMHEN_pagecontent_img_0.jpg" float="left" width="200px"/>
+</div>
+<div class="col-sm-8">
+<a href="https://www.umass.edu/sphhs/wmhen">
+<h4>Western Mass Health Equity Network</h4>
+</a>
+<p>Students have researched and used publicly available date to build a dashboard interface, facilitating the retrieval of multi-year data on health characteristics by neighborhood in  Springfield.</p>
+</div>
+</div>
+</hr><hr>
+<div class="row">
+<div class="col-sm-4">
+<img src="https://pbs.twimg.com/profile_images/1108328151992672257/rbjDkoHs_400x400.png" float="left" width="200px"/>
+</div>
+<div class="col-sm-8">
+<a href="https://www.girlsincvalley.org/">
+<h4>Girls Inc of the Pioneer Valley</h4>
+</a>
+<p>Students are working on a map for the organization to share with potential donors to demonstrate the accumulation of risk factors in the physical environment (air quality, water pollution, etc.) that face their target population on a daily basis</p>
+</div>
+</div>
+</hr><hr>
+<div class="row">
+<div class="col-sm-4">
+<img src="https://gust-production.s3.amazonaws.com/uploads/investor_group/logo_image/22442/VentureWell_logo_emblem.jpg" float="left" width="200px"/>
+</div>
+<div class="col-sm-8">
+<a href="https://venturewell.org/">
+<h4>VentureWell</h4>
+</a>
+<p>Students are working to make data accessible by converting an archive of pdf grant applications to text, automating the loading of the files to a database, and making them searchable.</p>
+<p>
+<a href="gfx/VentureWellTeamPoster.pdf">See poster</a>
+</p>
+</div>
+</div>
+</hr><hr>
+<div class="row">
+<div class="col-sm-4">
+<img src="https://pbs.twimg.com/profile_images/1280864560228990976/YOnBWukx.jpg" float="left" width="200px"/>
+</div>
+<div class="col-sm-8">
+<a href="https://www.nature.org/en-us/">
+<h4>The Nature Conservancy</h4>
+</a>
+<p>Students are working to automate the import and analysis of patterns in images from wildlife cameras to assess whether a particular image includes an animal or not. The metadata for the images are read from a file and added to a growing database of available images.</p>
+</div>
+</div>
+</hr></p>
+</div>
+
+<hr>
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">
+          <img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" width="80px" style="float:left; padding-right:10px;">
+          Created by <a href="http://www.science.smith.edu/~bbaumer" target="_blank">Ben Baumer</a>. This material is based upon work supported by the <a href="http://www.nsf.gov">National Science Foundation</a> under Grant Numbers HDR DSC <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&HistoricalAwards=false">1924017</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923388&HistoricalAwards=false">1923388</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923700&HistoricalAwards=false">1923700</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923934&HistoricalAwards=false">1923934</a>, and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924032&HistoricalAwards=false">1924032</a>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+        </p>
+      </div>
+    </div>. 
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

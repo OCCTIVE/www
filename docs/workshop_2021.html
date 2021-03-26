@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Faculty Development Workshop 2021</title>
+
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="57x57" href="gfx/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="gfx/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="gfx/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="gfx/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="gfx/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="gfx/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="gfx/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="gfx/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="gfx/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="gfx/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="gfx/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="gfx/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="gfx/favicon-16x16.png">
+<link rel="manifest" href="gfx/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="gfx/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="include/smith.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 52px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h2 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h3 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h4 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h5 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h6 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">DSC-WAV</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="projects.html">
+    <span class="fas fa-project-diagram"></span>
+     
+    Projects
+  </a>
+</li>
+<li>
+  <a href="workshops.html">
+    <span class="fas fa-wrench"></span>
+     
+    Workshops
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-users"></span>
+     
+    People
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="people.html">
+        <span class="fas fa-info"></span>
+         
+        Personnel
+      </a>
+    </li>
+    <li>
+      <a href="students.html">
+        <span class="fas fa-user-graduate"></span>
+         
+        Students
+      </a>
+    </li>
+    <li>
+      <a href="conduct.html">
+        <span class="fas fa-file-signature"></span>
+         
+        Code of Conduct
+      </a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="outreach.html">
+    <span class="fas fa-volume-up"></span>
+     
+    Outreach
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/DSC-WAV">
+    <span class="fas fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Faculty Development Workshop 2021</h1>
+
+</div>
+
+
+<div id="background-on-the-project" class="section level2">
+<h2>Background on the Project</h2>
+<p>Our project will increase long-term data science capacity in the Pioneer Valley area of Western Massachusetts, while also providing students with valuable hands-on data science experience.</p>
+<p>The two components of the proposed project are:</p>
+<ol style="list-style-type: decimal">
+<li><p>Data Science WAV teams: specially-trained teams of four undergraduate students who are deployed to community-based organizations to Wrangle, Analyze, and Visualize their data.</p></li>
+<li><p><strong>Summer Faculty Development Workshops</strong> designed to help new instructors - especially those at community colleges - teach data science at their institutions. Curricular innovations that bring experiential data science learning into the curriculum, leading to sustainable long term impact at the partnering academic institutions and in the larger Pioneer Valley region.</p></li>
+</ol>
+</div>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>A major goal of the faculty development workshops is to prepare the Five College and community college faculty to teach data science. The emphasis on community college faculty is critical, since nearly 50% of all bachelor’s degree recipients come through a two-year college (National Student Clearinghouse (2017)). Receiving training in data science will help the faculty engage with their students on relevant topics.</p>
+<p>The workshops will be divided into two parts: during the first year (2021) approximately 20 participants will receive instruction in fundamental data science concepts, while in the second year (2022) participants will work on implementing a specific curricular innovation.</p>
+</div>
+<div id="dates" class="section level2">
+<h2>Dates</h2>
+<p>The 2021 workshop was postponed and will take place Monday through Friday, <strong>June 14th–18th, 2021</strong> at Smith College. The workshop will begin at 9:30am each day and finish at 1:00pm on Friday. The dates for the 2022 workshop have not yet been finalized.</p>
+</div>
+<div id="funding" class="section level2">
+<h2>Funding</h2>
+<p>Stipends are available for faculty who attend the workshop and demonstrate their integration of the material from the workshop in their teaching. Applications for the 2021 workshop are now available and will be evaluated with rolling selection, beginning at the end of March <a href="https://docs.google.com/forms/d/12UVl_Tff9NhS6_bj_6V5sWXHhjJu6YkI1B65tyUDsH8/">LINK TO APPLICATION</a></p>
+</div>
+<div id="leaders" class="section level2">
+<h2>Leaders</h2>
+<p>These workshops will be led by:</p>
+<ul>
+<li><a href="https://www.smith.edu/academics/faculty/ben-baumer">Benjamin Baumer</a>, Smith College: PI on the DSC-WAV project, Ben has contributed to multiple curricular development efforts at the national level, including <span class="citation">De Veaux et al. (2017)</span>, and <span class="citation">B. Baumer (2015)</span>. He is a co-author of <span class="citation">B. S. Baumer, Kaplan, and Horton (2017)</span>, one of the first comprehensive textbooks on data science.</li>
+<li><a href="https://www.amherst.edu/people/facstaff/nhorton">Nicholas Horton</a>, Amherst College: co-PI on the DSC-WAV project, Nick is a leader in the statistics and data science community <span class="citation">(Horton, Baumer, and Wickham 2015; Hardin et al. 2015)</span>, and has worked to provide curriculum guidelines for data science at two-year colleges. He is a co-author of <span class="citation">B. S. Baumer, Kaplan, and Horton (2017)</span>.</li>
+<li><a href="https://www.hampshire.edu/faculty/ethan-meyers">Ethan Meyers</a>, Hampshire College/Yale University: co-PI on the DSC-WAV project, Ethan has extensive experience in data science practice and education through his work at Hampshire College, Yale University, and the through is research affiliation with the Center for Brains, Minds and Machines at MIT.</li>
+</ul>
+</div>
+<div id="audience-and-topics" class="section level2">
+<h2>Audience and Topics</h2>
+<p>The gathering is focused on engaging faculty from two-year colleges and the Five Colleges who have an interest in data science to better prepare students to meet the challenges of integrating data science into their courses.</p>
+<p>The aim of the workshop is to introduce a powerful suite of data science tools including R/<a href="https://rstudio.com/">RStudio</a>, the <code>tidyverse</code> suite of packages, <a href="https://shiny.rstudio.com/">Shiny</a> for dynamic visualization, and <a href="https://github.com/">GitHub</a> for collaboration. The workshop will provide an introduction to using these tools to undertake the entire data science analysis cycle: posing a question, identifying data sources, ingesting data, wrangling data, undertaking exploratory data analysis, modeling, assessment, and communication. Visualization and data wrangling Python will also be explored.</p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-baumer2015data" class="csl-entry">
+<p>Baumer, Ben. 2015. <span>“A Data Science Course for Undergraduates: Thinking with Data.”</span> <em>The American Statistician</em> 69 (4): 334–42. <a href="http://amstat.tandfonline.com/doi/abs/10.1080/00031305.2015.1081105">http://amstat.tandfonline.com/doi/abs/10.1080/00031305.2015.1081105</a>.</p>
+</div>
+<div id="ref-baumer2016mdsr" class="csl-entry">
+<p>Baumer, Benjamin S., Daniel T. Kaplan, and Nicholas J. Horton. 2017. <em><span class="nocase">Modern Data Science with R</span></em>. Chapman; Hall/CRC Press: Boca Raton. <a href="https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/9781498724487">https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/9781498724487</a>.</p>
+</div>
+<div id="ref-pcmi2016guidelines" class="csl-entry">
+<p>De Veaux, Richard D., Mahesh Agarwal, Maia Averett, Benjamin S. Baumer, Andrew Bray, Thomas C. Bressoud, Lance Bryant, et al. 2017. <span>“Curriculum Guidelines for Undergraduate Programs in Data Science.”</span> <em>Annual Review of Statistics and Its Application</em> 4 (1): 1–16. <a href="https://doi.org/10.1146/annurev-statistics-060116-053930">https://doi.org/10.1146/annurev-statistics-060116-053930</a>.</p>
+</div>
+<div id="ref-hardin2015data" class="csl-entry">
+<p>Hardin, Johanna, Roger Hoerl, Nicholas J Horton, Deborah Nolan, B Baumer, O Hall-Holt, P Murrell, et al. 2015. <span>“Data Science in Statistics Curricula: Preparing Students to <span>‘Think with Data’</span>.”</span> <em>The American Statistician</em> 69 (4): 343–53. <a href="http://www.tandfonline.com/doi/abs/10.1080/00031305.2015.1077729">http://www.tandfonline.com/doi/abs/10.1080/00031305.2015.1077729</a>.</p>
+</div>
+<div id="ref-horton2015stage" class="csl-entry">
+<p>Horton, N. J., Benjamin S. Baumer, and Hadley Wickham. 2015. <span>“Setting the Stage for Data Science: Integration of Data Management Skills in Introductory and Second Courses in Statistics.”</span> <em>CHANCE</em> 28 (3): 40–50. <a href="http://chance.amstat.org/2015/04/setting-the-stage/">http://chance.amstat.org/2015/04/setting-the-stage/</a>.</p>
+</div>
+</div>
+</div>
+
+<hr>
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">
+          <img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" width="80px" style="float:left; padding-right:10px;">
+          Created by <a href="http://www.science.smith.edu/~bbaumer" target="_blank">Ben Baumer</a>. This material is based upon work supported by the <a href="http://www.nsf.gov">National Science Foundation</a> under Grant Numbers HDR DSC <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&HistoricalAwards=false">1924017</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923388&HistoricalAwards=false">1923388</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923700&HistoricalAwards=false">1923700</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923934&HistoricalAwards=false">1923934</a>, and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924032&HistoricalAwards=false">1924032</a>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+        </p>
+      </div>
+    </div>. 
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

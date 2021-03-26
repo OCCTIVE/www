@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Students</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="57x57" href="gfx/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="gfx/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="gfx/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="gfx/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="gfx/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="gfx/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="gfx/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="gfx/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="gfx/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="gfx/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="gfx/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="gfx/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="gfx/favicon-16x16.png">
+<link rel="manifest" href="gfx/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="gfx/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+<link rel="stylesheet" href="include/smith.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">DSC-WAV</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="projects.html">
+    <span class="fas fa-project-diagram"></span>
+     
+    Projects
+  </a>
+</li>
+<li>
+  <a href="workshops.html">
+    <span class="fas fa-wrench"></span>
+     
+    Workshops
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-users"></span>
+     
+    People
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="people.html">
+        <span class="fas fa-info"></span>
+         
+        Personnel
+      </a>
+    </li>
+    <li>
+      <a href="students.html">
+        <span class="fas fa-user-graduate"></span>
+         
+        Students
+      </a>
+    </li>
+    <li>
+      <a href="conduct.html">
+        <span class="fas fa-file-signature"></span>
+         
+        Code of Conduct
+      </a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="outreach.html">
+    <span class="fas fa-volume-up"></span>
+     
+    Outreach
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/DSC-WAV">
+    <span class="fas fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Students</h1>
+
+</div>
+
+
+<p>The project aims to reach 25-30 students per semester, from the spring semester of 2020 to the fall semester of 2022.</p>
+<p>WAV teams will comprise 4 or 5 data science students (most likely majoring in statistics and/or data science) and one community engagement concentrator. Funding of up to $2500 per student per semester is available, although the actual amount paid will vary based on regulations at your home institution.</p>
+<div id="eligibility" class="section level2">
+<h2>Eligibility</h2>
+<p>Minimum requirements for data science students:</p>
+<ul>
+<li>has taken at least one course in computer programming</li>
+<li>has taken at least one course in statistics</li>
+<li>has taken at least one additional course in data science, data analysis, etc.</li>
+<li>is a sophomore or junior</li>
+<li>ability to commit to 8-10 hours per week through the spring semester</li>
+</ul>
+<p>Minimum requirements for community engagement students:</p>
+<ul>
+<li>has completed a community engagement course, or is enrolled in a related major, minor, or <a href="https://www.smith.edu/academics/community-engagement-and-social-change-concentration">concentration</a>, or the equivalent</li>
+<li>is a junior or senior</li>
+<li>ability to commit to 8-10 hours per week through the spring semester</li>
+</ul>
+<p>Eligibility for <a href="https://www.nsf.gov/pubs/forms/affidavit_eligibility_of_employment.pdf">NSF funding</a>:</p>
+<ul>
+<li>US Citizen or permanent resident</li>
+</ul>
+<p>If you are not eligible for NSF funding, please contact your home institution for additional funding options. You may still complete the application.</p>
+</div>
+<div id="cohort-5" class="section level2">
+<h2>Cohort 5</h2>
+<ul>
+<li>Applications for Cohort 5 will be reviewed on a rolling basis, beginning <strong>November 10th, 2021</strong>.</li>
+</ul>
+</div>
+<div id="cohort-4" class="section level2">
+<h2>Cohort 4</h2>
+<ul>
+<li><p>Students selected for Cohort 4 will begin in the fall semester of 2021.</p></li>
+<li><p>Applications for Cohort 4 will open on <strong>March 12th, 2021</strong>.</p></li>
+</ul>
+<div class="alert alert-info" role="alert">
+<p><i class="fas  fa-bullhorn "></i> <a href="https://forms.gle/CuXVD9xd66R6jUJW6"><strong>APPLY NOW</strong></a></p>
+</div>
+</div>
+<div id="cohort-3" class="section level2">
+<h2>Cohort 3</h2>
+<ul>
+<li>24 students selected for Cohort 3 began in the spring semester of 2021.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Student</th>
+<th align="left">Institution</th>
+<th align="left">role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/lauren-johnson-182b8b205/">Lauren Johnson</a></td>
+<td align="left">Mount Holyoke</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/maggie-smith-2b0aa6175/">Maggie Smith</a></td>
+<td align="left">Mount Holyoke</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left">Emily Robinson</td>
+<td align="left">Mount Holyoke</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/claire-bunn-a297b1204/">Claire Bunn</a></td>
+<td align="left">Smith</td>
+<td align="left">community engagement</td>
+</tr>
+<tr class="odd">
+<td align="left">Sarah Bingham</td>
+<td align="left">Smith</td>
+<td align="left">community engagement</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/christina-sher/">Christina Sherpa</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/dianne-caravela-b7058a18b/">Dianne Caravela</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/euniceyhkim/">Eunice Kim</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/grace-hartley-0094a21a3/">Grace Hartley</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/michelle-flesaker/">Michelle Flesaker</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/iannuccinatalia/">Natalia Iannucci</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/seren-s-43a902124/">Seren Smith</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/sunnigraleigh/">Sunni Raleigh</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/viviennemaxwell/">Vivienne Maxwell</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/guy-michaely-5126221a1/">Guy Michaely</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/jameslko/">James Ko</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/psarma21/">Pawan Sarma</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/kevin-luo-3a08561a1/">Rongqiang Luo</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/siddhanthsatish/">Siddhanth Satish</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/tanya-sehgal149/">Tanya Sehgal</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="cohort-2" class="section level2">
+<h2>Cohort 2</h2>
+<ul>
+<li>24 students selected for Cohort 2 began in the fall semester of 2020.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Student</th>
+<th align="left">Institution</th>
+<th align="left">role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/chinedu-chukwura-3a17281b3/">Chinedu Chukwura</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/graham-chickering-8012ba193/">Graham Chickering</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/jessica-yu-594902152/">Jessica Yu</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/kenny-c-a73255158/">Kenny Chen</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/konstantin-larin-617143a1/">Konstantin Larin</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/maggie-wu-870570178/">Maggie Wu</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/mcgirjau/">Maria-Cristiana Girjau</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/umaimah-ahmed-3596a31b0/">Umaimah Ahmed</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/thant-kyaw-hset-948159194/">Thant Kyaw Hset</a></td>
+<td align="left">Hampshire</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/erin-howe-2b2938191/">Erin Howe</a></td>
+<td align="left">Mount Holyoke</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/reesehirota/">Reese Hirota</a></td>
+<td align="left">Mount Holyoke</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left">Emily Robinson</td>
+<td align="left">Mount Holyoke</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/claire-bunn-a297b1204/">Claire Bunn</a></td>
+<td align="left">Smith</td>
+<td align="left">community engagement</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/emmasscott/">Emma Scott</a></td>
+<td align="left">Smith</td>
+<td align="left">community engagement, data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/annabel-yim/">Annabel Yim</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/dianne-caravela-b7058a18b/">Dianne Caravela</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/euniceyhkim/">Eunice Kim</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/iannuccinatalia/">Natalia Iannucci</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/camille-bergeron/">Camille Bergeron</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/gzwei/">George Wei</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/jasmine-mangat-5b03b1168/">Jasmine Mangat</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/nnaji/">Nnaji Obinelo</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/kevin-luo-3a08561a1/">Rongqiang Luo</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/timothy-nguyen-414525144/">Timothy Nguyen</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="cohort-1" class="section level2">
+<h2>Cohort 1</h2>
+<ul>
+<li>25 students selected for Cohort 1 began in the spring semester of 2020.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Student</th>
+<th align="left">Institution</th>
+<th align="left">role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/elisabeth-eigerman-32a912169/">Elsie Eigerman</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/jessica-yu-594902152/">Jessica Yu</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/kenny-c-a73255158/">Kenny Chen</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/mcgirjau/">Maria-Cristiana Girjau</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/phebe-palmer-8a9b1018b/">Phebe Kim Palmer</a></td>
+<td align="left">Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/mattylavallee/">Matthew Lavallee</a></td>
+<td align="left">Hampshire</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/thant-kyaw-hset-948159194/">Thant Kyaw Hset</a></td>
+<td align="left">Hampshire</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/mahamapara/">Maha Mapara</a></td>
+<td align="left">Mount Holyoke</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/reesehirota/">Reese Hirota</a></td>
+<td align="left">Mount Holyoke</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/robin-joyce-9aa8b1174/">Robin Joyce</a></td>
+<td align="left">Mount Holyoke</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/lizzy-dixon-997191150/">Elisabeth Dixon</a></td>
+<td align="left">Smith</td>
+<td align="left">community engagement</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/lauren-l-856367b0/">Lauren Low</a></td>
+<td align="left">Smith</td>
+<td align="left">community engagement</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/margaretzhang01/">Margaret Zhang</a></td>
+<td align="left">Smith</td>
+<td align="left">community engagement</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/amritaacharya23/">Amrita Acharya</a></td>
+<td align="left">Smith</td>
+<td align="left">community engagement, data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/emmasscott/">Emma Scott</a></td>
+<td align="left">Smith</td>
+<td align="left">community engagement, data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/annabel-yim/">Annabel Yim</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/joyce-mei-huang/">Joyce Huang</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/ran-yan-1706b9175/">Ran (Rachel) Yan</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/sunnigraleigh/">Sunni Raleigh</a></td>
+<td align="left">Smith</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/dvir-blander/">Dvir Blander</a></td>
+<td align="left">Umass</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/daria-garkavtseva/">Daria Garkavtseva</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/dennis-hof/">Dennis Hofmann</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/nila-abirami-sadeeshkumar/">Nila Abirami Sadeeshkumar</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.linkedin.com/in/lucyxinyinglu/">Xinying Lu</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.linkedin.com/in/zenry-padua-1b9672171/">Zenry Paul Padua</a></td>
+<td align="left">Umass-Amherst</td>
+<td align="left">data scientist</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<hr>
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">
+          <img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" width="80px" style="float:left; padding-right:10px;">
+          Created by <a href="http://www.science.smith.edu/~bbaumer" target="_blank">Ben Baumer</a>. This material is based upon work supported by the <a href="http://www.nsf.gov">National Science Foundation</a> under Grant Numbers HDR DSC <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&HistoricalAwards=false">1924017</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923388&HistoricalAwards=false">1923388</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923700&HistoricalAwards=false">1923700</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923934&HistoricalAwards=false">1923934</a>, and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924032&HistoricalAwards=false">1924032</a>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+        </p>
+      </div>
+    </div>. 
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
