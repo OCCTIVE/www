@@ -1,5 +1,5 @@
 # www
 
-website for DSC-WAV
+website for NSF CUE
 
-https://dsc-wav.github.io/www/
+URL:
