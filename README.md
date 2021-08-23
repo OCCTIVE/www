@@ -2,4 +2,4 @@
 
 website for NSF CUE
 
-URL:
+https://nsf-cue-frameworks.github.io/www
