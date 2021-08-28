@@ -12,9 +12,9 @@ library(bsplus)
 
 <div class="jumbotron">
 
-![](gfx/dsc-wav_logo_color.png)
+#![](gfx/dsc-wav_logo_color.png)
 
-A multi-institution, [NSF-funded](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&HistoricalAwards=false) project to address computing in undergraduate education.
+A multi-institution, [NSF-funded](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935113&HistoricalAwards=false) IUSE project to address computing in undergraduate education.
 
 
 
