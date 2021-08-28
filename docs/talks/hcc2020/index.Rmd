@@ -1,0 +1,335 @@
+---
+title: "The DSC-WAV project"
+subtitle: "NSF-funded workforce development in data science"
+author: |
+  Nicholas Horton<br/>
+  <span style = 'font-size: 70%;'>
+  Amherst College<br/>
+  `r icon::fa("envelope")` &nbsp;[nhorton@amherst.edu](mailto:nhorton@amherst.edu) | 
+  `r icon::fa("twitter")` @[askdrstats](http://www.twitter.com/askdrstats) |
+  `r icon::fa("github")` [nicholasjhorton](http://www.github.com/nicholasjhorton)
+  </span>
+date: |
+  Holyoke Community College<br/>
+  2020-04-13<br/>
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE}
+# sds::duo_smith()
+sds::mono_light_smith(
+  extra_css = list(".img-five" = list(width = "19%", float ="left", padding = "2px;"))
+)
+```
+
+
+class: center, middle, inverse
+# DSC-WAV
+---
+## The Data Science WAV
+
+.pull-left[
+
+![](https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png)
+
+]
+
+--
+
+.pull-right[
+
+- Experiential Learning with Local Community Organizations
+
+- 3 years
+
+- 9 institutions
+
+- $1.2 million total
+
+- 25-30 students per semester
+
+- 5 cohorts starting **January 2020**
+
+]
+
+
+---
+## Two related problems
+
+.pull-left[
+
+- Authentic, hands-on experience for data science students
+
+]
+
+--
+
+.pull-right[
+
+- Need for data science among local organizations
+
+]
+
+.center[![](https://media.giphy.com/media/l0Extn1wgzXyZn0J2/giphy.gif)]
+
+---
+class: center, middle, inverse
+# Piece 1: </br>Solving real data science problems
+
+---
+## Doin' work
+
+- Five College students + faculty mentors
+
+.img-five[![](https://pbs.twimg.com/profile_images/963462169517002753/q0OdNQov_400x400.jpg)]
+
+.img-five[![](https://pbs.twimg.com/profile_images/968216883286732801/jVsiELzc_400x400.jpg)]
+
+.img-five[![](https://pbs.twimg.com/profile_images/937781990966796288/zw09-cvB_400x400.jpg)]
+
+.img-five[![](Unknown-1.png)]
+
+.img-five[![](https://pbs.twimg.com/profile_images/3491577739/b653fe9d5dfadcf341b76fef56fa4a80.png)]
+
+--
+
+- Local community-based organizations
+
+.img-five[![](https://paradisedistrict.org/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-12.33.22-PM.png)]
+
+.img-five[![](https://www.umass.edu/sphhs/sites/default/files/WMHEN_pagecontent_img_0.jpg)]
+
+.img-five[![](https://girlsinc-carp.org/wp-content/uploads/2015/01/Logo-site-icon-54aef47dv1_site_icon-256x256.png)]
+
+.img-five[![](https://gust-production.s3.amazonaws.com/uploads/investor_group/logo_image/22442/VentureWell_logo_emblem.jpg)]
+
+.img-five[![](https://pbs.twimg.com/profile_images/608258767092908033/njR5TGTo_400x400.png)]
+
+---
+## WAV teams 
+
+.pull-left[
+
+![](https://media.giphy.com/media/xX1dwuf8LN9YI/giphy.gif)
+
+]
+
+--
+
+.pull-right[
+
+- **W**rangle, **A**nalyze, **V**isualize
+
+- Each team:
+    - 4 statistics and data science majors (mostly juniors)
+    - 1 faculty mentor
+    - 1 **community engagement**-focused student
+
+- `r icon::fa("money-bill")` stipends 
+
+- Direct interface with community-based orgs
+
+- Onboarding workshops emphasizing "soft skills" and collaboration
+
+- Poster sessions
+
+]
+
+---
+## Scrum
+
+.pull-left[
+
+![](Scrum1.png)
+
+]
+
+--
+
+.pull-right[
+
+- Scrum and Agile development
+
+- Agile development framework
+
+- Encourages teams to self-organize, learn, and reflect
+
+- Commonly used by software developers in the workforce
+
+]
+
+---
+class: center, middle, inverse
+# Piece 2: </br>Broading the data science pipeline
+
+---
+## Community colleges
+
+.tri-left[![](https://pbs.twimg.com/profile_images/1085657492615442433/BVRbloKJ_400x400.jpg)]
+
+.tri-middle[![](https://pbs.twimg.com/profile_images/962056787594641408/FAPaAlrt_400x400.jpg)]
+
+.tri-right[![](https://pbs.twimg.com/profile_images/1145385666131501056/dAegKY0z_400x400.png)]
+
+
+---
+## Fac Development Workshops
+
+.pull-left[
+
+- Data science training
+    - `r icon::fa("money-bill")` funded
+    - June 2020 and 2021
+
+- Attendees
+    - community college faculty
+    - Five College faculty
+    - community partners employees
+
+- Bringing data science concepts to new faculty and new students
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/xT39CSrbCLKaQJ2MqQ/giphy.gif)
+
+]
+
+---
+## Curriculum
+
+.pull-left[
+
+![](https://media.giphy.com/media/3orieZJVH2lYpnaJfG/giphy.gif)
+
+]
+
+.pull-right[
+
+- Aligning curricula between 2- and 4-year colleges
+
+- Potential community college majors in **data science**
+
+- New experiential learning classes at Five Colleges
+
+]
+
+---
+## Timeline
+
+.pull-left[
+
+- `r icon::fa("check")` Cohort 1 selected
+
+- `r icon::fa("ticket-alt")` Feb 1: Cohort 1 onboarding workshop
+
+- `r icon::fa("clock")` Mar 2020: Cohort 2 applications live
+
+- `r icon::fa("clock")` Apr 2020: Fac Dev applications live
+
+- `r icon::fa("umbrella-beach")` June 2020: Fac Dev workshop
+
+- `r icon::fa("leaf")` Sep 2020: 
+    - Cohort 1 poster session
+    - Cohort 2 onboarding workshop
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/9u514UZd57mRhnBCEk/giphy.gif)
+
+]
+
+
+---
+## Projects from Spring 2020 
+
+.pull-left[
+
+- **Nature Conservancy**
+- Valley Bike
+- VentureWell
+- Health Equity
+- Girls Inc
+
+]
+
+.pull-right[
+
+![](nc.png)
+
+]
+
+---
+## Projects from Spring 2020 
+
+.pull-left[
+
+- Nature Conservancy
+- **Valley Bike**
+- VentureWell
+- Health Equity
+- Girls Inc
+
+]
+
+.pull-right[
+
+![](vb.png)
+
+]
+
+---
+## Teams in action (in person)
+
+![](onboard.png)
+
+
+---
+## Teams in action (virtual)
+
+![](virtual.png)
+
+
+---
+## More on the HCC connection
+
+.pull-left[
+
+- Students can attend poster session in the fall
+- Participating in DataFest and similar events
+- Take CS, Statistics, and Data Science classes as you can
+- transfer to one of Five Colleges and apply (applications for Fall 2021 will go live in February)
+- Faculty have the opportunity to participate in the summer workshop
+- Questions?
+
+]
+
+.pull-right[
+
+![](https://pbs.twimg.com/profile_images/962056787594641408/FAPaAlrt_400x400.jpg)
+
+]
+
+---
+
+class: center, middle, inverse
+# https://dsc-wav.github.io/www/
+
+`r icon::fa("envelope")` [nhorton@amherst.edu](mailto:nhorton@amherst.edu) |
+`r icon::fa("twitter")` [askdrstats](http://www.twitter.com/askdrstats) |
+`r icon::fa("github")` [nicholasjhorton](http://www.github.com/nicholasjhorton)
+

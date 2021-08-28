@@ -13,13 +13,22 @@
 
 <title> </title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
@@ -53,32 +62,6 @@
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="include/smith.css" type="text/css" />
@@ -90,10 +73,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -110,40 +89,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 52px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h2 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h3 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h4 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h5 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h6 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -171,7 +123,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -183,7 +135,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -194,10 +146,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -209,7 +174,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -281,78 +245,76 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">NSF CUE</a>
+      <a class="navbar-brand" href="index.html">NSF-CUE-Frameworks</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
     <span class="fas fa-home"></span>
-
+     
     Home
   </a>
 </li>
-<!--<li>
+<li>
   <a href="projects.html">
     <span class="fas fa-project-diagram"></span>
-
+     
     Projects
   </a>
 </li>
 <li>
   <a href="workshops.html">
     <span class="fas fa-wrench"></span>
-
+     
     Workshops
   </a>
 </li>
--->
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fas fa-users"></span>
-
+     
     People
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
       <a href="people.html">
         <span class="fas fa-info"></span>
-
-        Project Personnel
+         
+        Personnel
       </a>
     </li>
     <li>
-      <a href="affiliated.html">
+      <a href="students.html">
         <span class="fas fa-user-graduate"></span>
-
-        Affiliated Faculty
+         
+        Students
       </a>
     </li>
-<!--    <li>
+    <li>
       <a href="conduct.html">
         <span class="fas fa-file-signature"></span>
-
+         
         Code of Conduct
       </a>
     </li>
-  -->
   </ul>
 </li>
 <li>
   <a href="outreach.html">
     <span class="fas fa-volume-up"></span>
-
+     
     Outreach
   </a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/DSC-WAV">
+  <a href="https://github.com/NSF-CUE-Frameworks">
     <span class="fas fa-github"></span>
-
+     
   </a>
 </li>
       </ul>
@@ -360,7 +322,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -371,15 +333,13 @@ $(document).ready(function () {
 
 <div class="jumbotron">
 <p><img src="gfx/dsc-wav_logo_color.png" /></p>
-<p>A multi-institution, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&amp;HistoricalAwards=false">NSF-funded</a> data science workforce development project</p>
+<p>A multi-institution, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&amp;HistoricalAwards=false">NSF-funded</a> project to address computing in undergraduate education.</p>
 <p><a class="btn btn-primary btn-lg" href="projects.html" role="button">Learn more…</a></p>
 </div>
 <div>
-  <center>
+<img src="https://pbs.twimg.com/profile_images/1337851361493397506/0UCOffxo_normal.jpg" width="100px" float="left"/>
 <img src="https://pbs.twimg.com/profile_images/1337418488227487745/ngRpXs_n.jpg" width="100px" float="left"/>
-<img src="logos/union.jpg" width="100px" float="left"/>
-<img src="logos/Colby.png" width="100px" float="left"/>
-</center>
+<img src="https://pbs.twimg.com/profile_images/1337851361493397506/0UCOffxo_normal.jpg" width="100px" float="left"/>
 </div>
 
 <hr>
@@ -387,10 +347,10 @@ $(document).ready(function () {
       <div class="container">
         <p class="muted credit">
           <img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" width="80px" style="float:left; padding-right:10px;">
-          This material is based upon work supported by the <a href="http://www.nsf.gov">National Science Foundation</a> under Grant Numbers CUE <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935113&HistoricalAwards=false">1935113</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935061&HistoricalAwards=false">1935061</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935099&HistoricalAwards=false">1935099</a>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+          Created by <a href="http://www.science.smith.edu/~bbaumer" target="_blank">Ben Baumer</a>. This material is based upon work supported by the <a href="http://www.nsf.gov">National Science Foundation</a> under Grant Numbers HDR DSC <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&HistoricalAwards=false">1924017</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923388&HistoricalAwards=false">1923388</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923700&HistoricalAwards=false">1923700</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923934&HistoricalAwards=false">1923934</a>, and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924032&HistoricalAwards=false">1924032</a>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
         </p>
       </div>
-    </div>
+    </div>. 
 
 
 
@@ -418,7 +378,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
