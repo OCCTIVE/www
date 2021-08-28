@@ -8,15 +8,15 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-    - text: "Projects"
-      icon: fa-project-diagram
-      href: projects.html
     - text: "Videos"
       icon: fa-wrench
       href: videos.html
     - text: "People"
       icon: fa-users
       href: people.html
+    - text: "Project"
+      icon: fa-project-diagram
+      href: projects.html  
   right:
     - icon: fa-github
       href: https://github.com/NSF-CUE-Frameworks
