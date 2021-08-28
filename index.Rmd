@@ -28,9 +28,9 @@ library(htmltools)
 
 school_logos <- tibble::tribble(
   ~school, ~logo,
-  "colby", "https://pbs.twimg.com/profile_images/1337851361493397506/0UCOffxo_n.jpg",
+  "colby", "gfx/Colby.png",
   "mhc", "https://pbs.twimg.com/profile_images/1337418488227487745/ngRpXs_n.jpg",
-  "union", "https://pbs.twimg.com/profile_images/1337851361493397506/0UCOffxo_n.jpg"
+  "union", "gfx/union.jpg"
   
 )
 
