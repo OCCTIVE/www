@@ -11,24 +11,12 @@ navbar:
     - text: "Projects"
       icon: fa-project-diagram
       href: projects.html
-    - text: "Workshops"
+    - text: "Videos"
       icon: fa-wrench
-      href: workshops.html
+      href: videos.html
     - text: "People"
       icon: fa-users
-      menu:    
-        - text: "Personnel"
-          icon: fa-info
-          href: people.html
-        - text: "Students"
-          icon: fa-user-graduate
-          href: students.html
-        - text: Code of Conduct
-          icon: fa-file-signature
-          href: conduct.html
-    - text: "Outreach"
-      icon: fa-volume-up
-      href: outreach.html
+      href: people.html
   right:
     - icon: fa-github
       href: https://github.com/NSF-CUE-Frameworks
