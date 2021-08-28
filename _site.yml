@@ -3,7 +3,7 @@ output_dir: "docs"
 include: "gfx"
 exclude: ["makefile", "data"]
 navbar:
-  title: "DSC-WAV"
+  title: "NSF-CUE-Frameworks"
   left:
     - text: "Home"
       icon: fa-home
@@ -31,7 +31,7 @@ navbar:
       href: outreach.html
   right:
     - icon: fa-github
-      href: https://github.com/DSC-WAV
+      href: https://github.com/NSF-CUE-Frameworks
 
 
 output:
