@@ -13,13 +13,22 @@
 
 <title>People</title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -58,32 +67,6 @@
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="include/smith.css" type="text/css" />
@@ -95,10 +78,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -115,40 +94,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 52px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h2 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h3 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h4 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h5 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h6 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -176,7 +128,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -188,7 +140,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -199,10 +151,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -214,7 +179,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -340,13 +304,13 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
 
 
 
@@ -359,7 +323,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">DSC-WAV</a>
+      <a class="navbar-brand" href="index.html">NSF-CUE-Frameworks</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -378,55 +342,23 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="workshops.html">
+  <a href="videos.html">
     <span class="fas fa-wrench"></span>
      
-    Workshops
+    Videos
   </a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+<li>
+  <a href="people.html">
     <span class="fas fa-users"></span>
      
     People
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="people.html">
-        <span class="fas fa-info"></span>
-         
-        Personnel
-      </a>
-    </li>
-    <li>
-      <a href="students.html">
-        <span class="fas fa-user-graduate"></span>
-         
-        Students
-      </a>
-    </li>
-    <li>
-      <a href="conduct.html">
-        <span class="fas fa-file-signature"></span>
-         
-        Code of Conduct
-      </a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="outreach.html">
-    <span class="fas fa-volume-up"></span>
-     
-    Outreach
   </a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/DSC-WAV">
+  <a href="https://github.com/NSF-CUE-Frameworks">
     <span class="fas fa-github"></span>
      
   </a>
@@ -436,7 +368,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -466,54 +398,10 @@ org
 <tbody>
 <tr>
 <td style="text-align:left;width: 30%; ">
-<a href="mailto:bbaumer@smith.edu">Ben Baumer</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-PI
-</td>
-<td style="text-align:left;width: 35%; ">
-Smith College
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:nhorton@amherst.edu">Nicholas Horton</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-co-PI
-</td>
-<td style="text-align:left;width: 35%; ">
-Amherst College
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:emeyers@hampshire.edu">Ethan Meyers</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-co-PI
-</td>
-<td style="text-align:left;width: 35%; ">
-Hampshire College
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:jaimejdavila@gmail.com">Jaime Davila</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-co-PI
-</td>
-<td style="text-align:left;width: 35%; ">
-Hampshire College
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
 <a href="mailto:vbarr@mtholyoke.edu">Valerie Barr</a>
 </td>
 <td style="text-align:left;width: 35%; ">
-co-PI
+PI
 </td>
 <td style="text-align:left;width: 35%; ">
 Mount Holyoke College
@@ -521,130 +409,24 @@ Mount Holyoke College
 </tr>
 <tr>
 <td style="text-align:left;width: 30%; ">
-<a href="mailto:rgarcia@smith.edu">Randi L. Garcia</a>
+<a href="mailto:bmaxwell@colby.edu">Bruce Maxwell</a>
 </td>
 <td style="text-align:left;width: 35%; ">
 co-PI
 </td>
 <td style="text-align:left;width: 35%; ">
-Smith College
+Colby College
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 30%; ">
-<a href="mailto:rattigan@cs.umass.edu">Matthew Rattigan</a>
+<a href="mailto:striegnk@union.edu">Kristina Striegnitz</a>
 </td>
 <td style="text-align:left;width: 35%; ">
 co-PI
 </td>
 <td style="text-align:left;width: 35%; ">
-UMass-Amherst
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="community-college-leadership" class="section level3">
-<h3>Community College leadership</h3>
-<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-Name
-</th>
-<th style="text-align:left;">
-role
-</th>
-<th style="text-align:left;">
-org
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:afarikumahe@gcc.mass.edu">Ebenezer Afarikumah</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-Campus Coordinator
-</td>
-<td style="text-align:left;width: 35%; ">
-Greenfield Community College
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:ivasu@hcc.edu">Ileana Vasu</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-Campus Coordinator
-</td>
-<td style="text-align:left;width: 35%; ">
-Holyoke Community College
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:BLCandido@stcc.edu">Brian Candido</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-Campus Coordinator
-</td>
-<td style="text-align:left;width: 35%; ">
-Springfield Technical Community College
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="community-engagement" class="section level3">
-<h3>Community engagement</h3>
-<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-Name
-</th>
-<th style="text-align:left;">
-role
-</th>
-<th style="text-align:left;">
-org
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:adustin78@smith.edu">Andrea Dustin</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-Project Coordinator
-</td>
-<td style="text-align:left;width: 35%; ">
-Smith College
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:dcandy@smith.edu">Denys Candy</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-Director of the Jandon Center
-</td>
-<td style="text-align:left;width: 35%; ">
-Smith College
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:nzigler@smith.edu">Nancy Zigler</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-Assistant Director of the Jandon Center
-</td>
-<td style="text-align:left;width: 35%; ">
-Smith College
+Union College
 </td>
 </tr>
 </tbody>
@@ -672,97 +454,18 @@ org
 <tbody>
 <tr>
 <td style="text-align:left;width: 30%; ">
-<a href="mailto:zief0002@umn.edu">Andrew Zieffler</a>
+<a href="mailto:info@educationdesign.biz">David Reider</a>
 </td>
 <td style="text-align:left;width: 35%; ">
 Evaluator
 </td>
 <td style="text-align:left;width: 35%; ">
-University of Minnesota
+Education Design
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="external-advisory-board" class="section level3">
-<h3>External advisory board</h3>
-<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-Name
-</th>
-<th style="text-align:left;">
-role
-</th>
-<th style="text-align:left;">
-org
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:bressoud@denison.edu">Thomas Bressoud</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-EAB
-</td>
-<td style="text-align:left;width: 35%; ">
-Denison University
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:kimberly.sellers@georgetown.edu">Kimberly Sellers</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-EAB
-</td>
-<td style="text-align:left;width: 35%; ">
-Georgetown University
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:cpfeil@massmutual.com">Christine Pfeil</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-EAB
-</td>
-<td style="text-align:left;width: 35%; ">
-MassMutual
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:Jo.Hardin@pomona.edu">Johanna Hardin</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-EAB
-</td>
-<td style="text-align:left;width: 35%; ">
-Pomona College
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 30%; ">
-<a href="mailto:rgould@stat.ucla.edu">Robert Gould</a>
-</td>
-<td style="text-align:left;width: 35%; ">
-EAB
-</td>
-<td style="text-align:left;width: 35%; ">
-UCLA
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="wav-students" class="section level2">
-<h2>WAV students</h2>
-<p>Coming soon…</p>
 </div>
 
 <hr>
@@ -770,7 +473,7 @@ UCLA
       <div class="container">
         <p class="muted credit">
           <img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" width="80px" style="float:left; padding-right:10px;">
-          Created by <a href="http://www.science.smith.edu/~bbaumer" target="_blank">Ben Baumer</a>. This material is based upon work supported by the <a href="http://www.nsf.gov">National Science Foundation</a> under Grant Numbers HDR DSC <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&HistoricalAwards=false">1924017</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923388&HistoricalAwards=false">1923388</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923700&HistoricalAwards=false">1923700</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923934&HistoricalAwards=false">1923934</a>, and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924032&HistoricalAwards=false">1924032</a>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+          Web site design based on work by <a href="http://www.science.smith.edu/~bbaumer" target="_blank">Ben Baumer</a>. Project material based upon work supported by the <a href="http://www.nsf.gov">National Science Foundation</a> under Grant Numbers CUE Ethics <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935113&HistoricalAwards=false">1935115</a>, <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1935099&HistoricalAwards=false">1935099</a>, and <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1935061&HistoricalAwards=false">1935061</a>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
         </p>
       </div>
     </div>. 
@@ -803,7 +506,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

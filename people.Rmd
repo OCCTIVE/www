@@ -31,24 +31,6 @@ people %>%
   print_table()
 ```
 
-### Community College leadership
-
-```{r}
-people %>%
-  filter(grepl("Campus Coordinator", role)) %>%
-  print_table()
-```
-
-
-### Community engagement
-
-```{r}
-people %>%
-  filter(grepl("Jandon|Project Coordinator", role)) %>%
-  print_table()
-```
-
-
 ## Assessment
 
 ### Evaluator
@@ -59,16 +41,6 @@ people %>%
   print_table()
 ```
 
-### External advisory board
 
-```{r}
-people %>%
-  filter(grepl("EAB", role)) %>%
-  print_table()
-```
-
-## WAV students
-
-Coming soon...
 
 
