@@ -3,11 +3,13 @@ title: "Videos"
 ---
 
 
-## Assignments & naming
+## Getting Started
 
 - [Assignments & naming - video 1](https://youtu.be/HGzkFGonGD4)
 - [Assignments & naming - Python examples](https://youtu.be/jWRvUSBgdik)
 - [Assignments & naming - R examples](https://youtu.be/n8rDAk95Eu8)
+- [Basic Control Flow](https://youtu.be/kHIBVxOG2MA)
+- [Basic Types & Operations -  Python](https://youtu.be/vjwnt_XVKXQ)
 
 
 
