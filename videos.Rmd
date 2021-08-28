@@ -11,6 +11,14 @@ title: "Videos"
 - [Basic Control Flow](https://youtu.be/kHIBVxOG2MA)
 - [Basic Types & Operations -  Python](https://youtu.be/vjwnt_XVKXQ)
 
+## Functions
+
+- [Calling Built-in Functions](https://youtu.be/EJPIPWC8gm0)
+- [Calling Functions in Python](https://youtu.be/GN1fM_OHINE)
+- [Calling Functions in R](https://youtu.be/XHjD4OKzbUs)
+- [Defining Your Own Functions - R](https://youtu.be/g2rZ6-OiBVY)
+
+## Memory Management
 
 
 
