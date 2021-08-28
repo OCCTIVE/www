@@ -9,9 +9,8 @@ library(tidyverse)
 people <- read_csv(here::here("people_db.csv"))
 ```
 
-## Academic
 
-### Project leadership
+## Project leadership
 
 ```{r}
 print_table <- function(x) {
@@ -31,7 +30,6 @@ people %>%
   print_table()
 ```
 
-## Assessment
 
 ### Evaluator
 
