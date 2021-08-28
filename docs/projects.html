@@ -11,15 +11,24 @@
 
 
 
-<title>The Data Science WAV</title>
+<title>CUE Ethics: Evaluating Frameworks for Incorporating Computing Across the Curriculum</title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -56,32 +65,6 @@
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="include/smith.css" type="text/css" />
@@ -93,10 +76,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -113,40 +92,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 52px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h2 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h3 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h4 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h5 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h6 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -174,7 +126,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -186,7 +138,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -197,10 +149,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -212,7 +177,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -338,13 +302,13 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
 
 
 
@@ -357,7 +321,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">DSC-WAV</a>
+      <a class="navbar-brand" href="index.html">NSF-CUE-Frameworks</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -424,7 +388,7 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/DSC-WAV">
+  <a href="https://github.com/NSF-CUE-Frameworks">
     <span class="fas fa-github"></span>
      
   </a>
@@ -434,95 +398,23 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">The Data Science WAV</h1>
-<h3 class="subtitle">Experiential Learning with Local Community Organizations</h3>
+<h1 class="title toc-ignore">CUE Ethics: Evaluating Frameworks for Incorporating Computing Across the Curriculum</h1>
 
 </div>
 
 
 <div id="project-abstract" class="section level2">
 <h2>Project abstract</h2>
-<p>This project simultaneously addresses two problems: 1) the inability of <a href="https://en.wikipedia.org/wiki/Community_organization">community-based and non-profit organizations</a> to tackle <a href="https://en.wikipedia.org/wiki/Data_science">data science</a> problems; and 2) the lack of real world experience gained by students studying data science. The increased availability of data, combined with increased computing power at lower costs, has brought to the desktop tremendous analytical and problem solving capabilities. Yet many organizations are not able to take advantage of these developments because they often lack appropriate staffing to wrestle with complex data science problems. Meanwhile, as students increasingly gravitate toward data science programs, much of their course-based problem solving experience focuses on clean problems with simple data sets. This leaves them unprepared for the reality of the data science applications they will face in professional settings. This project addresses both issues by deploying teams of data science students to assist local organizations, thereby increasing the long-term capacity of the data science workforce.</p>
-<p>This is a multifaceted project that will provide immediate impact to local organizations and long-term benefit for students through valuable hands-on data science experience. There are two major components of the proposed project. First, <a href="students.html"><strong>Data Science WAV teams</strong></a> of four specially-trained undergraduate students will be deployed to community-based organizations to <strong>W</strong>rangle, <strong>A</strong>nalyze, and <strong>V</strong>isualize their data. Second, this project will offer summer faculty development workshops designed to help new instructors, especially those at community colleges, teach data science at their institutions. Curricular innovations that bring experiential data science learning into the curriculum will lead to sustained impact at the partnering academic institutions and in the larger <a href="https://en.wikipedia.org/wiki/Pioneer_Valley">Pioneer Valley</a> region. This proposal is diverse across both institutions and student populations. It comprises one major research university (<a href="http://www.umass.edu">The University of Massachusetts, Amherst</a>), four liberal arts colleges (<a href="http://www.amherst.edu">Amherst</a>, <a href="http://www.hampshire.edu">Hampshire</a>, <a href="http://www.mtholyoke.edu">Mount Holyoke</a>, and <a href="http://www.smith.edu">Smith</a>), and three local community colleges (<a href="http://www.gcc.mass.edu">Greenfield</a>, <a href="http://www.hcc.edu">Holyoke</a>, and <a href="http://www.stcc.edu">Springfield Technical</a>). The inclusion of two <a href="https://en.wikipedia.org/wiki/Women%27s_college">women’s colleges</a> (Smith and Mount Holyoke) and two <a href="https://en.wikipedia.org/wiki/Hispanic-serving_institution">Hispanic-serving institutions</a> (Holyoke and Springfield Technical) will help ensure that a diverse student population is engaged in the project.</p>
-<div id="about-the-data-science-corps" class="section level3">
-<h3>About the Data Science Corps</h3>
-<p><a href="https://www.nsf.gov/pubs/2019/nsf19518/nsf19518.htm">NSF’s Harnessing the Data Revolution Data Science Corps</a> program focuses on building capacity for harnessing the data revolution at the local, state, national, and international levels to help unleash the power of data in the service of science and society. Projects in this program are being jointly funded by the NSF’s Harnessing the Data Revolution Big Idea; the Directorate for Computer and Information Science and Engineering, Division of Information and Intelligent Systems; the Directorate for Education and Human Resources, Division of Undergraduate Education; the Directorate for Mathematical and Physical Sciences, Division of Mathematical Sciences; and the Directorate for Social, Behavioral and Economic Sciences, Office of Multidisciplinary Activities and Division of Behavioral and Cognitive Sciences.</p>
-<div>
-<img src="gfx/dsc-wav_medallion_black.png" width="100px" float="left"/>
+<p>This award will test pathways for the delivery of computing across the curriculum in the context of undergraduate degrees at residential liberal arts colleges. The project will be organized as a Networked Improvement Community (NIC) that includes faculty from three colleges representing 10 distinct disciplines, as well as the heads of computer science and data science or data analytics at all three institutions. The multi-institutional NIC will provide an important opportunity for the project team to determine the most effective methods for delivering computer science (CS) content and working with non-CS faculty across a range of institutional governance and departmental structural differences. This project addresses the national desire to prepare larger and more diverse student populations for careers in both CS and non-CS fields, including careers in scientific and non-scientific disciplines.</p>
+<p>Project activities are five-fold. First, the project will identify a set of core computing concepts that should be learned by every student today, particularly those students who are applying computing in non-CS fields. Second, it will rigorously evaluate the relative effectiveness of venues, including curriculum and course structure, for exposing students to the core computing concepts. Third, the project will analyze the kind and extent of preparation, guidance, and support necessary for non-CS faculty to incorporate and teach computing concepts in their courses. Fourth, it will analyze the extent to which the addition of computing concept material impacts student acquisition of disciplinary knowledge in non-CS courses. Lastly, it will analyze the impact on affiliated non-CS faculty with regard to their own teaching and research as they learn more about computing, and work collaboratively with other non-CS faculty on integration of computing into courses. By including fields that are more demographically diverse than CS, the researchers expect to broaden the pool of students who learn about computing and its applications. By integrating ethical considerations into the teaching of core computing concepts from the start, it is expected that students will learn to naturally ask ethical questions as part of their computational problem solving instead of as an afterthought. Finally, the project will develop a guiding document for similar institutions on how to effectively infuse core computing concepts across an institution in a “computing across the curriculum” approach. This IUSE: CUE project is co-funded by the EHR/DUE and all CISE Directorates CNS, CCF, IIS, and OAC, reflecting the project’s alignment with the broader goals of the IUSE: EHR program in DUE and complementary programs in CISE.</p>
+<div id="about-cue-ethics" class="section level3">
+<h3>About CUE Ethics</h3>
+<p><a href="https://www.nsf.gov/pubs/2019/nsf19546/nsf19546.htm">NSF’s IUSE:CUE</a> program focuses on the preparation of a diverse student population careers in both CS and non-CS fields. The goal of this NSF solicitation is to support teams of Institutions of Higher Education (IHEs) in re-envisioning the role of computing in interdisciplinary collaboration within their institutions. In addition, NSF will encourage partnering IHEs to use this opportunity to integrate the study of ethics into their curricula, both within core CS courses and across the relevant interdisciplinary application areas.building capacity for harnessing the data revolution at the local, state, national, and international levels to help unleash the power of data in the service of science and society. Projects in this program are being jointly funded by the NSF’s Harnessing the Data Revolution Big Idea; the Directorate for Computer and Information Science and Engineering, Division of Information and Intelligent Systems; the Directorate for Education and Human Resources, Division of Undergraduate Education; the Directorate for Mathematical and Physical Sciences, Division of Mathematical Sciences; and the Directorate for Social, Behavioral and Economic Sciences, Office of Multidisciplinary Activities and Division of Behavioral and Cognitive Sciences.</p>
 </div>
-</div>
-</div>
-<div id="community-projects" class="section level2">
-<h2>Community projects</h2>
-<p>Please see <a href="https://github.com/DSC-WAV">our GitHub Organization</a> for more information about our projects.</p>
-<p><hr>
-<div class="row">
-<div class="col-sm-4">
-<img src="https://paradisedistrict.org/wp-content/uploads/2018/06/Screen-Shot-2018-06-01-at-12.33.22-PM.png" float="left" width="200px"/>
-</div>
-<div class="col-sm-8">
-<a href="https://www.valleybike.org/">
-<h4>ValleyBike</h4>
-</a>
-<p>Students are building visualizations to assist planners and inform decisions about how to expand the program most appropriately and best serve under-resources neighborhoods and communities.</p>
-</div>
-</div>
-</hr><hr>
-<div class="row">
-<div class="col-sm-4">
-<img src="https://www.umass.edu/sphhs/sites/default/files/WMHEN_pagecontent_img_0.jpg" float="left" width="200px"/>
-</div>
-<div class="col-sm-8">
-<a href="https://www.umass.edu/sphhs/wmhen">
-<h4>Western Mass Health Equity Network</h4>
-</a>
-<p>Students have researched and used publicly available date to build a dashboard interface, facilitating the retrieval of multi-year data on health characteristics by neighborhood in  Springfield.</p>
-</div>
-</div>
-</hr><hr>
-<div class="row">
-<div class="col-sm-4">
-<img src="https://pbs.twimg.com/profile_images/1108328151992672257/rbjDkoHs_400x400.png" float="left" width="200px"/>
-</div>
-<div class="col-sm-8">
-<a href="https://www.girlsincvalley.org/">
-<h4>Girls Inc of the Pioneer Valley</h4>
-</a>
-<p>Students are working on a map for the organization to share with potential donors to demonstrate the accumulation of risk factors in the physical environment (air quality, water pollution, etc.) that face their target population on a daily basis</p>
-</div>
-</div>
-</hr><hr>
-<div class="row">
-<div class="col-sm-4">
-<img src="https://gust-production.s3.amazonaws.com/uploads/investor_group/logo_image/22442/VentureWell_logo_emblem.jpg" float="left" width="200px"/>
-</div>
-<div class="col-sm-8">
-<a href="https://venturewell.org/">
-<h4>VentureWell</h4>
-</a>
-<p>Students are working to make data accessible by converting an archive of pdf grant applications to text, automating the loading of the files to a database, and making them searchable.</p>
-<p>
-<a href="gfx/VentureWellTeamPoster.pdf">See poster</a>
-</p>
-</div>
-</div>
-</hr><hr>
-<div class="row">
-<div class="col-sm-4">
-<img src="https://pbs.twimg.com/profile_images/1280864560228990976/YOnBWukx.jpg" float="left" width="200px"/>
-</div>
-<div class="col-sm-8">
-<a href="https://www.nature.org/en-us/">
-<h4>The Nature Conservancy</h4>
-</a>
-<p>Students are working to automate the import and analysis of patterns in images from wildlife cameras to assess whether a particular image includes an animal or not. The metadata for the images are read from a file and added to a growing database of available images.</p>
-</div>
-</div>
-</hr></p>
 </div>
 
 <hr>
@@ -530,7 +422,7 @@ div.tocify {
       <div class="container">
         <p class="muted credit">
           <img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" width="80px" style="float:left; padding-right:10px;">
-          Created by <a href="http://www.science.smith.edu/~bbaumer" target="_blank">Ben Baumer</a>. This material is based upon work supported by the <a href="http://www.nsf.gov">National Science Foundation</a> under Grant Numbers HDR DSC <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924017&HistoricalAwards=false">1924017</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923388&HistoricalAwards=false">1923388</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923700&HistoricalAwards=false">1923700</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1923934&HistoricalAwards=false">1923934</a>, and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924032&HistoricalAwards=false">1924032</a>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+          Web site design based on work by <a href="http://www.science.smith.edu/~bbaumer" target="_blank">Ben Baumer</a>. Project material based upon work supported by the <a href="http://www.nsf.gov">National Science Foundation</a> under Grant Numbers CUE Ethics <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935113&HistoricalAwards=false">1935115</a>, <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1935099&HistoricalAwards=false">1935099</a>, and <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1935061&HistoricalAwards=false">1935061</a>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
         </p>
       </div>
     </div>. 
@@ -563,7 +455,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
