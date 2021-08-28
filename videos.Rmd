@@ -1,14 +1,16 @@
 ---
 title: "Videos"
 ---
+## How To Use
 
+Check out the [full list](./guide.html) and the [flowchart](gfx/flowchart.jpg) of dependencies.
 
 ## Getting Started
 
 - [Assignments & naming - video 1](https://youtu.be/HGzkFGonGD4)
+- [Basic Control Flow](https://youtu.be/kHIBVxOG2MA)
 - [Assignments & naming - Python examples](https://youtu.be/jWRvUSBgdik)
 - [Assignments & naming - R examples](https://youtu.be/n8rDAk95Eu8)
-- [Basic Control Flow](https://youtu.be/kHIBVxOG2MA)
 - [Basic Types & Operations -  Python](https://youtu.be/vjwnt_XVKXQ)
 
 ## Functions

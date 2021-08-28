@@ -1,0 +1,40 @@
+---
+title: "Guide"
+output: html_document
+---
+
+## Topics
+
+### Assignment and naming
+
+- Assignment and naming (AN.1/MM.1)
+- Basic control flow (CF.1/AN.2/MM.2)
+-  Assignment and naming examples - R (AN.3R)
+- Assignment and naming examples - Python (AN.3P)
+- Basic types and operations - Python (AN.5P)
+
+### Memory models
+
+- Assignment and naming (AN.1/MM.1)
+- Basic control flow (CF.1/AN.2/MM.2)
+-  Memory models for sequences (MM.3)
+- Memory models for dataframes (MM.5)
+-  Working with dataframes (MM.7)
+
+### Control Flow
+
+- Basic control flow (CF.1/AN.2/MM.2)
+
+### Functions
+
+- Introduction to functions (FN.1)
+- Calling built-in functions (FN.2)
+- Calling function in R (FN.3R)
+- Calling functions in Python (FN.3P)
+- Defining your own functions - R (FN.5R)
+- Defining your own functions - Python (FN.5P)
+
+### Testing, Debugging, and Troubleshooting
+
+
+
