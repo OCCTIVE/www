@@ -6,8 +6,8 @@ title: "Videos"
 ## Assignments & naming
 
 - [Assignments & naming - video 1](https://youtu.be/HGzkFGonGD4)
-- [Assignments & naming - Python examples] 
-- [Assignments & naming - R examples] 
+- [Assignments & naming - Python examples](https://youtu.be/jWRvUSBgdik)
+- [Assignments & naming - R examples](https://youtu.be/n8rDAk95Eu8)
 
 
 
