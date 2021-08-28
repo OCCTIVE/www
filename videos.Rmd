@@ -1,0 +1,15 @@
+---
+title: "Videos"
+---
+
+
+## Assignments & naming
+
+- [Assignments & naming - video 1](https://youtu.be/HGzkFGonGD4)
+- [Assignments & naming - Python examples] 
+- [Assignments & naming - R examples] 
+
+
+
+
+
