@@ -15,13 +15,18 @@ Check out the [full list](./guide.html) and the [flowchart](gfx/flowchart.jpg) o
 
 ## Functions
 
+- [Introduction to Functions](https://youtu.be/BKoZ0gl8lMo)
 - [Calling Built-in Functions](https://youtu.be/EJPIPWC8gm0)
 - [Calling Functions in Python](https://youtu.be/GN1fM_OHINE)
 - [Calling Functions in R](https://youtu.be/XHjD4OKzbUs)
+- [Defining Your Own Functions](https://youtu.be/94-r-UyW1uc)
 - [Defining Your Own Functions - R](https://youtu.be/g2rZ6-OiBVY)
 
 ## Memory Management
 
+- [Memory Models for Sequences](https://youtu.be/AM26uLNwP8A)
+- [Memory Models for Dataframes](https://youtu.be/FJJUc0E8zTs)
+- [Working with dataframes](https://youtu.be/YsVvI8O8b3E)
 
 
 
