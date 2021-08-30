@@ -3,6 +3,10 @@ title: "Guide"
 output: html_document
 ---
 
+## Video Dependencies
+
+This [flowchart](gfx/Flowchart.jpg) shows the video dependencies.
+
 ## Topics
 
 ### Assignment and naming
