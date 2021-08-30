@@ -3,7 +3,7 @@ title: "Videos"
 ---
 ## How To Use
 
-Check out the [full video list](./guide.html) <!--and the [flowchart](gfx/flowchart.jpg) of dependencies.-->
+Check out the [full video list](./guide.html) and a [flowchart](gfx/Flowchart.jpg) that shows video dependencies.
 
 ## Getting Started
 
