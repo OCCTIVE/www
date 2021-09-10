@@ -1,27 +1,27 @@
-name,org,role,img,email
-Valerie Barr,Mount Holyoke College,PI,NA,vbarr@mtholyoke.edu
-Kristina Striegnitz,Union College,co-PI,NA,striegnk@union.edu
-Nick Webb,Union College,co-PI,NA,webbn@union.edu
-Bruce Maxwell,Colby College,co-PI,NA,bmaxwell@colby.edu
-Ying Li,Colby College,co-PI,NA,yingli@colby.edu
-Stephanie Taylor,Colby College,co-PI,NA,srtaylor@colby.edu
-David Reider,Education Design,Evaluator,NA,info@educationdesign.biz
-Kyle Broaders,Mount Holyoke College,Affiliated,NA,broaders@mtholyoke.edu
-Kerstin Nordstrom,Mount Holyoke College,Affiliated,NA,knordstr@mtholyoke.edu
-Spencer Smith,Mount Holyoke College,Affiliated,NA,smiths@mtholyoke.edu
-Marie Ozanne,Mount Holyoke College,Affiliated,NA,mozanne@mtholyoke.edu
-Johannes Norling,Mount Holyoke College,Affiliated,NA,jnorling@mtholyoke.edu
-Benjamin Gebre-Medhin,Mount Holyoke College,Affiliated,NA,bgebreme@mtholyoke.edu
-Denise Bruesewitz,Colby College,Affiliated,NA,dabruese@colby.edu
-Alejandra Ortiz,Colby College,Affiliated,NA,acortiz@colby.edu
-Christel Kesler,Colby College,Affiliated,NA,ckesler@colby.edu
-Whitney King,Colby College,Affiliated,NA,dwking@colby.edu
-Kathrin Ellieroth,Colby College,Affiliated,NA,kdellier@colby.edu
-Liz McGrath,Colby College,Affiliated,NA,emcgrath@colby.edu
-Ron Peck,Colby College,Affiliated,NA,rfpeck@colby.edu
-Jim Scott,Colby College,Affiliated,NA,jcscott@colby.edu
-Derek Huffman,Colby College,Affiliated,NA,dhuffman@colby.edu
-Jeff Corbin,Union College,Affiliated,NA,corbinj@union.edu
-Tomas Dvorak,Union College,Affiliated,NA,dvorakt@union.edu
-Roger Hoerl,Union College,Affiliated,NA,hoerlr@union.edu
-Mason Stahl,Union College,Affiliated,NA,stahlm@union.edu
+name,org,role,discipline,img,email
+Valerie Barr,Mount Holyoke College,PI,,NA,vbarr@mtholyoke.edu
+Kristina Striegnitz,Union College,co-PI,,NA,striegnk@union.edu
+Nick Webb,Union College,co-PI,,NA,webbn@union.edu
+Bruce Maxwell,Colby College,co-PI,,NA,bmaxwell@colby.edu
+Ying Li,Colby College,co-PI,,NA,yingli@colby.edu
+Stephanie Taylor,Colby College,co-PI,,NA,srtaylor@colby.edu
+David Reider,Education Design,Evaluator,,NA,info@educationdesign.biz
+Kyle Broaders,Mount Holyoke College,Affiliated,Chemistry,NA,broaders@mtholyoke.edu
+Kerstin Nordstrom,Mount Holyoke College,Affiliated,Physics,NA,knordstr@mtholyoke.edu
+Spencer Smith,Mount Holyoke College,Affiliated,Physics,NA,smiths@mtholyoke.edu
+Marie Ozanne,Mount Holyoke College,Affiliated,Statistics,NA,mozanne@mtholyoke.edu
+Johannes Norling,Mount Holyoke College,Affiliated,Economics,NA,jnorling@mtholyoke.edu
+Benjamin Gebre-Medhin,Mount Holyoke College,Affiliated,Sociology,NA,bgebreme@mtholyoke.edu
+Denise Bruesewitz,Colby College,Affiliated,Env. Science,NA,dabruese@colby.edu
+Alejandra Ortiz,Colby College,Affiliated,Geology,NA,acortiz@colby.edu
+Christel Kesler,Colby College,Affiliated,Sociology,NA,ckesler@colby.edu
+Whitney King,Colby College,Affiliated,Chemistry,NA,dwking@colby.edu
+Kathrin Ellieroth,Colby College,Affiliated,Economics,NA,kdellier@colby.edu
+Liz McGrath,Colby College,Affiliated,Astronomy,NA,emcgrath@colby.edu
+Ron Peck,Colby College,Affiliated,Biology,NA,rfpeck@colby.edu
+Jim Scott,Colby College,Affiliated,Statistics,NA,jcscott@colby.edu
+Derek Huffman,Colby College,Affiliated,Psychology,NA,dhuffman@colby.edu
+Jeff Corbin,Union College,Affiliated,Biology,NA,corbinj@union.edu
+Tomas Dvorak,Union College,Affiliated,Economics,NA,dvorakt@union.edu
+Roger Hoerl,Union College,Affiliated,Statistics,NA,hoerlr@union.edu
+Mason Stahl,Union College,Affiliated,Geology,NA,stahlm@union.edu
