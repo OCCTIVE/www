@@ -37,6 +37,16 @@ print_table2 <- function(x) {
     kableExtra::column_spec(3, width = "35%")
 }
 
+print_table3 <- function(x) {
+  x %>%
+    mutate(Name = paste0("[", name, "](mailto:", email, ")")) %>%
+    select(Name, org) %>%
+    arrange(Name, org) %>%
+    knitr::kable("html") %>%
+    kableExtra::kable_styling("striped") %>%
+    kableExtra::column_spec(1, width = "30%") %>%
+    kableExtra::column_spec(2, width = "70") 
+}
 people %>%
   filter(grepl("PI", role)) %>%
   print_table()
@@ -48,7 +58,7 @@ people %>%
 ```{r}
 people %>%
   filter(grepl("Evaluator", role)) %>%
-  print_table()
+  print_table3()
 ```
 
 ## Affiliated Faculty
