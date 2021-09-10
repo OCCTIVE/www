@@ -7,6 +7,10 @@ output: html_document
 
 This [flowchart](gfx/Flowchart.jpg) shows the video dependencies.
 
+## Sample Exercises
+
+This [document](gfx/Example Exercises.pdf) contains a number of exercises that provide examples for faculty who would like to create their own reinforcing exercises students can work on after watching the videos.
+
 ## Topics
 
 ### Assignment and naming
