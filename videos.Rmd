@@ -7,6 +7,8 @@ Check out the [full video list](./guide.html) and a [flowchart](gfx/Flowchart.jp
 
 ## Getting Started
 
+These videos all have captions.  Use the CC button in YouTube to turn captions on/off
+
 - [Assignments & naming - video 1](https://youtu.be/HGzkFGonGD4)
 - [Basic Control Flow](https://youtu.be/kHIBVxOG2MA)
 - [Assignments & naming - Python examples](https://youtu.be/jWRvUSBgdik)
