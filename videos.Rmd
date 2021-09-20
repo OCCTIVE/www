@@ -17,8 +17,8 @@ These videos all have captions.  Use the CC button in YouTube to turn captions o
 
 ## Functions
 
-- [Introduction to Functions](https://youtu.be/BKoZ0gl8lMo)
-- [Calling Built-in Functions](https://youtu.be/EJPIPWC8gm0)
+- [Introduction to Functions](https://youtu.be/BKoZ0gl8lMo) (captioned)
+- [Calling Built-in Functions](https://youtu.be/EJPIPWC8gm0) (captioned)
 - [Calling Functions in Python](https://youtu.be/GN1fM_OHINE)
 - [Calling Functions in R](https://youtu.be/XHjD4OKzbUs)
 - [Defining Your Own Functions - Python](https://youtu.be/94-r-UyW1uc)
