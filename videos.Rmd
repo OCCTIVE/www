@@ -5,9 +5,9 @@ title: "Videos"
 
 Check out the [full video list](./guide.html) and a [flowchart](gfx/Flowchart.jpg) that shows video dependencies.
 
-## Getting Started
+All videos have captions unless otherwise indicated.  Use the CC button in YouTube to turn captions on/off
 
-These videos all have captions.  Use the CC button in YouTube to turn captions on/off
+## Getting Started
 
 - [Assignments & naming - video 1](https://youtu.be/HGzkFGonGD4)
 - [Basic Control Flow](https://youtu.be/kHIBVxOG2MA)
@@ -16,8 +16,6 @@ These videos all have captions.  Use the CC button in YouTube to turn captions o
 - [Basic Types & Operations -  Python](https://youtu.be/vjwnt_XVKXQ)
 
 ## Functions
-
-These videos all have captions.  Use the CC button in YouTube to turn captions on/off
 
 - [Introduction to Functions](https://youtu.be/BKoZ0gl8lMo) 
 - [Calling Built-in Functions](https://youtu.be/EJPIPWC8gm0)
