@@ -17,17 +17,17 @@ All videos have captions unless otherwise indicated.  Use the CC button in YouTu
 
 ## Functions
 
-- [Introduction to Functions](https://youtu.be/BKoZ0gl8lMo) 
+- [Introduction to Functions](https://youtu.be/BKoZ0gl8lMo) ([slide](gfx/Intro-to-Functions.pdf) file)
 - [Calling Built-in Functions](https://youtu.be/EJPIPWC8gm0)
 - [Calling Functions in Python](https://youtu.be/GN1fM_OHINE)
 - [Calling Functions in R](https://youtu.be/XHjD4OKzbUs)
-- [Defining Your Own Functions - Python](https://youtu.be/94-r-UyW1uc)
-- [Defining Your Own Functions - R](https://youtu.be/g2rZ6-OiBVY)
+- [Defining Your Own Functions - Python](https://youtu.be/94-r-UyW1uc) ([slide](gfx/WritingFunctionsInPython.pdf) file)
+- [Defining Your Own Functions - R](https://youtu.be/g2rZ6-OiBVY) ([slide](gfx/WritingFunctionsInR.pdf) file)
 
 ## Memory Management
 
-- [Memory Models for Sequences](https://youtu.be/AM26uLNwP8A)
-- [Memory Models for Dataframes](https://youtu.be/FJJUc0E8zTs)
+- [Memory Models for Sequences](https://youtu.be/AM26uLNwP8A) ([slide](gfx/SequenceMemoryModels.pdf) file)
+- [Memory Models for Dataframes](https://youtu.be/FJJUc0E8zTs) ([slide](gfx/MemoryModelsForDataFrames.pdf) file)
 - [Working with dataframes](https://youtu.be/YsVvI8O8b3E)
 
 
