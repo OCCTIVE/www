@@ -3,7 +3,7 @@ title: "Videos"
 ---
 ## How To Use
 
-Check out the [full video list](./guide.html) and a [flowchart](gfx/Flowchart.jpg) that shows video dependencies.
+Check out the [full video list](./guide.html) and a [flowchart](https://docs.google.com/drawings/d/1lD1CxMXV6G_83KfyaABuvqY-g2SodAKmKiVu3FFWMo8/edit?usp=sharing) that shows video dependencies.
 
 All videos have captions unless otherwise indicated.  Use the CC button in YouTube to turn captions on/off
 
@@ -25,6 +25,11 @@ If interested in searching for coverage of a particular topic, the complete capt
 - [Calling Functions in R](https://youtu.be/XHjD4OKzbUs)
 - [Defining Your Own Functions - Python](https://youtu.be/94-r-UyW1uc) ([slide](gfx/WritingFunctionsInPython.pdf) file)
 - [Defining Your Own Functions - R](https://youtu.be/g2rZ6-OiBVY) ([slide](gfx/WritingFunctionsInR.pdf) file)
+
+## Control Flow
+
+- [Basic Control Flow](https://youtu.be/kHIBVxOG2MA) ([slide file](gfx/BasicControlFlow.pdf))
+- Conditional selection of rows from dataframes (CF.9)
 
 ## Memory Management
 

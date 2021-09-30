@@ -5,7 +5,7 @@ output: html_document
 
 ## Video Dependencies
 
-This [flowchart](gfx/Flowchart.jpg) shows the video dependencies.
+This [flowchart](https://docs.google.com/drawings/d/1lD1CxMXV6G_83KfyaABuvqY-g2SodAKmKiVu3FFWMo8/edit?usp=sharing) shows the video dependencies.
 
 ## Sample Exercises
 
