@@ -24,7 +24,7 @@ Coming soon .... some guidance on how to evaluate student code!
 This is a developing list of resources that may be useful for faculty, or passed along to students.
 
 - [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
-- [Advance R](http://adv-r.had.co.nz/Style.html), a style guide by Hadley Wickham
+- [Advanced R](http://adv-r.had.co.nz/Style.html), a style guide by Hadley Wickham
 - [Modern Data Science with R](https://mdsr-book.github.io/mdsr2e/) by Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas Horton
 - [Data Feminism](https://data-feminism.mitpress.mit.edu/) by Catherine D'Ignazio and Lauren F. Klein
 
