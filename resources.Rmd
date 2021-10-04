@@ -19,7 +19,7 @@ This [document](gfx/Example Exercises.pdf) contains a number of exercises that p
 
 Coming soon .... some guidance on how to evaluate student code!
 
-## Resources for Further Learning
+## Resources for Further Exploration
 
 This is a developing list of resources that may be useful for faculty, or passed along to students.
 
