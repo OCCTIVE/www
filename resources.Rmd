@@ -1,0 +1,20 @@
+---
+title: "Faculty Resources"
+---
+## Guide to Videos
+
+Check out the [full video list](./guide.html) and a [flowchart](https://docs.google.com/drawings/d/1lD1CxMXV6G_83KfyaABuvqY-g2SodAKmKiVu3FFWMo8/edit?usp=sharing) that shows video dependencies.
+
+All videos have captions unless otherwise indicated.  
+
+## Video Captions
+
+If interested in searching for coverage of a particular topic, the complete captions of all videos are viewable [here](https://docs.google.com/document/d/1Aj2NEE8PwzdjAXffKrh6OV3lafPbbTgQUC4FqYzBYcE/edit?usp=sharing).
+
+## Sample Exercises
+
+This [document](gfx/Example Exercises.pdf) contains a number of exercises that provide examples for faculty who would like to create their own reinforcing exercises students can work on after watching the videos.
+
+
+
+

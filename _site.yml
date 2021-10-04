@@ -11,6 +11,9 @@ navbar:
     - text: "Videos"
       icon: fa-wrench
       href: videos.html
+    - text: "Faculty Resources"
+      icon: fa-wrench
+      href: resources.html
     - text: "People"
       icon: fa-users
       href: people.html
