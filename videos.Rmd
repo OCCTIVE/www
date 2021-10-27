@@ -15,7 +15,7 @@ If interested in searching for coverage of a particular topic, the complete capt
 - [Basic Control Flow](https://youtu.be/kHIBVxOG2MA) ([slide file](gfx/BasicControlFlow.pdf))
 - [Assignments & naming - Python examples](https://youtu.be/jWRvUSBgdik)
 - [Assignments & naming - R examples](https://youtu.be/n8rDAk95Eu8)
-- [Basic Types & Operations -  Python](https://youtu.be/vjwnt_XVKXQ)
+- [Basic Types & Operations -  Python](https://youtu.be/8cDkz_f7nzk)
 
 ## Functions
 
