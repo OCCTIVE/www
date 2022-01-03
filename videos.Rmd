@@ -42,5 +42,8 @@ If interested in searching for coverage of a particular topic, the complete capt
 - [Memory Models for Dataframes](https://youtu.be/FJJUc0E8zTs) ([slide file](gfx/MemoryModelsForDataFrames.pdf))
 - [Working with dataframes](https://youtu.be/YsVvI8O8b3E)
 
+## Good Programming Practices
+
+- [Reading Documentation](https://youtu.be/IXerdgKCJDM)
 
 
