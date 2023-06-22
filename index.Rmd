@@ -16,7 +16,7 @@ library(bsplus)
 
 A multi-institution, [NSF-funded](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935113&HistoricalAwards=false) IUSE project to address computing in undergraduate education.
 
-The focus is on non-CS courses that use computing, providing those students with a strong foundational understanding of core computing concepts that will be transferable as they continue to encounter computing  within  their fields of study.
+This project resulted in OCCTIVE, the Online Computing-concepts Toolkit of Interdisciplinary Videos for Education.  The focus of this video repository is non-CS courses that use computing, providing students in those courses with strong understanding of foundational computing concepts that will be transferable as they continue to encounter computing  within  their fields of study.
 
 
 
