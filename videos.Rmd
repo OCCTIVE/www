@@ -13,7 +13,7 @@ If you are a new user/viewer of our materials, we'd love to hear from you.  You 
 
 ## Setting Context
 
-- [What's the Importance of Computing?](https://youtu.be/LozdbWhe5-E) (length: 16:52)
+- [What's the Importance of Computing?](https://youtu.be/LozdbWhe5-E) length: 16:52
 - [Benefits of Understanding Foundational Computing Concepts](https://youtu.be/8_3XBp7p4HQ) ([slide file](gfx/Basics of Computing.pdf)) (length: 7:02)
 
 ## Getting Started
