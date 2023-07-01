@@ -19,34 +19,34 @@ If you are a new user/viewer of our materials, we'd love to hear from you.  You 
 ## Getting Started
 
 - [Assignments & naming - video 1](https://youtu.be/HGzkFGonGD4) ([slide file](gfx/AssignmentsAndNaming.pdf)) (length: 7:25)
-- [Basic Control Flow](https://youtu.be/kHIBVxOG2MA) ([slide file](gfx/BasicControlFlow.pdf))
-- [Assignments & naming - Python examples](https://youtu.be/jWRvUSBgdik)
-- [Assignments & naming - R examples](https://youtu.be/n8rDAk95Eu8)
-- [Basic Types & Operations -  Python](https://youtu.be/8cDkz_f7nzk)
+- [Basic Control Flow](https://youtu.be/kHIBVxOG2MA) ([slide file](gfx/BasicControlFlow.pdf)) (length: 8:08)
+- [Assignments & naming - Python examples](https://youtu.be/jWRvUSBgdik) (length: 8:40)
+- [Assignments & naming - R examples](https://youtu.be/n8rDAk95Eu8) (length: 10:14)
+- [Basic Types & Operations -  Python](https://youtu.be/8cDkz_f7nzk) (length: 9:59)
 
 ## Functions
 
-- [Introduction to Functions](https://youtu.be/BKoZ0gl8lMo) ([slide file](gfx/Intro-to-Functions.pdf))
-- [Calling Built-in Functions](https://youtu.be/EJPIPWC8gm0) ([slide file](gfx/CallingBuiltInFunctions.pdf))
+- [Introduction to Functions](https://youtu.be/BKoZ0gl8lMo) ([slide file](gfx/Intro-to-Functions.pdf)) (length: 2:22)
+- [Calling Built-in Functions](https://youtu.be/EJPIPWC8gm0) ([slide file](gfx/CallingBuiltInFunctions.pdf)) (length: 4:53)
 <!--- [Calling Functions in Python](https://youtu.be/GN1fM_OHINE) -- this is version 1-->
-- [Calling Functions in Python](https://youtu.be/8ja0Pz8CJ5o) ([slide file](gfx/CallingFunctionsInPython.pdf)) <!-- Version 2 -->
-- [Calling Functions in R](https://youtu.be/XHjD4OKzbUs)
-- [Defining Your Own Functions - Python](https://youtu.be/H2MJGme0OxE) ([slide file](gfx/WritingFunctionsInPython.pdf))
-- [Defining Your Own Functions - R](https://youtu.be/WtuiF1T0sXg) ([slide file](gfx/WritingFunctionsInR.pdf))
+- [Calling Functions in Python](https://youtu.be/8ja0Pz8CJ5o) ([slide file](gfx/CallingFunctionsInPython.pdf)) (length: 9:26) <!-- Version 2 -->
+- [Calling Functions in R](https://youtu.be/XHjD4OKzbUs) (length: 8:10)
+- [Defining Your Own Functions - Python](https://youtu.be/H2MJGme0OxE) ([slide file](gfx/WritingFunctionsInPython.pdf)) (length: 16:29)
+- [Defining Your Own Functions - R](https://youtu.be/WtuiF1T0sXg) ([slide file](gfx/WritingFunctionsInR.pdf)) (length: 16:37)
 
 ## Control Flow
 
-- [Basic Control Flow](https://youtu.be/kHIBVxOG2MA) ([slide file](gfx/BasicControlFlow.pdf))
-- [Conditional selection of rows from dataframes](https://youtu.be/oZDEJH3W6EM) ([slide file](gfx/ConditionalRowSelection.pdf))
+- [Basic Control Flow](https://youtu.be/kHIBVxOG2MA) ([slide file](gfx/BasicControlFlow.pdf)) (length: 8:08)
+- [Conditional selection of rows from dataframes](https://youtu.be/oZDEJH3W6EM) ([slide file](gfx/ConditionalRowSelection.pdf)) (length: 10:57)
 
 ## Memory Management
 
-- [Memory Models for Sequences](https://youtu.be/AM26uLNwP8A) ([slide file](gfx/SequenceMemoryModels.pdf))
-- [Memory Models for Dataframes](https://youtu.be/FJJUc0E8zTs) ([slide file](gfx/MemoryModelsForDataFrames.pdf))
-- [Working with dataframes](https://youtu.be/YsVvI8O8b3E)
+- [Memory Models for Sequences](https://youtu.be/AM26uLNwP8A) ([slide file](gfx/SequenceMemoryModels.pdf)) (length: 9:02)
+- [Memory Models for Dataframes](https://youtu.be/FJJUc0E8zTs) ([slide file](gfx/MemoryModelsForDataFrames.pdf)) (length: 9:12)
+- [Working with dataframes](https://youtu.be/YsVvI8O8b3E) (length: 14:01)
 
 ## Good Programming Practices
 
-- [Reading Documentation](https://youtu.be/IXerdgKCJDM)
+- [Reading Documentation](https://youtu.be/IXerdgKCJDM) (length: 6:21)
 
 
