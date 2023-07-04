@@ -43,7 +43,7 @@ If you are a new user/viewer of our materials, we'd love to hear from you.  You 
 
 - [Memory Models for Sequences](https://youtu.be/AM26uLNwP8A) ([slide file](gfx/SequenceMemoryModels.pdf)) (length: 9:02)
 - [Memory Models for Dataframes](https://youtu.be/FJJUc0E8zTs) ([slide file](gfx/MemoryModelsForDataFrames.pdf)) (length: 9:12)
-- [Working with dataframes](https://youtu.be/YsVvI8O8b3E) (length: 14:01)
+- [Working With Dataframes](https://youtu.be/YsVvI8O8b3E) (length: 14:01)
 
 ## Good Programming Practices
 
