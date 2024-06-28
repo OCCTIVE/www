@@ -3,7 +3,7 @@ output_dir: "docs"
 include: "gfx"
 exclude: ["makefile", "data"]
 navbar:
-  title: "NSF-CUE-Frameworks"
+  title: "OCCTIVE"
   left:
     - text: "Home"
       icon: fa-home

@@ -12,14 +12,16 @@ library(bsplus)
 
 <div class="jumbotron">
 
-<!--[](gfx/dsc-wav_logo_color.png)-->
 
+This multi-institution, [NSF-funded](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2337251&HistoricalAwards=false) IUSE project extends previous work (see [OCCTIVE Version 1](Occtive1.html).  The earlier project led to the initial development of **OCCTIVE, the Online Computing-concepts Toolkit of Interdisciplinary Videos for Education**.  This video library is intended primarily for use in non-CS courses that use computing, providing students in those courses with strong understanding of foundational computing concepts that will be transferable as they continue to encounter computing  within  their fields of study.  In this new project we are improving the existing videos, adding new videos, and carrying out robust evaluation in order to determine the impact on students' understanding of and ability to use core computing concepts.
 
-This multi-institution, [NSF-funded](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935113&HistoricalAwards=false) IUSE project to address computing in undergraduate education resulted in **OCCTIVE, the Online Computing-concepts Toolkit of Interdisciplinary Videos for Education**.  The focus of this video repository is non-CS courses that use computing, providing students in those courses with strong understanding of foundational computing concepts that will be transferable as they continue to encounter computing  within  their fields of study.
+**We are currently seeking non-CS faculty who are interested in adopting OCCTIVE for their courses.  Click below for more information about the project in general or to explore OCCTIVE adoption.**
 
 
 
 <a class="btn btn-primary btn-lg" href="projects.html" role="button">Learn more...</a>
+
+<a class="btn btn-primary btn-lg" href="recruitmentInfo.html" role="button">Adopt OCCTIVE</a>
 
 </div>
 
@@ -29,10 +31,10 @@ library(htmltools)
 
 school_logos <- tibble::tribble(
   ~school, ~logo,
-  "colby", "gfx/Colby.png",
-  "mhc", "https://pbs.twimg.com/profile_images/1337418488227487745/ngRpXs_n.jpg",
-  "union", "gfx/union.jpg"
-  
+  "union", "gfx/union.jpg",
+  "furman", "gfx/furman.png",
+  "bard", "gfx/bard.png",
+  "ucsd", "gfx/UCSD.png"
 )
 
 school_logos %>%

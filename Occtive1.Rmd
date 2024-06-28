@@ -1,0 +1,44 @@
+---
+title: "<br/>"
+output:
+  html_document:
+    toc: false
+    toc_float: false
+---
+
+```{r, include=FALSE}
+library(bsplus)
+```
+
+<div class="jumbotron">
+
+<!--[](gfx/dsc-wav_logo_color.png)-->
+
+
+This multi-institution, [NSF-funded](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935113&HistoricalAwards=false) IUSE project to address computing in undergraduate education resulted in **OCCTIVE, the Online Computing-concepts Toolkit of Interdisciplinary Videos for Education**.  The focus of this video repository is non-CS courses that use computing, providing students in those courses with strong understanding of foundational computing concepts that will be transferable as they continue to encounter computing  within  their fields of study.
+
+
+
+<a class="btn btn-primary btn-lg" href="oldProjects.html" role="button">Learn more...</a>
+
+</div>
+
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(htmltools)
+
+school_logos <- tibble::tribble(
+  ~school, ~logo,
+  "colby", "gfx/Colby.png",
+  "mhc", "https://pbs.twimg.com/profile_images/1337418488227487745/ngRpXs_n.jpg",
+  "union", "gfx/union.jpg"
+  
+)
+
+school_logos %>%
+#  filter(!str_detect(school, "cc")) %>%
+  pull(logo) %>%
+  purrr::map(~img(src = ., width = "100px", float = "left")) %>%
+  div()
+```
+
