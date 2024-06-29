@@ -63,9 +63,9 @@ people %>%
 
 ## Affiliated Faculty
 ```{r}
-people %>%
-  filter(grepl("Affiliated", role)) %>%
-  print_table2()
+# people %>%
+#   filter(grepl("Affiliated", role)) %>%
+#   print_table2()
 ```
 
 
