@@ -8,6 +8,9 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
+    - text: "Workshop"
+      icon: fa-wrench
+      href: workshop.html
     - text: "Videos"
       icon: fa-wrench
       href: videos.html
