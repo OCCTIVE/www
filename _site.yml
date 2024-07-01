@@ -8,13 +8,16 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
+    - text: "Adopt OCCTIVE"
+      icon: fa-wrench
+      href: recruitmentInfo.html
     - text: "Workshop"
       icon: fa-wrench
       href: workshop.html
     - text: "Videos"
       icon: fa-wrench
       href: videos.html
-    - text: "Faculty Resources"
+    - text: "Resources"
       icon: fa-wrench
       href: resources.html
     - text: "People"
@@ -25,7 +28,7 @@ navbar:
       href: projects.html  
   right:
     - icon: fa-github
-      href: https://github.com/NSF-CUE-Frameworks
+      href: https://github.com/OCCTIVE
 
 
 output:

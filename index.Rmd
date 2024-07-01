@@ -17,11 +17,39 @@ This multi-institution, [NSF-funded](https://www.nsf.gov/awardsearch/showAward?A
 
 **We are currently seeking non-CS faculty who are interested in adopting OCCTIVE for their courses.  Click below for more information about the project in general or to explore OCCTIVE adoption.**
 
+:::: {style="display: flex;"}
 
+::: {}
 
 <a class="btn btn-primary btn-lg" href="projects.html" role="button">Learn more...</a>
 
+:::
+
+::: {.col data-latex="{1\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {}
+
 <a class="btn btn-primary btn-lg" href="recruitmentInfo.html" role="button">Adopt OCCTIVE</a>
+
+:::
+
+::: {.col data-latex="{1\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {}
+
+<a class="btn btn-primary btn-lg" href="workshop.html" role="button">Attend Workshop</a>
+
+:::
+
+::::
 
 </div>
 

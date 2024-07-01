@@ -1,10 +1,11 @@
 ---
 title: "Interested in adopting OCCTIVE?"
 ---
+<a class="btn btn-primary btn-lg" href="https://forms.gle/NA8dtC4mB43JLmTC8" role="button">I'm interested!</a>
 
 Do you use computing in your science, social science, math, humanities, or arts courses? Would your students benefit from additional material to help them get comfortable with the underlying computing concepts?  The OCCTIVE library contains short videos designed to integrate with your course activities.  In these videos, students get clear, brief, engaging explanations that help them more confidently apply computing knowledge. 
 
-A first version of OCCTIVE [already exists](videos.html) and we have piloted it in courses at our institutions.  One adopting faculty member said “I thought that they really were a great way for me to be able to efficiently get information across more effectively than if I tried to do it... I thought that the videos were clean and watchable.” Now we are recruiting a new cohort of faculty to adopt a forthcoming revised and expanded version of OCCTIVE. If you are interested in integrating OCCTIVE into one or more of your courses and helping us collect data to evaluate the effectiveness of OCCTIVE, please complete [this form](https://forms.gle/NA8dtC4mB43JLmTC8). If you have questions, please [reach out to the project team](mailto:occtive@gmail.com).
+A first version of OCCTIVE [already exists](videos.html) and we have piloted it in courses at our institutions.  One adopting faculty member said “I thought that they really were a great way for me to be able to efficiently get information across more effectively than if I tried to do it... I thought that the videos were clean and watchable.” **Now we are recruiting a new cohort of faculty to adopt a forthcoming revised and expanded version of OCCTIVE.** If you are interested in integrating OCCTIVE into one or more of your courses and helping us collect data to evaluate the effectiveness of OCCTIVE, please complete [this form](https://forms.gle/NA8dtC4mB43JLmTC8). If you have questions, please [reach out to the project team](mailto:occtive@gmail.com).
 
 OCCTIVE is supported by the NSF grant “The efficacy of OCCTIVE: A computing-concepts video library for students and peer tutors in multidisciplinary contexts” (award nos. 2337251, 2337252, 2337253, 2337254). The first version was developed as part of the NSF grant “Evaluating Frameworks for Incorporating Computing Across the Curriculum” (award nos. 1935113, 1935099, 1935061).
 
@@ -19,10 +20,11 @@ Who can participate?
 
 What will participants do?
 
-* Attend a workshop on November 18-19, 2024 held at Union College in Schenectady, NY. This workshop will be a 1.5 day opportunity to work with the grant team and other faculty adopting OCCTIVE on ways to incorporate the video toolkit into a course.
+* Attend an [in-person workshop](workshop.html) on November 18-19, 2024 held at Union College in Schenectady, NY. This workshop will be a 1.5 day opportunity to work with the grant team and other faculty adopting OCCTIVE on ways to incorporate the video toolkit into a course.
 * Collect control group data in their course in an offering prior to introduction of OCCTIVE.
 * Integrate OCCTIVE into class offering.
 * Collect evaluation data in the course offering that uses OCCTIVE.
+* Note that for later adopters there will be a virtual workshop in 2025.
 
 What will participants get?
 
@@ -35,4 +37,5 @@ What will participants get?
 Can I use the material without participating in the full list of activities?
 
 * OCCTIVE is a public resource so anybody can adopt it, but more support will be given to faculty who fully engage with the project team.
+* Participating in data collection is not required for OCCTIVE adopters, but helpful to the project team.  To indicate your willingness to support the project team with data collection, please complete [this form](https://forms.gle/NA8dtC4mB43JLmTC8).
 
