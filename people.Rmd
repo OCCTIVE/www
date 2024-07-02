@@ -16,8 +16,8 @@ people <- read_csv(here::here("people_db.csv"))
 print_table <- function(x) {
   x %>%
     mutate(Name = paste0("[", name, "](mailto:", email, ")")) %>%
-    select(Name, role, org) %>%
-    arrange(desc(role), org, Name) %>%
+    select(Name, Role, Institution) %>%
+    arrange(desc(Role), Institution, Name) %>%
     knitr::kable("html") %>%
     kableExtra::kable_styling("striped") %>%
     kableExtra::column_spec(1, width = "30%") %>%
@@ -40,24 +40,25 @@ print_table2 <- function(x) {
 print_table3 <- function(x) {
   x %>%
     mutate(Name = paste0("[", name, "](mailto:", email, ")")) %>%
-    select(Name, org) %>%
-    arrange(Name, org) %>%
+    select(Name, Institution, Responsibilities) %>%
+    arrange(Name, Institution, Responsibilities) %>%
     knitr::kable("html") %>%
     kableExtra::kable_styling("striped") %>%
     kableExtra::column_spec(1, width = "30%") %>%
-    kableExtra::column_spec(2, width = "70") 
+    kableExtra::column_spec(2, width = "35%")%>%
+    kableExtra::column_spec(3, width = "35%") 
 }
 people %>%
-  filter(grepl("PI", role)) %>%
+  filter(grepl("PI", Role)) %>%
   print_table()
 ```
 
 
-## Evaluator
+## Collaborators
 
 ```{r}
 people %>%
-  filter(grepl("Evaluator", role)) %>%
+  filter(grepl("Collaborator", Role)) %>%
   print_table3()
 ```
 
