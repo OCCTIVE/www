@@ -29,7 +29,7 @@ To contribute or edit the OCCTIVE site content:
 
 ## Style and Conventions
 
-Please make your branch names follow the format `yourname/whatyourworkingon`. For example, if I'm going to be updating the stories page, I'd make my branch called `melvyn/add-video-library-page`.
+Please make your branch names follow the format `yourname/whatyoureworkingon`. For example, if I'm going to be updating the stories page, I'd make my branch called `melvyn/add-video-library-page`.
 
 We require you to use **functional** components, and to define required props using an **interface**. [This guide](https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react) can provide some more context.
 
