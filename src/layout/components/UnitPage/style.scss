@@ -3,15 +3,17 @@
 @use '../../../styles/vars' as *;
 
 .unit-page {
+  padding-top: calc(4.25rem + 1rem); /* Account for fixed navbar */
+
   &-nav-button {
-    @include body-text;
+    @include small-text;
     all: unset;
     border-radius: 6px;
     color: #f3f8f9;
     cursor: pointer;
     display: block;
     font-weight: 400;
-    padding: 0.4rem 0.75rem;
+    padding: 0.5rem 1rem;
     transition:
       color 0.2s ease,
       background-color 0.2s ease,
@@ -29,8 +31,9 @@
     @include heading-3;
     color: #fff;
     display: block;
+    font-size: 1.125rem;
     letter-spacing: 0.08em;
-    margin: 0 0 1.5rem 1rem;
+    margin: 0 0 1rem 1rem;
     opacity: 0.85;
   }
 
@@ -39,7 +42,7 @@
     content: '';
     display: block;
     height: 1px;
-    margin: 0.75rem 0 1rem;
+    margin: 0.5rem 0 0.75rem;
   }
 
   &-cards {
@@ -50,28 +53,32 @@
 
   &-content {
     background-color: $color-tag-white;
+    box-sizing: border-box;
     display: flex;
-    gap: 2rem;
-    padding: 3rem 5rem 3rem 3rem;
+    gap: 2.5rem;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 2rem 3rem 3rem 0.7rem;
   }
 
   &-sidebar {
     @include small-text;
     background-color: #3d555e;
     border-radius: 12px;
-    max-width: 275px;
-    padding: 1.5rem 0;
+    flex-shrink: 0;
+    padding: 1.25rem 0.5rem;
     position: sticky;
+    width: 230px;
   }
 
   &-sidebar-sticky {
     position: sticky;
-    top: 8rem;
+    top: 6rem;
     z-index: 10;
   }
 
   &-anchor {
-    scroll-margin-top: 3rem; // scrolls 3rem above the anchor element
+    scroll-margin-top: 6rem;
   }
 
   .btn-blue {
@@ -102,18 +109,24 @@
 // For small laptops
 @include down(md) {
   .unit-page {
+    padding-top: calc(4.25rem + 0.5rem);
+
     &-content {
       flex-direction: column;
-      padding: 2rem;
+      padding: 1.5rem;
     }
 
     &-side-items {
-      margin-top: 2rem;
+      margin-top: 1rem;
+    }
+
+    &-sidebar {
+      min-width: 100%;
     }
 
     &-cards {
       grid-template-columns: 1fr;
-      padding: 0 1rem;
+      padding: 0;
     }
   }
 }
@@ -122,17 +135,17 @@
 @include down(xs) {
   .unit-page {
     &-content {
-      padding: 1.5rem 1.25rem;
+      padding: 1rem;
     }
 
     &-side-items {
-      margin-top: 3rem;
+      margin-top: 0.5rem;
     }
 
     &-cards {
       padding: 0;
     }
-    
+
     .btn-blue {
       padding: 0.75rem 1.25rem;
     }

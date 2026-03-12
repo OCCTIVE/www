@@ -3,31 +3,32 @@
 
 /* Page content padding */
 .page-content {
-  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 1.5rem 3rem;
+  width: 100%;
+
+  @include down(md) {
+    padding: 1.25rem 2rem;
+  }
 
   @include down(sm) {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
   }
 }
 
 /* ------------------------- Home Page Styling ---------------- */
 /* Multi-column card layout (HomePage + UnitPage) */
 .cards-column-layout {
-  /* Default: desktop and up */
-  column-count: 3;
+  /* Default: 2 columns */
+  column-count: 2;
   column-gap: 1.5rem;
-  column-width: 45rem;
 
-  /* Medium screens (still multi-column) */
-  @include down(xl) {
-    column-count: 2;
-    column-width: 30rem;
-  }
-
-  /* Tablets: still multi-column */
+  /* Tablets: still 2 columns */
   @include down(md) {
     column-count: 2;
-    column-width: 20rem;
+    column-gap: 1.25rem;
   }
 
   /* Mobile: Single column */

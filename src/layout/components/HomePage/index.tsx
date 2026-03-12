@@ -242,23 +242,25 @@ const HomePage: React.FC = () => {
 
       {/* Adoption call-to-action for instructors and faculty */}
       <section className="home-page-adoption-card">
-        <h2 className="home-page-adoption-title">
-          We are currently seeking non-CS faculty who are interested in adopting OCCTIVE
-          for their courses.
-        </h2>
-        <p className="home-page-adoption-text">
-          Click below for more information about the project in general or to explore
-          OCCTIVE adoption.
-        </p>
+        <div className="home-page-adoption-inner">
+          <h2 className="home-page-adoption-title">
+            We are currently seeking non-CS faculty who are interested in adopting OCCTIVE
+            for their courses.
+          </h2>
+          <p className="home-page-adoption-text">
+            Click below for more information about the project in general or to explore
+            OCCTIVE adoption.
+          </p>
 
-        {/* External link to adoption interest form */}
-        <div className="home-page-adoption-buttons">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScpxuvjaV3tUhRpPG2LDSxJmaam1A_OFaC7wKUDmOigIzveUQ/viewform"
-            className="btn-primary"
-          >
-            <b>Fill Out Our Interest Form</b>
-          </a>
+          {/* External link to adoption interest form */}
+          <div className="home-page-adoption-buttons">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScpxuvjaV3tUhRpPG2LDSxJmaam1A_OFaC7wKUDmOigIzveUQ/viewform"
+              className="btn-primary"
+            >
+              <b>Fill Out Our Interest Form</b>
+            </a>
+          </div>
         </div>
       </section>
     </section>
