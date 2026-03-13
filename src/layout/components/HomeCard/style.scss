@@ -12,6 +12,7 @@
 /* ───────────── Base Card ───────────── */
 .home-card {
   @include font-text;
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   background-color: $color-neutrals-white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;

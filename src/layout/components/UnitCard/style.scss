@@ -3,6 +3,7 @@
 @import '../../../styles/base';
 
 .frame-card {
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   background-color: $color-tag-white;
   border-radius: 1rem;
   color: $color-neutrals-black;
@@ -51,7 +52,7 @@
 
   &-description {
     color: #4a5a60;
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     width: 100%;

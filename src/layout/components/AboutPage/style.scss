@@ -3,12 +3,75 @@
 @import '../../../styles/base';
 
 /* ─────────────────────────────
+   Variables
+   ───────────────────────────── */
+
+$about-max-width: 1500px;
+$about-teal: #37555b;
+$about-teal-light: #4a6d75;
+
+/* ─────────────────────────────
    Page wrapper
    ───────────────────────────── */
 
 .about-page {
   display: flex;
   flex-direction: column;
+
+  .home-page-text {
+    font-size: 1.25rem;
+    opacity: 0.95;
+  }
+}
+
+/* ─────────────────────────────
+   Hero section additions
+   ───────────────────────────── */
+
+.about-hero-tagline {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.about-hero-buttons {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+
+  .btn-primary {
+    @include button-text;
+    background-color: #cdf1ff;
+    border: none;
+    border-radius: 0.375rem;
+    color: $color-neutrals-black;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      filter: brightness(1.05);
+      transform: scale(1.02);
+    }
+  }
+
+  .btn-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  }
 }
 
 /* ─────────────────────────────
@@ -18,48 +81,48 @@
 .about-section {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1400px;
-  padding: 2rem 3rem;
+  max-width: $about-max-width;
+  padding: 1.5rem 3rem;
+  width: 100%;
+}
 
-  a {
-    color: inherit;
-    text-decoration: underline;
-    transition: opacity 0.2s ease;
+/* ─────────────────────────────
+   Two-column layout
+   ───────────────────────────── */
 
-    &:hover {
-      opacity: 0.85;
+.about-two-col {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 280px;
+}
+
+.about-two-col-main {
+  p {
+    @include body-text;
+    margin: 0 0 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
 
-/* ─────────────────────────────
-   Content block
-   ───────────────────────────── */
+.about-two-col-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-.about-block {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1rem;
-  padding: 1.5rem 2rem;
-
-  h2 {
-    @include heading-2;
-    margin: 0 0 1rem;
-  }
-
-  h3 {
-    @include small-text;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    margin: 1rem 0 0.5rem;
-    text-transform: uppercase;
-  }
+.about-content-continued {
+  margin-top: 1.5rem;
 
   p {
     @include body-text;
     margin: 0 0 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -69,48 +132,273 @@
 
 .about-section-title {
   @include heading-2;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
+}
+
+.about-subtitle {
+  color: $about-teal;
+  font-size: 1.0625rem;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0 0 1.5rem;
 }
 
 /* ─────────────────────────────
-   Tables
+   Stat cards
    ───────────────────────────── */
 
-.about-table {
+.about-stat-card {
+  background: linear-gradient(135deg, $about-teal 0%, $about-teal-light 100%);
+  border-radius: 10px;
+  color: #fff;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.about-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.about-stat-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* ─────────────────────────────
+   Highlight cards
+   ───────────────────────────── */
+
+.about-highlight-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 1.25rem;
+
+  h4 {
+    color: $about-teal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #4a5a60;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+/* ─────────────────────────────
+   Goals grid
+   ───────────────────────────── */
+
+.about-goals-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1.5rem 0;
+}
+
+.about-goal-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+}
+
+.about-goal-badge {
+  align-items: center;
+  background: $about-teal;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: 28px;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  width: 28px;
+}
+
+.about-goal-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.about-goal-card p {
+  color: #5a6a70;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ─────────────────────────────
+   SIGCSE card
+   ───────────────────────────── */
+
+.about-sigcse-card {
+  background: linear-gradient(135deg, rgba(55, 85, 91, 0.08) 0%, rgba(74, 109, 117, 0.08) 100%);
+  border: 1px solid rgba(55, 85, 91, 0.15);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+
+  .about-section-title {
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    @include body-text;
+    color: #4a5a60;
+    margin: 0 0 0.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $about-teal;
+    font-weight: 500;
+  }
+}
+
+/* ─────────────────────────────
+   NSF bar
+   ───────────────────────────── */
+
+.about-nsf-bar {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  display: flex;
+  gap: 1.25rem;
+  padding: 1rem 1.5rem;
+
+  img {
+    flex-shrink: 0;
+    height: auto;
+    width: 60px;
+  }
+
+  p {
+    color: #5a6a70;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+/* ─────────────────────────────
+   Leadership section
+   ───────────────────────────── */
+
+.about-leadership-section {
+  background: #f3f8f9;
+  padding: 2rem 0 3rem;
+}
+
+.about-leadership-wrapper {
+  margin: 0 auto;
+  max-width: $about-max-width;
+  padding: 0 3rem;
+}
+
+.about-leadership-table {
   border-collapse: collapse;
-  table-layout: fixed;
   width: 100%;
 
   th,
   td {
-    @include body-text;
-    border: 1px solid #f3f8f9;
-    overflow-wrap: anywhere;
-    padding: 0.75rem;
+    padding: 0.75rem 1rem;
     text-align: left;
-    white-space: normal;
   }
 
-  th {
-    background-color: #f3f8f9;
-    font-weight: 600;
+  thead {
+    th {
+      background: $about-teal;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+
+      &:first-child {
+        border-radius: 6px 0 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 6px 0 0;
+      }
+    }
   }
 
-  tbody tr:nth-child(even) {
-    background-color: #f3f8f9;
+  tbody {
+    tr {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:nth-child(even) {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    td {
+      color: #30383c;
+      font-size: 0.9375rem;
+    }
   }
 }
 
 /* ─────────────────────────────
-   Responsive adjustments
+   Responsive
    ───────────────────────────── */
 
-@include down(sm) {
-  .about-block {
-    padding: 1.25rem 1.5rem;
+@include down(md) {
+  .about-two-col {
+    gap: 2rem;
+    grid-template-columns: 1fr;
   }
 
-  .about-section {
-    margin: 1.5rem auto;
+  .about-two-col-aside {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > * {
+      flex: 1 1 200px;
+    }
+  }
+
+  .about-goals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@include down(sm) {
+  .about-section,
+  .about-leadership-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about-nsf-bar {
+    flex-direction: column;
+    text-align: center;
   }
 }
