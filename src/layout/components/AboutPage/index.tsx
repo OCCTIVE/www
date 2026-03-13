@@ -63,6 +63,28 @@ const AboutPage: React.FC = () => (
       </article>
     </section>
 
+    {/* SIGCSE TS Poster pointer  */}
+    <section className="about-section">
+      <article className="about-block">
+        <h2 className="about-section-title">OCCTIVE @ SIGCSE TS 2026</h2>
+
+        <p>
+          The project team presented the OCCTIVE library at the 2026 ACM
+          SIGCSE Technical Symposium in St. Louis, Missouri.
+        </p>
+        <p>View the short paper, poster, and video
+          introduction to the project here{' '}
+          <a
+            href="https://dl.acm.org/doi/10.1145/3770761.3777292"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://dl.acm.org/doi/10.1145/3770761.3777292
+          </a>{' '}.
+        </p>
+      </article>
+    </section>
+
     {/* Project overview */}
     <section className="about-section">
       <article className="about-block">
