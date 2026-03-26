@@ -161,11 +161,12 @@
     border-radius: 6px;
     color: #f3f8f9;
     display: inline-flex;
-    font-size: 0.875rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
     font-weight: 500;
     gap: 0.35rem;
     margin-left: 0;
-    padding: 0.4rem 0.85rem;
+    padding: 0.5rem 1rem;
     transition: all 0.2s ease;
 
     &:hover {

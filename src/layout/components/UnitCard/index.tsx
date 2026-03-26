@@ -95,19 +95,15 @@ const UnitCard: React.FC<UnitCardProps> = ({
           </section>
         </li>
 
-        {/* Dependency graph modal is rendered conditionally per video */}
-        {open && (
-          <div className="video-entry-graph-wrapper">
-            <DependencyGraph
-              isOpen={open}
-              onClose={() => setOpen(false)}
-              flowId={`${baseId}-v${idx}`}
-              highlightId={video.t}
-              groupLabels={groupLabels}
-              topicColorMap={topicColorMap}
-            />
-          </div>
-        )}
+        {/* Dependency graph modal rendered via portal to document body */}
+        <DependencyGraph
+          isOpen={open}
+          onClose={() => setOpen(false)}
+          flowId={`${baseId}-v${idx}`}
+          highlightId={video.t}
+          groupLabels={groupLabels}
+          topicColorMap={topicColorMap}
+        />
       </>
     );
   };

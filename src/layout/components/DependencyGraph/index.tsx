@@ -2,6 +2,7 @@
 // Renders an accessible modal dialog containing a visual dependency graph.
 
 import React, { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
 import ReactFlow, { Background, ReactFlowProvider } from 'reactflow';
 import dagre from '@dagrejs/dagre';
 import 'reactflow/dist/style.css';
@@ -344,7 +345,9 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
 
   /* ------------------------------- RENDER ------------------------------- */
 
-  return (
+  // Use portal to render modal at document body level, bypassing any parent
+  // CSS transforms or animations that would break position: fixed
+  return ReactDOM.createPortal(
     <>
       {/* Visual overlay blocks background interaction */}
       <div
@@ -413,7 +416,8 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
           </div>
         </ReactFlowProvider>
       </div>
-    </>
+    </>,
+    document.body,
   );
 };
 
