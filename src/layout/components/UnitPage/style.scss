@@ -22,7 +22,7 @@
     &:hover,
     &:focus-visible {
       background-color: rgba(255, 255, 255, 0.08);
-      color: #71bfde;
+      color: var(--unit-color, #71bfde);
       transform: translateX(2px);
     }
   }
@@ -31,18 +31,10 @@
     @include heading-3;
     color: #fff;
     display: block;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     letter-spacing: 0.08em;
     margin: 0 0 1rem 1rem;
     opacity: 0.85;
-  }
-
-  &-navbar-title::after {
-    background: rgba(255, 255, 255, 0.15);
-    content: '';
-    display: block;
-    height: 1px;
-    margin: 0.5rem 0 0.75rem;
   }
 
   &-cards {
@@ -57,8 +49,8 @@
     display: flex;
     gap: 2.5rem;
     margin: 0 auto;
-    max-width: 1500px;
-    padding: 2rem 3rem 3rem 0.7rem;
+    max-width: 1550px;
+    padding: 2rem 2rem 3rem 0;
   }
 
   &-sidebar {
@@ -68,7 +60,7 @@
     flex-shrink: 0;
     padding: 1.25rem 0.5rem;
     position: sticky;
-    width: 230px;
+    width: 250px;
   }
 
   &-sidebar-sticky {
@@ -106,22 +98,40 @@
   }
 }
 
-// For small laptops
+// For small laptops (< 1024px)
 @include down(md) {
   .unit-page {
-    padding-top: calc(4.25rem + 0.5rem);
+    padding-top: calc(3.5rem + 0.5rem);
 
     &-content {
       flex-direction: column;
+      gap: 1.5rem;
       padding: 1.5rem;
     }
 
     &-side-items {
-      margin-top: 1rem;
+      margin-top: 0;
+      order: -1;
     }
 
     &-sidebar {
+      border-radius: 10px;
       min-width: 100%;
+      padding: 1rem 0.5rem;
+    }
+
+    &-sidebar-sticky {
+      position: relative;
+      top: 0;
+    }
+
+    &-navbar-title {
+      font-size: 1.125rem;
+      margin: 0 0 0.75rem 0.75rem;
+    }
+
+    &-nav-button {
+      padding: 0.4rem 0.75rem;
     }
 
     &-cards {
@@ -131,23 +141,56 @@
   }
 }
 
-// For small devices
-@include down(xs) {
+// For tablets (< 768px)
+@include down(sm) {
   .unit-page {
+    padding-top: calc(3.5rem + 0.25rem);
+
     &-content {
+      gap: 1rem;
       padding: 1rem;
     }
 
-    &-side-items {
-      margin-top: 0.5rem;
+    &-sidebar {
+      padding: 0.75rem 0.5rem;
     }
 
-    &-cards {
-      padding: 0;
+    &-navbar-title {
+      font-size: 1rem;
+      margin: 0 0 0.5rem 0.5rem;
+    }
+
+    &-nav-button {
+      font-size: 0.875rem;
+      padding: 0.35rem 0.5rem;
     }
 
     .btn-blue {
+      font-size: 0.875rem;
       padding: 0.75rem 1.25rem;
+      width: 100%;
+    }
+  }
+}
+
+// For small phones (< 480px)
+@include down(xs) {
+  .unit-page {
+    &-content {
+      padding: 0.75rem;
+    }
+
+    &-sidebar {
+      padding: 0.5rem 0.25rem;
+    }
+
+    &-navbar-title {
+      font-size: 0.9375rem;
+    }
+
+    &-nav-button {
+      font-size: 0.8125rem;
+      padding: 0.3rem 0.4rem;
     }
   }
 }

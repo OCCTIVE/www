@@ -16,15 +16,12 @@ const AboutPage: React.FC = () => (
             The OCCTIVE Project offers resources to introduce foundational computing concepts
             with applications in the sciences, humanities, and beyond.
           </p>
-          <p className="about-hero-tagline">
-            Empowering non-CS faculty to teach computing with confidence.
-          </p>
-          <div className="about-hero-buttons">
+          <div className="home-page-hero-buttons">
             <Link to="/" className="btn-primary">
               Explore the Library
             </Link>
-            <Link to="/adopt" className="btn-text">
-              Adopt OCCTIVE &rarr;
+            <Link to="/adopt" className="btn-secondary">
+              Adopt OCCTIVE
             </Link>
           </div>
         </section>
@@ -197,23 +194,6 @@ const AboutPage: React.FC = () => (
       </div>
     </section>
 
-    {/* NSF Grant Info */}
-    <section className="about-section">
-      <div className="about-nsf-bar">
-        <img
-          src={`${process.env.PUBLIC_URL}/img/NSF_logo.png`}
-          alt="NSF"
-          className="about-nsf-bar-logo"
-        />
-        <p>
-          OCCTIVE is supported by the NSF grant &ldquo;The efficacy of OCCTIVE:
-          A computing-concepts video library for students and peer tutors in
-          multidisciplinary contexts&rdquo; (Award Numbers: 2337251, 2337252,
-          2337253, 2337254).
-        </p>
-      </div>
-    </section>
-
     {/* Project Leadership */}
     <section className="about-leadership-section">
       <div className="about-leadership-wrapper">
@@ -240,6 +220,23 @@ const AboutPage: React.FC = () => (
             <tr><td>Nick Webb</td><td>Workshop Collaboration</td><td>Union College</td></tr>
           </tbody>
         </table>
+      </div>
+    </section>
+
+    {/* NSF Grant Info */}
+    <section className="about-section">
+      <div className="about-nsf-bar">
+        <img
+          src={`${process.env.PUBLIC_URL}/img/NSF_logo.png`}
+          alt="NSF"
+          className="about-nsf-bar-logo"
+        />
+        <p>
+          OCCTIVE is supported by the NSF grant &ldquo;The efficacy of OCCTIVE:
+          A computing-concepts video library for students and peer tutors in
+          multidisciplinary contexts&rdquo; (Award Numbers: 2337251, 2337252,
+          2337253, 2337254).
+        </p>
       </div>
     </section>
   </section>

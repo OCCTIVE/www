@@ -13,9 +13,9 @@ const AdoptPage: React.FC = () => (
         <section className="home-page-hero-text">
           <h1 className="home-page-title">Adopt OCCTIVE</h1>
           <p className="home-page-text">
-            Bring OCCTIVE into your course. Below you&rsquo;ll find who can
-            participate, what&rsquo;s involved, the support you&rsquo;ll receive,
-            and resources to help you adopt the video toolkit.
+            Bring OCCTIVE into your course. Find out who can participate,
+            what&rsquo;s involved, the support you&rsquo;ll receive, and
+            resources to help you adopt the video toolkit.
           </p>
         </section>
       </header>
@@ -54,35 +54,36 @@ const AdoptPage: React.FC = () => (
       </article>
     </section>
 
-    {/* Workshop and Contact Info */}
-    <section className="adopt-section adopt-section--tight">
-      <article className="adopt-block adopt-block--action">
-        <p>
-          If you decide you&rsquo;d like to attend our adoption workshop in November, 2025,{' '}
+    {/* CTA Banner - matches home page */}
+    <section className="home-page-adoption-card">
+      <div className="home-page-adoption-inner">
+        <h2 className="home-page-adoption-title">
+          We are always interested in having more faculty adopt the OCCTIVE library.
+        </h2>
+        <p className="home-page-adoption-text">
+          If you are interested in integrating OCCTIVE into one or more of your courses and
+          helping us collect data to evaluate the effectiveness of OCCTIVE, please fill out
+          our interest form.
+        </p>
+        <div className="home-page-adoption-buttons">
           <a
-            className="adopt-link"
-            href="https://forms.gle/fkwd2ghG2xmphutS6"
+            href="https://forms.gle/CiLWR96ztVktb1TB9"
             target="_blank"
             rel="noopener noreferrer"
+            className="btn-primary"
           >
-            head here instead
+            <b>Fill Out Our Interest Form</b>
           </a>
-          .
-        </p>
-
-        <p>
-          If you have questions, please{' '}
           <a
-            className="adopt-link"
             href="mailto:occtive@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="btn-secondary"
           >
-            reach out to the project team
+            Reach Out to the Project Team
           </a>
-          .
-        </p>
-      </article>
+        </div>
+      </div>
     </section>
 
     {/* Faculty Resources */}
@@ -211,30 +212,6 @@ const AdoptPage: React.FC = () => (
           />
         </figure>
       </article>
-    </section>
-
-    {/* CTA Banner - matches home page */}
-    <section className="home-page-adoption-card">
-      <div className="home-page-adoption-inner">
-        <h2 className="home-page-adoption-title">
-          We are always interested in having more faculty adopt the OCCTIVE library.
-        </h2>
-        <p className="home-page-adoption-text">
-          If you are interested in integrating OCCTIVE into one or more of your courses and
-          helping us collect data to evaluate the effectiveness of OCCTIVE, please fill out
-          our interest form.
-        </p>
-        <div className="home-page-adoption-buttons">
-          <a
-            href="https://forms.gle/CiLWR96ztVktb1TB9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            <b>Fill Out Our Interest Form</b>
-          </a>
-        </div>
-      </div>
     </section>
 
   </section>

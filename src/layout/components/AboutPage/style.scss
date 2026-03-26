@@ -6,7 +6,7 @@
    Variables
    ───────────────────────────── */
 
-$about-max-width: 1500px;
+$about-max-width: 1550px;
 $about-teal: #37555b;
 $about-teal-light: #4a6d75;
 
@@ -25,51 +25,42 @@ $about-teal-light: #4a6d75;
 }
 
 /* ─────────────────────────────
-   Hero section additions
+   Hero section - uses HomePage button styles
    ───────────────────────────── */
 
-.about-hero-tagline {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0.5rem 0 1.5rem;
-}
+.about-page {
+  .home-page-hero-buttons {
+    .btn-primary,
+    .btn-secondary {
+      @include button-text;
+      align-items: center;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: inherit;
+      font-size: 1rem;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      text-decoration: none !important;
+      transition: background-color 0.2s ease, transform 0.15s ease;
 
-.about-hero-buttons {
-  align-items: center;
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-
-  .btn-primary {
-    @include button-text;
-    background-color: #cdf1ff;
-    border: none;
-    border-radius: 0.375rem;
-    color: $color-neutrals-black;
-    cursor: pointer;
-    display: inline-flex;
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-
-    &:hover {
-      filter: brightness(1.05);
-      transform: scale(1.02);
+      &:hover {
+        filter: brightness(1.05);
+        transform: scale(1.02);
+        text-decoration: none !important;
+      }
     }
-  }
 
-  .btn-text {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
+    .btn-primary {
+      background-color: #cdf1ff;
+      border: none;
+      color: $color-neutrals-black !important;
+    }
 
-    &:hover {
-      opacity: 0.8;
-      text-decoration: underline;
+    .btn-secondary {
+      background-color: #d4f8cc;
+      color: $color-neutrals-black !important;
     }
   }
 }
@@ -82,7 +73,7 @@ $about-teal-light: #4a6d75;
   box-sizing: border-box;
   margin: 0 auto;
   max-width: $about-max-width;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 1rem;
   width: 100%;
 }
 
@@ -91,6 +82,7 @@ $about-teal-light: #4a6d75;
    ───────────────────────────── */
 
 .about-two-col {
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   display: grid;
   gap: 3rem;
   grid-template-columns: 1fr 280px;
@@ -114,6 +106,7 @@ $about-teal-light: #4a6d75;
 }
 
 .about-content-continued {
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   margin-top: 1.5rem;
 
   p {
@@ -148,11 +141,18 @@ $about-teal-light: #4a6d75;
    ───────────────────────────── */
 
 .about-stat-card {
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   background: linear-gradient(135deg, $about-teal 0%, $about-teal-light 100%);
   border-radius: 10px;
   color: #fff;
   padding: 1.25rem;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
 }
 
 .about-stat-number {
@@ -173,11 +173,18 @@ $about-teal-light: #4a6d75;
    ───────────────────────────── */
 
 .about-highlight-card {
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
 
   h4 {
     color: $about-teal;
@@ -201,6 +208,7 @@ $about-teal-light: #4a6d75;
    ───────────────────────────── */
 
 .about-goals-grid {
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
@@ -213,6 +221,12 @@ $about-teal-light: #4a6d75;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
 }
 
 .about-goal-badge {
@@ -247,10 +261,17 @@ $about-teal-light: #4a6d75;
    ───────────────────────────── */
 
 .about-sigcse-card {
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   background: linear-gradient(135deg, rgba(55, 85, 91, 0.08) 0%, rgba(74, 109, 117, 0.08) 100%);
   border: 1px solid rgba(55, 85, 91, 0.15);
   border-radius: 10px;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
 
   .about-section-title {
     margin-bottom: 0.75rem;
@@ -278,6 +299,7 @@ $about-teal-light: #4a6d75;
 
 .about-nsf-bar {
   align-items: center;
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   background: rgba(0, 0, 0, 0.03);
   border-radius: 8px;
   display: flex;
@@ -303,17 +325,19 @@ $about-teal-light: #4a6d75;
    ───────────────────────────── */
 
 .about-leadership-section {
-  background: #f3f8f9;
-  padding: 2rem 0 3rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $about-max-width;
+  padding: 1.5rem 1rem;
+  width: 100%;
 }
 
 .about-leadership-wrapper {
-  margin: 0 auto;
-  max-width: $about-max-width;
-  padding: 0 3rem;
+  /* wrapper is now redundant but kept for structure */
 }
 
 .about-leadership-table {
+  animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
   border-collapse: collapse;
   width: 100%;
 
@@ -388,17 +412,112 @@ $about-teal-light: #4a6d75;
     flex-direction: column;
     gap: 1rem;
   }
+
+  .about-section-title {
+    font-size: 1.5rem;
+  }
+
+  .about-leadership-section {
+    padding: 1.5rem 0 2rem;
+  }
 }
 
 @include down(sm) {
   .about-section,
   .about-leadership-wrapper {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .about-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .about-nsf-bar {
     flex-direction: column;
     text-align: center;
+  }
+
+  .about-section-title {
+    font-size: 1.25rem;
+  }
+
+  .about-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .about-stat-card {
+    padding: 1rem;
+  }
+
+  .about-stat-number {
+    font-size: 2rem;
+  }
+
+  .about-goal-card {
+    padding: 1rem;
+  }
+
+  .about-sigcse-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .about-leadership-table {
+    font-size: 0.875rem;
+
+    th,
+    td {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+
+  .about-hero-buttons {
+    .btn-primary {
+      width: 100%;
+    }
+  }
+}
+
+@include down(xs) {
+  .about-section,
+  .about-leadership-wrapper {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .about-section-title {
+    font-size: 1.125rem;
+  }
+
+  .about-stat-number {
+    font-size: 1.75rem;
+  }
+
+  .about-stat-label {
+    font-size: 0.75rem;
+  }
+
+  .about-goal-badge {
+    font-size: 0.75rem;
+    height: 24px;
+    width: 24px;
+  }
+
+  .about-goal-title {
+    font-size: 0.9375rem;
+  }
+
+  .about-goal-card p {
+    font-size: 0.875rem;
+  }
+
+  .about-leadership-table {
+    font-size: 0.8125rem;
+
+    th,
+    td {
+      padding: 0.4rem 0.5rem;
+    }
   }
 }

@@ -1,3 +1,4 @@
+@use '../../../styles/media' as *;
 @import '../../../styles';
 
 /* Notice box */
@@ -42,7 +43,7 @@
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1550px;
-    padding: 0 3rem;
+    padding: 0 1rem;
     width: 100%;
   }
 
@@ -141,7 +142,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 1550px;
-    padding: 0 3rem;
+    padding: 0 1rem;
     width: 100%;
   }
 
@@ -168,6 +169,127 @@
     .btn-primary,
     .btn-secondary {
       padding: 0.625rem 1.25rem;
+    }
+  }
+
+  /* ---------- TABLET (< 1024px) ---------- */
+  @include down(md) {
+    &-hero {
+      padding-top: calc(3.5rem + 1.5rem);
+    }
+
+    &-hero-content {
+      gap: 2rem;
+    }
+
+    &-hero-graphic {
+      flex: 0 0 180px;
+
+      &-img,
+      .home-page-hero-graphic-img {
+        max-width: 180px;
+      }
+    }
+
+    &-title {
+      font-size: 2.25rem;
+    }
+
+    &-text {
+      font-size: 1rem;
+    }
+
+    &-adoption-title {
+      font-size: 1.5rem;
+    }
+
+    &-adoption-text {
+      font-size: 1rem;
+    }
+  }
+
+  /* ---------- MOBILE (< 768px) ---------- */
+  @include down(sm) {
+    &-hero {
+      padding: 1.5rem 0;
+      padding-top: calc(3.5rem + 1rem);
+    }
+
+    &-hero-content {
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    &-hero-text {
+      order: 2;
+    }
+
+    &-hero-graphic {
+      flex: 0 0 auto;
+      order: 1;
+
+      &-img,
+      .home-page-hero-graphic-img {
+        max-width: 150px;
+      }
+    }
+
+    &-title {
+      font-size: 2rem;
+    }
+
+    &-text {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    &-hero-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    &-adoption-card {
+      padding: 2rem 0;
+    }
+
+    &-adoption-title {
+      font-size: 1.25rem;
+    }
+
+    &-adoption-text {
+      font-size: 0.95rem;
+    }
+
+    &-adoption-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  /* ---------- SMALL PHONES (< 480px) ---------- */
+  @include down(xs) {
+    &-title {
+      font-size: 1.75rem;
+    }
+
+    &-text {
+      font-size: 0.875rem;
+    }
+
+    &-hero-graphic {
+      &-img,
+      .home-page-hero-graphic-img {
+        max-width: 120px;
+      }
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      font-size: 0.875rem;
+      padding: 0.625rem 1rem;
     }
   }
 }

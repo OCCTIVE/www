@@ -1,3 +1,4 @@
+@use '../../../styles/media' as *;
 @import '../../../styles';
 @import '../../../styles/base';
 @import '../../../styles/layout';
@@ -264,5 +265,89 @@
   to {
     opacity: 0;
     transform: translateY(-10px);
+  }
+}
+
+/* ───────────── Responsive ───────────── */
+
+/* Tablets (< 768px) */
+@include down(sm) {
+  .home-card {
+    margin-bottom: 1rem;
+  }
+
+  .home-card-top {
+    padding: 1rem 1rem 0;
+  }
+
+  .home-card-heading {
+    font-size: 1.125rem;
+  }
+
+  .home-card-bottom {
+    padding: 0 1rem 1rem;
+  }
+
+  .home-card-subheading {
+    font-size: 1rem;
+  }
+
+  .home-card-description {
+    font-size: 0.9375rem;
+  }
+
+  .home-card-video-link {
+    font-size: 0.9375rem;
+  }
+
+  .home-card-dependency-btn {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .home-card-note {
+    padding: 0.4rem 0.75rem;
+  }
+
+  .home-card-note-text {
+    font-size: 0.6875rem;
+  }
+}
+
+/* Small phones (< 480px) */
+@include down(xs) {
+  .home-card-top {
+    padding: 0.75rem 0.75rem 0;
+  }
+
+  .home-card-heading {
+    font-size: 1rem;
+  }
+
+  .home-card-bottom {
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .home-card-subheading {
+    font-size: 0.9375rem;
+  }
+
+  .home-card-description {
+    font-size: 0.875rem;
+  }
+
+  .home-card-video-link {
+    font-size: 0.875rem;
+  }
+
+  .home-card-dependency-btn {
+    font-size: 0.8125rem;
+    padding: 0.35rem 0.625rem;
+    width: 100%;
+  }
+
+  .copy-toast {
+    font-size: 0.8125rem;
+    padding: 0.5rem 1rem;
   }
 }

@@ -90,7 +90,7 @@
   font-size: 14px;
 }
 
-/* mobile: stack everything */
+/* tablet: stack everything */
 @media (max-width: $site-size-small) {
   .footer {
     column-gap: 0;
@@ -101,4 +101,58 @@
 
   .footer-issue { max-width: none; }
   .footer-grant { grid-column: 1; }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.25rem 1rem;
+    row-gap: 1rem;
+  }
+
+  .footer-logo {
+    width: 2.5rem;
+  }
+
+  .footer-contact {
+    font-size: 0.875rem;
+  }
+
+  .footer-email {
+    font-size: 0.8125rem;
+  }
+
+  .footer-issue-heading {
+    font-size: 0.875rem;
+  }
+
+  .footer-issue-link {
+    font-size: 0.8125rem;
+  }
+
+  .footer-grant {
+    padding: 0.75rem 1rem;
+  }
+
+  .footer-grant-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-grant-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* small phones */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem 0.75rem;
+  }
+
+  .footer-grant-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }

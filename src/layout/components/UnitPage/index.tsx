@@ -153,12 +153,15 @@ const UnitPage: React.FC = () => {
               {sortedUnits.map((unit) => {
                 const cleanName = cleanUnitName(unit.name);
                 const anchorId = toAnchorId(cleanName);
+                const unitId = (unit.unit_id || '').trim();
+                const unitColor = topicColorMap[unitId];
 
                 return (
                   <div className="unit-page-link" key={unit.unit_id}>
                     <button
                       type="button"
                       className="unit-page-nav-button"
+                      style={{ '--unit-color': unitColor } as React.CSSProperties}
                       onClick={() => {
                         const el = document.getElementById(anchorId);
                         if (el) {

@@ -78,11 +78,55 @@
 }
 
 /* ─────────────────────────────
-   Mobile spacing only
+   Responsive
    ───────────────────────────── */
 
+@include down(md) {
+  .workshop-section {
+    margin: 1.5rem auto;
+    padding: 0 0.75rem;
+  }
+}
+
 @include down(sm) {
+  .workshop-section {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
   .workshop-block {
     padding: 1.25rem 1rem;
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      font-size: 0.75rem;
+    }
+
+    p,
+    ul li {
+      font-size: 0.9375rem;
+    }
+  }
+}
+
+@include down(xs) {
+  .workshop-section {
+    margin: 0.75rem auto;
+  }
+
+  .workshop-block {
+    padding: 1rem 0.75rem;
+
+    h2 {
+      font-size: 1.125rem;
+    }
+
+    p,
+    ul li {
+      font-size: 0.875rem;
+    }
   }
 }
