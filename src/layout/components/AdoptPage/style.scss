@@ -336,10 +336,10 @@
 
 @include down(sm) {
   .adopt-section {
-    padding: 0.75rem;
+    padding: 1rem;
 
     &--intro {
-      padding-top: 0.5rem;
+      padding-top: 0.75rem;
     }
 
     &--tight {
@@ -350,11 +350,12 @@
 
   .adopt-page {
     .home-page-adoption-inner {
-      padding: 0 0.75rem;
+      padding: 0 1rem;
+      text-align: center;
     }
 
     .home-page-adoption-title {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
 
     .home-page-adoption-text {
@@ -362,10 +363,16 @@
     }
 
     .home-page-adoption-buttons {
+      align-items: center;
       flex-direction: column;
+      gap: 0.5rem;
+      justify-content: center;
 
-      .btn-primary {
-        width: 100%;
+      .btn-primary,
+      .btn-secondary {
+        font-size: 0.9375rem;
+        padding: 0.625rem 1.25rem;
+        width: auto;
       }
     }
   }
@@ -389,20 +396,32 @@
 
 @include down(xs) {
   .adopt-section {
-    padding: 0.5rem;
+    padding: 0.75rem;
   }
 
   .adopt-page {
     .home-page-adoption-inner {
-      padding: 0 0.5rem;
+      padding: 0 0.75rem;
+      text-align: center;
     }
 
     .home-page-adoption-title {
-      font-size: 1.125rem;
+      font-size: 1.375rem;
     }
 
     .home-page-adoption-text {
       font-size: 0.875rem;
+    }
+
+    .home-page-adoption-buttons {
+      align-items: center;
+      flex-direction: column;
+
+      .btn-primary,
+      .btn-secondary {
+        font-size: 0.875rem;
+        padding: 0.625rem 1rem;
+      }
     }
   }
 

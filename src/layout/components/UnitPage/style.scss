@@ -3,6 +3,7 @@
 @use '../../../styles/vars' as *;
 
 .unit-page {
+  overflow-x: hidden;
   padding-top: calc(4.25rem + 1rem); /* Account for fixed navbar */
 
   &-nav-button {
@@ -104,8 +105,11 @@
     padding-top: calc(3.5rem + 0.5rem);
 
     &-content {
+      box-sizing: border-box;
       flex-direction: column;
       gap: 1.5rem;
+      max-width: 100%;
+      overflow-x: hidden;
       padding: 1.5rem;
     }
 
@@ -116,8 +120,11 @@
 
     &-sidebar {
       border-radius: 10px;
-      min-width: 100%;
+      box-sizing: border-box;
+      max-width: 100%;
+      min-width: auto;
       padding: 1rem 0.5rem;
+      width: 100%;
     }
 
     &-sidebar-sticky {

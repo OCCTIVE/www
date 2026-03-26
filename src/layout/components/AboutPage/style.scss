@@ -425,8 +425,8 @@ $about-teal-light: #4a6d75;
 @include down(sm) {
   .about-section,
   .about-leadership-wrapper {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .about-section {
@@ -473,8 +473,12 @@ $about-teal-light: #4a6d75;
   }
 
   .about-hero-buttons {
-    .btn-primary {
-      width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .btn-primary,
+    .btn-secondary {
+      width: auto;
     }
   }
 }
@@ -482,8 +486,8 @@ $about-teal-light: #4a6d75;
 @include down(xs) {
   .about-section,
   .about-leadership-wrapper {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .about-section-title {
