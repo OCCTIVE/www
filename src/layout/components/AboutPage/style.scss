@@ -47,8 +47,8 @@ $about-teal-light: #4a6d75;
 
       &:hover {
         filter: brightness(1.05);
-        transform: scale(1.02);
         text-decoration: none !important;
+        transform: scale(1.02);
       }
     }
 
@@ -290,6 +290,7 @@ $about-teal-light: #4a6d75;
   a {
     color: $about-teal;
     font-weight: 500;
+    word-break: break-all;
   }
 }
 
@@ -430,8 +431,8 @@ $about-teal-light: #4a6d75;
   }
 
   .about-section {
-    padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-top: 1rem;
   }
 
   .about-nsf-bar {
