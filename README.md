@@ -1,7 +1,7 @@
 # Welcome to the OCCTIVE project!
-This repository hosts the source code and site content for the OCCTIVE (Online Computing-Concepts Toolkit of Interdisciplinary Videos for Education) platform. OCCTIVE is a curated video library designed to help non-computing faculty teach fundamental computer science concepts in their courses. This project builds upon and extends the structure of the [ComputingPaths](http://computingpaths.ucsd.edu/) platform.
+This repository hosts the source code and site content for the OCCTIVE (Online Computing-Concepts Toolkit of Interdisciplinary Videos for Education) platform. OCCTIVE is a curated video library designed to help non-computing faculty teach fundamental computer science concepts in their courses.
 
-OCCTIVE is part of an NSF-funded initiative to empower students across disciplines with foundational computing knowledge and support faculty who may not have formal training in computer science. The first version of the OCCTIVE website can be found [here](https://occtive.github.io/www/index.html).
+OCCTIVE is part of an NSF-funded initiative to empower students across disciplines with foundational computing knowledge and support faculty who may not have formal training in computer science.
 
 Please keep in mind that this project is on-going and subject to change.
 
@@ -23,7 +23,8 @@ ComputingPaths uses Netlify for live site and staging previews, but this has not
 
 To contribute or edit the OCCTIVE site content:
 
-- Refer to the ComputingPaths [Content and Development Guide](https://docs.google.com/document/d/1oJeoiLy2kp-hF9ntmxVzWUoYXXmplfEFkj459G5BRE0/edit). The OCCTIVE content guide will be created and shared once development is complete.
+- Refer to the [Content and Development Guide](https://docs.google.com/document/d/1oJeoiLy2kp-hF9ntmxVzWUoYXXmplfEFkj459G5BRE0/edit?usp=sharing).
+- Refer to the [Data Spreadsheet](https://docs.google.com/spreadsheets/d/1u7-7kIAtv2q_gIUCcSp6hZdR_Nv0HGgg_wWNZ68I9kY/edit?gid=2013487824#gid=2013487824).
 - Most changes will occur in the `/components`, `/content`, and `/pages` directories
 
 
