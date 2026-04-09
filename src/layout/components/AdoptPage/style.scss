@@ -78,6 +78,11 @@
         text-decoration: none !important;
         transform: scale(1.02);
       }
+
+      &:focus-visible {
+        outline: 3px solid #005fcc;
+        outline-offset: 3px;
+      }
     }
 
     .btn-primary {

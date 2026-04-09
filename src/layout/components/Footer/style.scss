@@ -34,8 +34,16 @@
 
 .footer-logo { width: 3rem; }
 
-.footer-contact { @include font-footer-heading-text; margin-top: 1rem; }
-.footer-email { @include font-footer-text;        margin-top: 0.5rem; }
+.footer-contact {
+  @include font-footer-heading-text;
+  margin-top: 1rem;
+}
+
+.footer-email { 
+  @include font-footer-text;
+  display: block;
+  margin-top: 0.5rem;
+}
 
 /* middle column — keep to ~2 lines max by bounding the width */
 .footer-issue {
@@ -47,6 +55,7 @@
 .footer-issue-link {
   @include font-footer-text;
   cursor: pointer;
+  display: block;
   margin-top: 1.25rem;
   overflow-wrap: anywhere;
   text-decoration-line: underline;

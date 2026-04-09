@@ -237,6 +237,11 @@
       filter: brightness(1.05);
       transform: scale(1.02);
     }
+
+    &:focus-visible {
+      outline: 3px solid #005fcc;
+      outline-offset: 3px;
+    }
   }
 
   /* Primary button */

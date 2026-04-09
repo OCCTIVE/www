@@ -70,7 +70,7 @@ const UnitCard: React.FC<UnitCardProps> = ({
           <div className="video-entry-left">
             <iframe
               src={toEmbed(video.u)}
-              title={`video-${idx}`}
+              title={video.t || `Video ${idx + 1}`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
@@ -89,7 +89,7 @@ const UnitCard: React.FC<UnitCardProps> = ({
               onClick={() => setOpen((s) => !s)}
               aria-expanded={open}
             >
-              <img src={DependencyChartBtnIcon} alt="Dependency Icon" className="dependency-icon" />
+              <img src={DependencyChartBtnIcon} alt="" aria-hidden="true" className="dependency-icon" />
               {open ? 'Hide Dependencies' : 'Dependencies'}
             </button>
           </section>

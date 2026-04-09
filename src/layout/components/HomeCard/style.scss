@@ -89,6 +89,7 @@
   align-items: center;
   background: none;
   border: 0;
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
   margin: 0;
@@ -97,6 +98,11 @@
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  &:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
   }
 }
 

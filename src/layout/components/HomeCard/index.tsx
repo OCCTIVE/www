@@ -168,8 +168,12 @@ const HomeCard: React.FC<HomeCardProps> = ({
         </section>
       </article>
 
-      {/* Toast feedback */}
-      {toast && <div className="copy-toast">{toast}</div>}
+      {/* Toast feedback — announced to screen readers via aria-live */}
+      {toast && (
+        <div className="copy-toast" role="status" aria-live="polite" aria-atomic="true">
+          {toast}
+        </div>
+      )}
     </>
   );
 };

@@ -78,7 +78,7 @@
 
   .btn-lightblue {
     @include font-button;
-    background-color: #71bfde;
+    background-color: #3d9ab8;
     border-radius: 8px;
     color: #f3f8f9;
     cursor: pointer;
@@ -87,6 +87,11 @@
     &:hover {
       filter: brightness(1.05);
       transform: scale(1.02);
+    }
+
+    &:focus-visible {
+      outline: 3px solid #005fcc;
+      outline-offset: 3px;
     }
   }
 }
@@ -102,7 +107,6 @@
   gap: 1.25rem;
   margin-top: 0.75rem;
   padding: 1.25rem 1.5rem;
-  width: 100%;
 }
 
 .video-entry-card {
@@ -156,7 +160,7 @@
   .btn-dependencies {
     align-items: center;
     align-self: flex-start;
-    background-color: #71bfde;
+    background-color: #3d9ab8;
     border: none;
     border-radius: 6px;
     color: #f3f8f9;
@@ -172,6 +176,11 @@
     &:hover {
       filter: brightness(1.05);
       transform: scale(1.02);
+    }
+
+    &:focus-visible {
+      outline: 3px solid #005fcc;
+      outline-offset: 3px;
     }
 
     img {

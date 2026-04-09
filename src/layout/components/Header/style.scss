@@ -1,5 +1,32 @@
 @import '../../../styles';
 
+.skip-link {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &:focus-visible {
+    background: #005fcc;
+    border-radius: 4px;
+    clip: auto;
+    clip-path: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    height: auto;
+    left: 1rem;
+    overflow: visible;
+    padding: 0.75rem 1.25rem;
+    top: 1rem;
+    width: auto;
+    z-index: 9999;
+  }
+}
+
 .header {
   left: 0;
   max-width: 100%;
@@ -73,12 +100,20 @@
     }
 
     &:focus-visible {
-      outline: 3px solid rgba(0, 0, 0, 0.08);
+      outline: 3px solid #cdf1ff;
       outline-offset: 3px;
     }
   }
 
   /* ---------- HAMBURGER BUTTON ---------- */
+  &-mobile-button {
+    &:focus-visible {
+      border-radius: 4px;
+      outline: 3px solid #cdf1ff;
+      outline-offset: 3px;
+    }
+  }
+
   &-mobile {
     align-items: center;
     cursor: pointer;
@@ -116,7 +151,10 @@
     right: 0;
     top: 3.5rem; // directly under header
     transform: translateY(-100%);
-    transition: top 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+    /* visibility: hidden removes links from tab order when menu is closed;
+       delay matches the close animation so content fades out before disappearing */
+    transition: top 0.4s ease, opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    visibility: hidden;
     width: 100%;
 
     &.open {
@@ -124,6 +162,9 @@
       pointer-events: auto;
       top: 2.75rem;
       transform: translateY(0);
+      /* visibility becomes visible immediately on open (no delay) */
+      transition: top 0.4s ease, opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+      visibility: visible;
       z-index: 100;
     }
 

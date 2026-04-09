@@ -14,8 +14,8 @@ const Footer: React.FC = () => (
         alt="OCCTIVE Logo"
       />
       <p className="footer-contact">Contact</p>
-      <a href="mailto:occtive@gmail.com">
-        <p className="footer-email">occtive@gmail.com</p>
+      <a href="mailto:occtive@gmail.com" className="footer-email">
+        occtive@gmail.com
       </a>
     </address>
 
@@ -26,8 +26,9 @@ const Footer: React.FC = () => (
         target="_blank"
         rel="noopener noreferrer"
         href="https://docs.google.com/forms/d/e/1FAIpQLSdy5MtrwNQZ9VHM32Tjm6UL3MTuc9vu-oQ9vknjkVrviUYC0g/viewform"
+        className="footer-issue-link"
       >
-        <p className="footer-issue-link">Fill out this form</p>
+        Fill out this form<span className="sr-only"> (opens in new tab)</span>
       </a>
     </section>
 
@@ -52,7 +53,7 @@ const Footer: React.FC = () => (
         <p className="footer-grant-text">
           Project material based upon work supported by the{' '}
           <a href="https://www.nsf.gov/" target="_blank" rel="noopener noreferrer">
-            National Science Foundation
+            National Science Foundation<span className="sr-only"> (opens in new tab)</span>
           </a>{' '}
           under Grant Numbers{' '}
           <a
@@ -60,7 +61,7 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            2337251
+            2337251<span className="sr-only"> (opens in new tab)</span>
           </a>
           ,{' '}
           <a
@@ -68,7 +69,7 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            2337252
+            2337252<span className="sr-only"> (opens in new tab)</span>
           </a>
           ,{' '}
           <a
@@ -76,7 +77,7 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            2337253
+            2337253<span className="sr-only"> (opens in new tab)</span>
           </a>
           ,{' '}
           <a
@@ -84,7 +85,7 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            2337254
+            2337254<span className="sr-only"> (opens in new tab)</span>
           </a>
           ,{' '}
           <a
@@ -92,7 +93,7 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            1935113
+            1935113<span className="sr-only"> (opens in new tab)</span>
           </a>
           ,{' '}
           <a
@@ -100,7 +101,7 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            1935099
+            1935099<span className="sr-only"> (opens in new tab)</span>
           </a>
           , and{' '}
           <a
@@ -108,7 +109,7 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            1935061
+            1935061<span className="sr-only"> (opens in new tab)</span>
           </a>
           . Any opinions, findings, and conclusions or recommendations expressed in this material
           are those of the author(s) and do not necessarily reflect the views of the

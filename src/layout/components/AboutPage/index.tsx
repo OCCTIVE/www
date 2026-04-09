@@ -128,7 +128,7 @@ const AboutPage: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              NSF-funded IUSE
+              NSF-funded IUSE<span className="sr-only"> (opens in new tab)</span>
             </a>{' '}
             project extends previous work (see{' '}
             <a
@@ -136,7 +136,7 @@ const AboutPage: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              OCCTIVE Version 1
+              OCCTIVE Version 1<span className="sr-only"> (opens in new tab)</span>
             </a>
             , including the{' '}
             <a
@@ -144,7 +144,7 @@ const AboutPage: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              archive of earlier videos
+              archive of earlier videos<span className="sr-only"> (opens in new tab)</span>
             </a>
             ). The earlier project led to the initial development of{' '}
             <strong>
@@ -188,7 +188,7 @@ const AboutPage: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://dl.acm.org/doi/10.1145/3770761.3777292
+            https://dl.acm.org/doi/10.1145/3770761.3777292<span className="sr-only"> (opens in new tab)</span>
           </a>
         </p>
       </div>

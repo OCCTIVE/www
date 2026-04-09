@@ -126,7 +126,7 @@ a img {
   border: 0;
 }
  
-:focus {
+:focus:not(:focus-visible) {
   outline: 0;
 }
  
