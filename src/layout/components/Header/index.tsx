@@ -2,7 +2,7 @@
 // Navigation header for OCCTIVE
 
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import HeaderMenu from '../../../assets/HeaderMenu.svg';
 import { pages } from '../../../vars';
 import './style.scss';
@@ -10,6 +10,7 @@ import './style.scss';
 const Header: React.FC = () => {
   /* Controls visibility of the mobile navigation menu */
   const [menu, setMenu] = useState(false);
+  const { pathname } = useLocation();
 
   const closeMenu = () => {
     setMenu(false);
@@ -19,6 +20,10 @@ const Header: React.FC = () => {
     <>
       {/* Header landmark identifies site-wide banner */}
       <header className="header">
+        {/* Skip link — first tabbable element on every page */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <div className="header-content">
           <Link to="/" onClick={closeMenu}>
             <img
@@ -29,19 +34,23 @@ const Header: React.FC = () => {
           </Link>
 
           {/* ---------- DESKTOP LINKS ---------- */}
-          <div className="header-links">
-            {pages.map((page, index) => (
-              <NavLink
-                key={index}
-                to={page.link}
-                exact={page.link === '/'}
-                className="header-link"
-                activeClassName="active"
-              >
-                {page.title}
-              </NavLink>
-            ))}
-          </div>
+          <nav className="header-links" aria-label="Main navigation">
+            {pages.map((page, index) => {
+              const isActive = page.link === '/' ? pathname === '/' : pathname.startsWith(page.link);
+              return (
+                <NavLink
+                  key={index}
+                  to={page.link}
+                  exact={page.link === '/'}
+                  className="header-link"
+                  activeClassName="active"
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {page.title}
+                </NavLink>
+              );
+            })}
+          </nav>
 
           {/* ---------- HAMBURGER ---------- */}
           <div className="header-mobile">
@@ -50,31 +59,42 @@ const Header: React.FC = () => {
               type="button"
               onClick={() => setMenu(!menu)}
               aria-label="Toggle navigation menu"
+              aria-expanded={menu}
+              aria-controls="mobile-nav-menu"
             >
               <img
                 className="header-mobile-icon"
                 src={HeaderMenu}
-                alt="Mobile menu"
+                alt=""
+                aria-hidden="true"
               />
             </button>
           </div>
         </div>
 
         {/* ---------- MOBILE DROPDOWN ---------- */}
-        <div className={`header-mobile-links${menu ? ' open' : ''}`}>
-          {pages.map((page, index) => (
-            <NavLink
-              key={index}
-              to={page.link}
-              exact={page.link === '/'}
-              className="header-link"
-              activeClassName="active"
-              onClick={closeMenu}
-            >
-              {page.title}
-            </NavLink>
-          ))}
-        </div>
+        <nav
+          id="mobile-nav-menu"
+          className={`header-mobile-links${menu ? ' open' : ''}`}
+          aria-label="Mobile navigation"
+        >
+          {pages.map((page, index) => {
+            const isActive = page.link === '/' ? pathname === '/' : pathname.startsWith(page.link);
+            return (
+              <NavLink
+                key={index}
+                to={page.link}
+                exact={page.link === '/'}
+                className="header-link"
+                activeClassName="active"
+                onClick={closeMenu}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {page.title}
+              </NavLink>
+            );
+          })}
+        </nav>
       </header>
     </>
   );

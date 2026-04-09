@@ -72,7 +72,7 @@ const AdoptPage: React.FC = () => (
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            <b>Fill Out Our Interest Form</b>
+            <b>Fill Out Our Interest Form</b><span className="sr-only"> (opens in new tab)</span>
           </a>
           <a
             href="mailto:occtive@gmail.com"
@@ -106,7 +106,7 @@ const AdoptPage: React.FC = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                flowchart
+                flowchart<span className="sr-only"> (opens in new tab)</span>
               </a>{' '}
               that shows video dependencies.
             </p>
@@ -130,7 +130,7 @@ const AdoptPage: React.FC = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                document
+                document<span className="sr-only"> (opens in new tab)</span>
               </a>{' '}
               contains a number of exercises that provide examples for faculty who would like to
               create their own reinforcing exercises students can work on after watching the videos.
@@ -153,7 +153,7 @@ const AdoptPage: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              RStudio Cheatsheets
+              RStudio Cheatsheets<span className="sr-only"> (opens in new tab)</span>
             </a>
           </li>
           <li>
@@ -163,7 +163,7 @@ const AdoptPage: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              Advanced R, a style guide by Hadley Wickham
+              Advanced R, a style guide by Hadley Wickham<span className="sr-only"> (opens in new tab)</span>
             </a>
           </li>
           <li>
@@ -174,7 +174,7 @@ const AdoptPage: React.FC = () => (
               rel="noopener noreferrer"
             >
               Modern Data Science with R by Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas
-              Horton
+              Horton<span className="sr-only"> (opens in new tab)</span>
             </a>
           </li>
           <li>
@@ -184,7 +184,7 @@ const AdoptPage: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              Data Feminism by Catherine D&rsquo;Ignazio and Lauren F. Klein
+              Data Feminism by Catherine D&rsquo;Ignazio and Lauren F. Klein<span className="sr-only"> (opens in new tab)</span>
             </a>
           </li>
         </ul>

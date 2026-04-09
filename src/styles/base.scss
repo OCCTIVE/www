@@ -1,3 +1,24 @@
+/* WCAG 2.4.7 — ensure a visible focus ring on every interactive element */
+*:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Visually hidden but readable by screen readers */
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* Set the background color for the entire page */
 body {
   background-color: #f3f8f9;

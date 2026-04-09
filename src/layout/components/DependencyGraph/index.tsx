@@ -1,7 +1,9 @@
 // File: src/layout/components/DependencyGraph/index.tsx
 // Renders an accessible modal dialog containing a visual dependency graph.
 
-import React, { useEffect, useState } from 'react';
+import React, {
+  useEffect, useState, useRef, useCallback,
+} from 'react';
 import ReactDOM from 'react-dom';
 import ReactFlow, { Background, ReactFlowProvider } from 'reactflow';
 import dagre from '@dagrejs/dagre';
@@ -241,26 +243,93 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
   groupColorKeys,
   topicColorMap,
 }) => {
-  /* Block scroll when modal is open */
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLElement | null>(null);
+
+  /* Close modal and restore focus to the element that opened it */
+  const handleClose = useCallback(() => {
+    onClose();
+    requestAnimationFrame(() => {
+      triggerRef.current?.focus();
+    });
+  }, [onClose]);
+
+  /* Block scroll and mark background inert when modal is open */
   useEffect(() => {
+    const mainEl = document.getElementById('main-content');
+    const headerEl = document.querySelector('header');
+    const footerEl = document.querySelector('footer');
+
     if (isOpen) {
+      triggerRef.current = document.activeElement as HTMLElement;
       document.body.style.overflow = 'hidden';
+      [mainEl, headerEl, footerEl].forEach((el) => {
+        if (el) el.setAttribute('inert', '');
+      });
     } else {
       document.body.style.overflow = '';
+      [mainEl, headerEl, footerEl].forEach((el) => {
+        if (el) el.removeAttribute('inert');
+      });
     }
     return () => {
       document.body.style.overflow = '';
+      [mainEl, headerEl, footerEl].forEach((el) => {
+        if (el) el.removeAttribute('inert');
+      });
     };
   }, [isOpen]);
 
   /* ESC key closes modal */
   useEffect(() => {
     function handleEsc(e: KeyboardEvent) {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') handleClose();
     }
     if (isOpen) window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
-  }, [isOpen, onClose]);
+  }, [isOpen, handleClose]);
+
+  /* Focus trap: keep focus inside dialog while open */
+  useEffect(() => {
+    if (!isOpen || !dialogRef.current) return () => {};
+
+    const FOCUSABLE = [
+      'a[href]',
+      'button:not([disabled])',
+      'textarea:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(',');
+
+    /* Move initial focus to the first focusable element (close button) */
+    const focusable = Array.from(
+      dialogRef.current.querySelectorAll<HTMLElement>(FOCUSABLE),
+    );
+    if (focusable.length > 0) focusable[0].focus();
+
+    function trapFocus(e: KeyboardEvent) {
+      if (e.key !== 'Tab' || !dialogRef.current) return;
+      const els = Array.from(
+        dialogRef.current.querySelectorAll<HTMLElement>(FOCUSABLE),
+      ).filter((el) => !el.closest('[aria-hidden="true"]'));
+      if (els.length === 0) return;
+      const first = els[0];
+      const last = els[els.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    window.addEventListener('keydown', trapFocus);
+    return () => window.removeEventListener('keydown', trapFocus);
+  }, [isOpen]);
 
   const { nodes: rawNodes, edges: rawEdges } = useGraphFromSheet();
   const [legendCollapsed, setLegendCollapsed] = useState(true);
@@ -351,7 +420,7 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
     <>
       {/* Visual overlay blocks background interaction */}
       <div
-        onClick={onClose}
+        onClick={handleClose}
         style={{
           position: 'fixed',
           inset: 0,
@@ -364,7 +433,10 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
 
       {/* Dialog container for dependency graph */}
       <div
-        onClick={(e) => e.stopPropagation()}
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="dep-graph-title"
         style={{
           position: 'fixed',
           top: '50%',
@@ -382,9 +454,27 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
           animation: 'fadeIn 0.15s ease-out',
         }}
       >
+        {/* Visually hidden title for screen readers */}
+        <h2
+          id="dep-graph-title"
+          style={{
+            position: 'absolute',
+            width: 1,
+            height: 1,
+            padding: 0,
+            margin: -1,
+            overflow: 'hidden',
+            clip: 'rect(0, 0, 0, 0)',
+            whiteSpace: 'nowrap',
+            border: 0,
+          }}
+        >
+          Dependency Graph
+        </h2>
+
         {/* Close button */}
         <button
-          onClick={onClose}
+          onClick={handleClose}
           aria-label="Close Dependency Graph"
           type="button"
           style={{

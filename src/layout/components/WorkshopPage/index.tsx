@@ -48,8 +48,8 @@ const WorkshopPage: React.FC = () => (
           Biology/Ecology, Physics, Astronomy, Chemistry, Statistics, Sociology, Psychology,
           Environmental Science. Of course, we welcome participants from the full range of
           academic disciplines!! If you are interested in participating, complete{' '}
-          <a className="adopt-link" href=" https://forms.gle/fkwd2ghG2xmphutS6" target="_blank" rel="noopener noreferrer">
-            this form
+          <a className="adopt-link" href="https://forms.gle/fkwd2ghG2xmphutS6" target="_blank" rel="noopener noreferrer">
+            this form<span className="sr-only"> (opens in new tab)</span>
           </a>
           .
         </p>
@@ -110,7 +110,7 @@ const WorkshopPage: React.FC = () => (
           given to faculty who fully engage with the project team. If you read this far and
           decided you’d like to adopt OCCTIVE but not attend the workshop, please{' '}
           <a className="adopt-link" href="https://forms.gle/CiLWR96ztVktb1TB9" target="_blank" rel="noopener noreferrer">
-            head here instead
+            head here instead<span className="sr-only"> (opens in new tab)</span>
           </a>
           .
         </p>
