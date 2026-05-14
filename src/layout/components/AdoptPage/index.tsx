@@ -54,38 +54,6 @@ const AdoptPage: React.FC = () => (
       </article>
     </section>
 
-    {/* CTA Banner - matches home page */}
-    <section className="home-page-adoption-card">
-      <div className="home-page-adoption-inner">
-        <h2 className="home-page-adoption-title">
-          We are always interested in having more faculty adopt the OCCTIVE library.
-        </h2>
-        <p className="home-page-adoption-text">
-          If you are interested in integrating OCCTIVE into one or more of your courses and
-          helping us collect data to evaluate the effectiveness of OCCTIVE, please fill out
-          our interest form.
-        </p>
-        <div className="home-page-adoption-buttons">
-          <a
-            href="https://forms.gle/CiLWR96ztVktb1TB9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            <b>Fill Out Our Interest Form</b><span className="sr-only"> (opens in new tab)</span>
-          </a>
-          <a
-            href="mailto:occtive@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-          >
-            Reach Out to the Project Team
-          </a>
-        </div>
-      </div>
-    </section>
-
     {/* Faculty Resources */}
     <section className="adopt-section">
       <article className="adopt-block">
@@ -212,6 +180,38 @@ const AdoptPage: React.FC = () => (
           />
         </figure>
       </article>
+    </section>
+
+    {/* CTA Banner */}
+    <section className="home-page-adoption-card">
+      <div className="home-page-adoption-inner">
+        <h2 className="home-page-adoption-title">
+          We are always interested in having more faculty adopt the OCCTIVE library.
+        </h2>
+        <p className="home-page-adoption-text">
+          If you are interested in integrating OCCTIVE into one or more of your courses and
+          helping us collect data to evaluate the effectiveness of OCCTIVE, please fill out
+          our interest form.
+        </p>
+        <div className="home-page-adoption-buttons">
+          <a
+            href="https://forms.gle/CiLWR96ztVktb1TB9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            <b>Fill Out Our Interest Form</b><span className="sr-only"> (opens in new tab)</span>
+          </a>
+          <a
+            href="mailto:occtive@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            Reach Out to the Project Team
+          </a>
+        </div>
+      </div>
     </section>
 
   </section>

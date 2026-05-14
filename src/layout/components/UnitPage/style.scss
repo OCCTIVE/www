@@ -3,7 +3,7 @@
 @use '../../../styles/vars' as *;
 
 .unit-page {
-  overflow-x: hidden;
+  overflow-x: clip;
   padding-top: calc(4.25rem + 1rem); /* Account for fixed navbar */
 
   &-nav-button {

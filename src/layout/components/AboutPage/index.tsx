@@ -32,7 +32,7 @@ const AboutPage: React.FC = () => (
     <section className="about-section">
       <div className="about-two-col">
         <div className="about-two-col-main">
-          <h2 className="about-section-title">Project Abstract</h2>
+          <h2 className="about-section-title about-section-title--abstract">Project Abstract</h2>
           <p className="about-subtitle">
             The efficacy of a computing-concepts video library for students and peer tutors in
             multidisciplinary contexts

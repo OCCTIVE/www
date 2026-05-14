@@ -133,6 +133,14 @@ $about-teal-light: #4a6d75;
   margin: 0 0 1rem;
 }
 
+.about-section-title--abstract {
+  font-size: 1.375rem;
+
+  @include up(lg) {
+    font-size: 1.75rem;
+  }
+}
+
 .about-subtitle {
   color: $about-teal;
   font-size: 1.0625rem;
