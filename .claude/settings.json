@@ -83,7 +83,18 @@
       "Bash(git check-ignore *)",
       "Bash(node compare-heroes.js)",
       "Bash(echo \"exit: $?\")",
-      "Bash(echo \"stylelint exit: $?\")"
+      "Bash(echo \"stylelint exit: $?\")",
+      "Bash(sips -g pixelHeight -g pixelWidth mobile-library.png)",
+      "Bash(sips -c 2500 390 mobile-library.png --out mobile-library-crop1.png)",
+      "Bash(sips -c 2000 390 mobile-library.png --out mobile-library-crop2.png -p 2500 0)",
+      "Bash(yarn install *)",
+      "Bash(python3 -c ' *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(xargs -I{} sh -c 'echo ==={}===; cat {}')",
+      "Bash(NODE_PATH=/Users/tvidyala/.npm/_npx/705bc6b22212b352/node_modules node -e ' *)",
+      "Bash(yarn build *)",
+      "Bash(read d *)",
+      "Bash(node -p 'require\\('\\\\''__TRACKED_VAR__/__TRACKED_VAR__/package.json'\\\\''\\).version')"
     ],
     "additionalDirectories": [
       "/private/tmp"
