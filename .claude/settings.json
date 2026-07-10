@@ -94,7 +94,10 @@
       "Bash(NODE_PATH=/Users/tvidyala/.npm/_npx/705bc6b22212b352/node_modules node -e ' *)",
       "Bash(yarn build *)",
       "Bash(read d *)",
-      "Bash(node -p 'require\\('\\\\''__TRACKED_VAR__/__TRACKED_VAR__/package.json'\\\\''\\).version')"
+      "Bash(node -p 'require\\('\\\\''__TRACKED_VAR__/__TRACKED_VAR__/package.json'\\\\''\\).version')",
+      "Bash(cat .claude/settings.json)",
+      "Bash(cat .claude/settings.local.json)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('hooks',{}\\), indent=2\\)\\)\")"
     ],
     "additionalDirectories": [
       "/private/tmp"
