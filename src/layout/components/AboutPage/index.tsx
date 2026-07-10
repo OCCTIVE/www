@@ -29,10 +29,10 @@ const AboutPage: React.FC = () => (
     </section>
 
     {/* Project Abstract */}
-    <section className="about-section">
+    <section className="about-section about-section--lead">
       <div className="about-two-col">
         <div className="about-two-col-main">
-          <h2 className="about-section-title about-section-title--abstract">Project Abstract</h2>
+          <h2 className="about-section-title">Project Abstract</h2>
           <p className="about-subtitle">
             The efficacy of a computing-concepts video library for students and peer tutors in
             multidisciplinary contexts
@@ -56,7 +56,7 @@ const AboutPage: React.FC = () => (
             enter the workforce.
           </p>
 
-          <p>This project&rsquo;s goals are to:</p>
+          <p className="about-goals-lead">This project&rsquo;s goals are to:</p>
         </div>
 
         <aside className="about-two-col-aside">
@@ -117,7 +117,7 @@ const AboutPage: React.FC = () => (
     </section>
 
     {/* About OCCTIVE */}
-    <section className="about-section">
+    <section className="about-section about-section--lead about-section--divider">
       <div className="about-two-col">
         <div className="about-two-col-main">
           <h2 className="about-section-title">About OCCTIVE</h2>
@@ -162,8 +162,8 @@ const AboutPage: React.FC = () => (
         </div>
 
         <aside className="about-two-col-aside">
-          <div className="about-highlight-card">
-            <h4>Key Focus</h4>
+          <div className="about-callout about-callout--aside">
+            <span className="about-callout-label">Key Focus</span>
             <p>
               Improving existing videos, adding new content, and conducting robust
               evaluation to measure impact on student learning.
@@ -174,9 +174,10 @@ const AboutPage: React.FC = () => (
     </section>
 
     {/* SIGCSE 2026 */}
-    <section className="about-section">
-      <div className="about-sigcse-card">
-        <h2 className="about-section-title">OCCTIVE @ SIGCSE TS 2026</h2>
+    <section className="about-section about-section--tight-top">
+      <div className="about-callout about-callout--feature">
+        <span className="about-callout-label">Conference Presentation</span>
+        <h2 className="about-callout-title">OCCTIVE @ SIGCSE TS 2026</h2>
         <p>
           The project team presented the OCCTIVE library at the 2026 ACM
           SIGCSE Technical Symposium in St. Louis, Missouri.
@@ -195,7 +196,7 @@ const AboutPage: React.FC = () => (
     </section>
 
     {/* Project Leadership */}
-    <section className="about-leadership-section">
+    <section className="about-leadership-section about-section--lead about-section--divider">
       <div className="about-leadership-wrapper">
         <h2 className="about-section-title">Project Leadership</h2>
         <table className="about-leadership-table">

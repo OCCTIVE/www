@@ -180,6 +180,7 @@ const UnitPage: React.FC = () => {
 
         {/* ---------- Main Content ---------- */}
         <section className="unit-page-cards">
+          <h1 className="unit-page-title">Video Library</h1>
           {sortedUnits.map((unit) => {
             const cleanName = cleanUnitName(unit.name);
             const anchorId = toAnchorId(cleanName);

@@ -25,9 +25,13 @@ const AdoptPage: React.FC = () => (
     <section className="adopt-section adopt-section--intro">
       <article className="adopt-intro-grid">
         <div className="adopt-intro-text">
+          <p className="adopt-intro-lead">
+            Do you use computing in your science, social science, math, humanities, or
+            arts courses?
+          </p>
+
           <p>
-            Do you use computing in your science, social science, math, humanities, or arts
-            courses? Your students will benefit from additional material to help them get
+            Your students will benefit from additional material to help them get
             comfortable with the underlying computing concepts. The OCCTIVE library contains
             short videos designed to integrate with your course activities. In these videos,
             students get clear, brief, engaging explanations that help them more confidently
@@ -106,79 +110,80 @@ const AdoptPage: React.FC = () => (
             </p>
           </div>
 
-          <div className="adopt-resource-item">
-            <h3>Evaluating Code</h3>
-            <p>Coming soon …. some guidance on how to evaluate student code!</p>
+          <div className="adopt-resource-item adopt-resource-item--muted">
+            <h3>
+              Evaluating Code
+              <span className="adopt-resource-badge">Coming soon</span>
+            </h3>
+            <p>Guidance on how to evaluate student code is in development.</p>
           </div>
         </div>
 
-        <h3>Resources for Further Exploration</h3>
-        <ul>
-          <li>
-            <a
-              className="adopt-link"
-              href="https://posit.co/resources/cheatsheets/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              RStudio Cheatsheets<span className="sr-only"> (opens in new tab)</span>
-            </a>
-          </li>
-          <li>
-            <a
-              className="adopt-link"
-              href="http://adv-r.had.co.nz/Style.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Advanced R, a style guide by Hadley Wickham<span className="sr-only"> (opens in new tab)</span>
-            </a>
-          </li>
-          <li>
-            <a
-              className="adopt-link"
-              href="https://mdsr-book.github.io/mdsr2e/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Modern Data Science with R by Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas
-              Horton<span className="sr-only"> (opens in new tab)</span>
-            </a>
-          </li>
-          <li>
-            <a
-              className="adopt-link"
-              href="https://data-feminism.mitpress.mit.edu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Data Feminism by Catherine D&rsquo;Ignazio and Lauren F. Klein<span className="sr-only"> (opens in new tab)</span>
-            </a>
-          </li>
-        </ul>
+        <div className="adopt-further-reading">
+          <h3>Resources for Further Exploration</h3>
+          <ul>
+            <li>
+              <a
+                className="adopt-link"
+                href="https://posit.co/resources/cheatsheets/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RStudio Cheatsheets<span className="sr-only"> (opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a
+                className="adopt-link"
+                href="http://adv-r.had.co.nz/Style.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Advanced R, a style guide by Hadley Wickham<span className="sr-only"> (opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a
+                className="adopt-link"
+                href="https://mdsr-book.github.io/mdsr2e/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Modern Data Science with R by Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas
+                Horton<span className="sr-only"> (opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a
+                className="adopt-link"
+                href="https://data-feminism.mitpress.mit.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Data Feminism by Catherine D&rsquo;Ignazio and Lauren F. Klein<span className="sr-only"> (opens in new tab)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </article>
     </section>
 
     {/* NSF Funding Info with logo */}
-    <section className="adopt-section">
-      <article className="adopt-nsf-card">
-        <div className="adopt-nsf-content">
-          <p>
-            OCCTIVE is supported by the NSF grant &ldquo;The efficacy of OCCTIVE:
-            A computing-concepts video library for students and peer tutors in
-            multidisciplinary contexts&rdquo; (award nos. 2337251, 2337252,
-            2337253, 2337254). The first version was developed as part of the
-            NSF grant &ldquo;Evaluating Frameworks for Incorporating Computing
-            Across the Curriculum&rdquo; (award nos. 1935113, 1935099, 1935061).
-          </p>
-        </div>
-        <figure className="adopt-nsf-logo">
-          <img
-            src={`${process.env.PUBLIC_URL}/img/NSF_logo.png`}
-            alt="National Science Foundation logo"
-            className="adopt-nsf-logo-img"
-          />
-        </figure>
+    <section className="adopt-section adopt-section--tight">
+      <article className="adopt-nsf-footnote">
+        <img
+          src={`${process.env.PUBLIC_URL}/img/NSF_logo.png`}
+          alt="National Science Foundation logo"
+          className="adopt-nsf-footnote-logo"
+        />
+        <p>
+          OCCTIVE is supported by the NSF grant &ldquo;The efficacy of OCCTIVE:
+          A computing-concepts video library for students and peer tutors in
+          multidisciplinary contexts&rdquo; (award nos. 2337251, 2337252,
+          2337253, 2337254). The first version was developed as part of the
+          NSF grant &ldquo;Evaluating Frameworks for Incorporating Computing
+          Across the Curriculum&rdquo; (award nos. 1935113, 1935099, 1935061).
+        </p>
       </article>
     </section>
 

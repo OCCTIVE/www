@@ -21,7 +21,7 @@
 
 /* Set the background color for the entire page */
 body {
-  background-color: #f3f8f9;
+  background-color: $color-surface;
 }
 
 /* Same Properties for Organization & Resource*/
@@ -90,7 +90,7 @@ $link-blue: #2d8a9e;
     text-decoration: none;
 
     &:hover {
-      color: $link-blue; /* keep same color on hover */
+      color: $color-accent-teal;
       text-decoration: underline;
     }
 

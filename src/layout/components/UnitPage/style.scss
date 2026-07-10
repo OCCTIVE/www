@@ -6,32 +6,40 @@
   overflow-x: clip;
   padding-top: calc(4.25rem + 1rem); /* Account for fixed navbar */
 
+  &-title {
+    @include heading-1;
+    color: #163c4f;
+    margin: 0;
+  }
+
   &-nav-button {
     @include small-text;
     all: unset;
-    border-radius: 6px;
-    color: #f3f8f9;
+    border-left: 3px solid transparent;
+    border-radius: 0 6px 6px 0;
+    box-sizing: border-box;
+    color: #dce9ec;
     cursor: pointer;
     display: block;
     font-weight: 400;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 0.8125rem;
     transition:
-      color 0.2s ease,
-      background-color 0.2s ease,
-      transform 0.15s ease;
+      color 0.2s ease-out,
+      background-color 0.2s ease-out,
+      border-color 0.2s ease-out;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.08);
-      color: var(--unit-color, #71bfde);
-      transform: translateX(2px);
+      background-color: rgba(255, 255, 255, 0.06);
+      border-left-color: var(--unit-color, $color-accent-teal);
+      color: #fff;
     }
 
     &:focus-visible {
-      background-color: rgba(255, 255, 255, 0.08);
-      color: var(--unit-color, #71bfde);
+      background-color: rgba(255, 255, 255, 0.06);
+      border-left-color: var(--unit-color, $color-accent-teal);
+      color: #fff;
       outline: 3px solid #005fcc;
       outline-offset: 3px;
-      transform: translateX(2px);
     }
   }
 
@@ -63,8 +71,11 @@
 
   &-sidebar {
     @include small-text;
-    background-color: #3d555e;
-    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(56, 84, 91, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: $radius-md;
+    box-shadow: $shadow-md;
     flex-shrink: 0;
     padding: 1.25rem 0.5rem;
     position: sticky;
@@ -84,17 +95,18 @@
   .btn-blue {
     @include button-text;
     background-color: #77c5e7;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: $radius-sm;
+    box-shadow: $shadow-sm;
     color: $color-tag-white;
     cursor: pointer;
     font-weight: 400;
     padding: 1rem 2rem;
-    transition: background-color 0.2s ease, transform 0.15s ease;
+    transition: box-shadow 0.2s ease-out, transform 0.2s ease-out, filter 0.2s ease-out;
 
     &:hover {
+      box-shadow: $shadow-md;
       filter: brightness(1.05);
-      transform: scale(1.02);
+      transform: translateY(-2px);
     }
   }
 

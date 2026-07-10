@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import DependencyChartBtnIcon from '../../../assets/dependency_chart_btn_icon.svg';
 import DependencyGraph from '../DependencyGraph';
+import { getUnitIcon } from '../../../utils/unitIcons';
 import './style.scss';
 
 /* ------------------------------------------------------------------ */
@@ -116,17 +117,21 @@ const UnitCard: React.FC<UnitCardProps> = ({
 
   // Determine the deterministic topic color for this unit
   const topicColor = topicColorMap[unitId];
+  const UnitIcon = getUnitIcon(unitId);
   return (
     <>
       {/* Heading of the unit card */}
       <article className="frame-card">
         <header className="frame-card-unit">
-          <p
-            className="frame-card-heading"
-            style={{ color: topicColor }}
-          >
-            {name}
-          </p>
+          <div className="frame-card-heading-row">
+            <UnitIcon className="frame-card-unit-icon" style={{ color: topicColor }} />
+            <p
+              className="frame-card-heading"
+              style={{ color: topicColor }}
+            >
+              {name}
+            </p>
+          </div>
           <p className="frame-card-description">{description}</p>
         </header>
 

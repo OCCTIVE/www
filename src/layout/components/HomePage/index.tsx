@@ -221,6 +221,7 @@ const HomePage: React.FC = () => {
             return (
               <HomeCard
                 key={unitId || u.name}
+                unitId={unitId}
                 name={u.name}
                 description={u.description}
                 note={u.note || ''}
