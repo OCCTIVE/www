@@ -225,7 +225,7 @@ const AboutPage: React.FC = () => (
     </section>
 
     {/* NSF Grant Info */}
-    <section className="about-section">
+    <section className="about-section about-section--tight-top">
       <div className="about-nsf-bar">
         <img
           src={`${process.env.PUBLIC_URL}/img/NSF_logo.png`}
