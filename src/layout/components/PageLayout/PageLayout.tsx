@@ -13,16 +13,14 @@ interface PageLayoutProps {
 
 // PageLayout component provides a consistent structure for pages by wrapping content
 // within a main container. The children prop represents the content passed to the layout.
-const PageLayout: React.FC<PageLayoutProps> = (props) => {
+function PageLayout(props: PageLayoutProps) {
   const { children } = props;
 
   return (
-    <>
-      <main id="main-content" className="content" tabIndex={-1}>
-        {children}
-      </main>
-    </>
+    <main id="main-content" className="content" tabIndex={-1}>
+      {children}
+    </main>
   );
-};
+}
 
 export default PageLayout;

@@ -37,7 +37,7 @@ const cleanUnitName = (raw: string) => {
 
 /* Converts unit name into a hash-safe anchor id */
 const toAnchorId = (name: string) => name.replace(/\s+/g, '-').replace(/:/g, '');
-const HomeCard: React.FC<HomeCardProps> = ({
+function HomeCard({
   unitId,
   name,
   description,
@@ -45,7 +45,7 @@ const HomeCard: React.FC<HomeCardProps> = ({
   videos,
   allVideosCopy,
   topicColor,
-}) => {
+}: HomeCardProps) {
   /* Toast state for copy feedback */
   const [toast, setToast] = useState<string | null>(null);
 
@@ -186,6 +186,6 @@ const HomeCard: React.FC<HomeCardProps> = ({
       )}
     </>
   );
-};
+}
 
 export default HomeCard;

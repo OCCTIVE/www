@@ -9,15 +9,17 @@ import './style.scss';
 
 // The ErrorPage component is a functional component that renders an error message
 // and a button for users to navigate back to the homepage.
-const ErrorPage: React.FC = () => (
-  <section className="error-page">
-    <section>
-      <p className="error-page-message">Oops, our gears are broken. Let’s find you a better page for you to go to.</p>
-      <Link to="/">
-        <button className="error-page-button" type="button">Home</button>
-      </Link>
+function ErrorPage() {
+  return (
+    <section className="error-page">
+      <section>
+        <p className="error-page-message">Oops, our gears are broken. Let’s find you a better page to go to.</p>
+        <Link to="/">
+          <button className="error-page-button" type="button">Home</button>
+        </Link>
+      </section>
     </section>
-  </section>
-);
+  );
+}
 
 export default ErrorPage;

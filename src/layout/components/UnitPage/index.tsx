@@ -28,7 +28,7 @@ type VideoRow = {
 };
 /* eslint-enable camelcase */
 
-const UnitPage: React.FC = () => {
+function UnitPage() {
   /* Stores unit and video data loaded from CSVs */
   const [units, setUnits] = useState<UnitRow[]>([]);
   const [videos, setVideos] = useState<VideoRow[]>([]);
@@ -211,6 +211,6 @@ const UnitPage: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 
 export default UnitPage;

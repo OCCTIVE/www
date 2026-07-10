@@ -73,7 +73,17 @@
       "Bash(curl -sf http://localhost:3000)",
       "Bash(npx --no-install chromium-cli --help)",
       "Bash(pkill -f \"npm start\")",
-      "Bash(node shot.js)"
+      "Bash(node shot.js)",
+      "Bash(node shot_adopt.js)",
+      "Bash(BROWSER=none PORT=3131 nohup npm start)",
+      "Bash(disown)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3131/adopt)",
+      "Bash(timeout 20 npx --yes playwright --version)",
+      "Bash(grep -v \"^\\\\s*$\")",
+      "Bash(git check-ignore *)",
+      "Bash(node compare-heroes.js)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(echo \"stylelint exit: $?\")"
     ],
     "additionalDirectories": [
       "/private/tmp"

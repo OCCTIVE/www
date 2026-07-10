@@ -93,12 +93,12 @@ interface LegendProps {
   onToggle: () => void;
 }
 
-const Legend: React.FC<LegendProps> = ({
+function Legend({
   colourOf,
   groupLabels,
   collapsed,
   onToggle,
-}) => {
+}: LegendProps) {
   const rowStyle: React.CSSProperties = {
     display: 'flex',
     alignItems: 'center',
@@ -230,13 +230,13 @@ const Legend: React.FC<LegendProps> = ({
       )}
     </div>
   );
-};
+}
 
 /* ------------------------------------------------------------------ */
 /*                              COMPONENT                             */
 /* ------------------------------------------------------------------ */
 
-const DependencyGraph: React.FC<DependencyGraphProps> = ({
+function DependencyGraph({
   flowId,
   highlightId,
   isOpen,
@@ -244,7 +244,7 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
   groupLabels,
   groupColorKeys,
   topicColorMap,
-}) => {
+}: DependencyGraphProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
 
@@ -556,6 +556,6 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
     </>,
     document.body,
   );
-};
+}
 
 export default DependencyGraph;

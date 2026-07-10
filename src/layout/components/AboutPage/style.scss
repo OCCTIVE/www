@@ -43,6 +43,13 @@ $about-teal-tint-border: rgba(55, 85, 91, 0.15);
     font-size: 1.35rem;
     opacity: 0.95;
   }
+
+  /* No hero graphic on this page, so let the text column fill the
+     full hero width instead of the 60% reserved for it alongside an image. */
+  .home-page-hero-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 /* ─────────────────────────────
@@ -106,10 +113,20 @@ $about-teal-tint-border: rgba(55, 85, 91, 0.15);
 /* Pulls a section closer to the one above it (e.g. the SIGCSE callout
    sitting right under "About OCCTIVE") */
 .about-section--tight-top {
-  padding-top: $space-4;
+  padding-top: $space-2;
 
   @include down(sm) {
-    padding-top: $space-3;
+    padding-top: $space-1;
+  }
+}
+
+/* Pulls a section flush against the one above it (e.g. the NSF grant
+   bar sitting right under the leadership table) */
+.about-section--flush-top {
+  padding-top: $space-1;
+
+  @include down(sm) {
+    padding-top: 0;
   }
 }
 
@@ -173,6 +190,18 @@ $about-teal-tint-border: rgba(55, 85, 91, 0.15);
   color: $color-neutrals-black;
   font-weight: 700;
   margin: 0 0 $space-2;
+}
+
+.about-section-title--compact {
+  font-size: 2rem;
+
+  @include down(md) {
+    font-size: 1.625rem;
+  }
+
+  @include down(sm) {
+    font-size: 1.375rem;
+  }
 }
 
 .about-subtitle {
@@ -330,28 +359,28 @@ $about-teal-tint-border: rgba(55, 85, 91, 0.15);
 }
 
 /* ─────────────────────────────
-   NSF bar
+   NSF bar - quiet, low-weight attribution (matches AdoptPage's
+   .adopt-nsf-footnote treatment)
    ───────────────────────────── */
 
 .about-nsf-bar {
   align-items: center;
   animation: slideUp 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) both;
-  background: rgba(0, 0, 0, 0.025);
-  border: 1px solid $color-border-subtle;
-  border-radius: $radius-md;
+  border-top: 1px solid $color-border-subtle;
   display: flex;
-  gap: 1.25rem;
-  padding: 1.25rem 1.75rem;
+  gap: $space-4;
+  padding-top: $space-5;
 
   img {
     flex-shrink: 0;
     height: auto;
-    width: 60px;
+    opacity: 0.8;
+    width: 40px;
   }
 
   p {
-    color: #5a6a70;
-    font-size: 0.875rem;
+    color: #7a8890;
+    font-size: 0.75rem;
     line-height: 1.5;
     margin: 0;
   }
@@ -457,6 +486,12 @@ $about-teal-tint-border: rgba(55, 85, 91, 0.15);
     grid-template-columns: 1fr;
   }
 
+  .about-nsf-bar {
+    flex-direction: column-reverse;
+    gap: $space-3;
+    text-align: center;
+  }
+
   .about-hero-buttons {
     flex-direction: column;
     gap: 1rem;
@@ -481,11 +516,6 @@ $about-teal-tint-border: rgba(55, 85, 91, 0.15);
   .about-section {
     padding-bottom: 1rem;
     padding-top: 1rem;
-  }
-
-  .about-nsf-bar {
-    flex-direction: column;
-    text-align: center;
   }
 
   .about-section-title {
@@ -541,6 +571,18 @@ $about-teal-tint-border: rgba(55, 85, 91, 0.15);
 
   .about-stat-label {
     font-size: 0.75rem;
+  }
+
+  .about-nsf-bar {
+    padding-top: $space-4;
+
+    p {
+      font-size: 0.6875rem;
+    }
+
+    img {
+      width: 34px;
+    }
   }
 
   .about-goal-badge {

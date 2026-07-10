@@ -17,6 +17,20 @@
     opacity: 0.95;
   }
 
+  /* No hero graphic on this page, so let the text column fill the
+     full hero width instead of the 60% reserved for it alongside an image. */
+  .home-page-hero-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .home-page-hero-buttons .btn-primary {
+    @include btn-base;
+    background-color: #cdf1ff;
+    border: none;
+    color: $color-neutrals-black !important;
+  }
+
   /* ─────────────────────────────
      Adoption Banner (matches HomePage)
      ───────────────────────────── */
@@ -44,7 +58,6 @@
     @include heading-2;
     color: $color-tag-white;
     font-family: 'MBGrotesk', sans-serif;
-    font-size: 1.875rem;
     margin-bottom: 0.75rem;
   }
 
@@ -115,8 +128,9 @@
     }
   }
 
-  /* Intro section - slight gap from hero */
+  /* Intro section - slight gap from hero, tighter gap into Faculty Resources */
   &--intro {
+    padding-bottom: $space-2;
     padding-top: $space-6;
   }
 
@@ -124,6 +138,12 @@
   &--tight {
     padding-bottom: $space-2;
     padding-top: $space-2;
+  }
+
+  /* Pulls a section closer to the one above it (e.g. Faculty Resources
+     sitting right under the intro) */
+  &--tight-top {
+    padding-top: $space-3;
   }
 }
 
@@ -142,21 +162,22 @@
 .adopt-intro-text {
   p {
     @include body-text;
-    @include measure;
     margin: 0 0 $space-4;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
-}
 
-/* Lead line - the entry point into the intro copy */
-.adopt-intro-lead {
-  @include heading-3;
-  @include measure;
-  color: $color-neutrals-black;
-  margin: 0 0 $space-5 !important;
+  /* Lead line - the entry point into the intro copy. Nested here so it
+     reliably beats the plain "p" rule above on specificity. */
+  .adopt-intro-lead {
+    color: $color-neutrals-black;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: var(--line-height-heading);
+    margin: 0 0 $space-5;
+  }
 }
 
 .adopt-intro-graphic {
@@ -169,12 +190,59 @@
   justify-content: center;
   margin: 0;
   padding: $space-6;
+  position: relative;
 
   &-img {
     display: block;
     height: auto;
     max-width: 100%;
     width: 260px;
+  }
+
+  /* Speech bubble - hidden until the octopus illustration is hovered */
+  &-bubble {
+    background: $color-tag-white;
+    border: 1.5px solid $color-border-subtle;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-sm;
+    color: $color-neutrals-black;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    opacity: 0;
+    padding: 0.5rem 0.9rem;
+    pointer-events: none;
+    position: absolute;
+    right: 18%;
+    top: 12%;
+    transform: translateY(6px) scale(0.85);
+    transform-origin: bottom left;
+    transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    white-space: nowrap;
+    z-index: 1;
+
+    /* Speech bubble tail, pointing down toward the octopus */
+    &::after {
+      border: 7px solid transparent;
+      border-top-color: $color-tag-white;
+      bottom: -13px;
+      content: '';
+      left: 20px;
+      position: absolute;
+    }
+
+    &::before {
+      border: 8px solid transparent;
+      border-top-color: $color-border-subtle;
+      bottom: -16px;
+      content: '';
+      left: 19px;
+      position: absolute;
+    }
+  }
+
+  &:hover &-bubble {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -234,7 +302,10 @@
   }
 
   h2 {
-    @include heading-2;
+    color: $color-neutrals-black;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: var(--line-height-heading);
     margin: 0 0 1.25rem;
   }
 
@@ -413,7 +484,7 @@
     }
 
     .home-page-adoption-title {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     .home-page-adoption-text {
@@ -461,14 +532,6 @@
     .home-page-adoption-inner {
       padding: 0 0.75rem;
       text-align: center;
-    }
-
-    .home-page-adoption-title {
-      font-size: 1.375rem;
-    }
-
-    .home-page-adoption-text {
-      font-size: 0.875rem;
     }
 
     .home-page-adoption-buttons {
