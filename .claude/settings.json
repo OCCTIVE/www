@@ -97,10 +97,23 @@
       "Bash(node -p 'require\\('\\\\''__TRACKED_VAR__/__TRACKED_VAR__/package.json'\\\\''\\).version')",
       "Bash(cat .claude/settings.json)",
       "Bash(cat .claude/settings.local.json)",
-      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('hooks',{}\\), indent=2\\)\\)\")"
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('hooks',{}\\), indent=2\\)\\)\")",
+      "Bash(sips -g pixelWidth -g pixelHeight public/img/occtive_dark.png)",
+      "Bash(pkill -f \"Google Chrome\")",
+      "Bash(grep \"MacOS/Google Chrome$\")",
+      "Bash(open -a \"Google Chrome\")",
+      "Bash(open \"http://localhost:3000/\")",
+      "Bash(open \"http://localhost:3000/library\")",
+      "Bash(curl -s \"http://localhost:3000/static/css/main.chunk.css\" -o /tmp/main.css)",
+      "Bash(curl -s \"http://localhost:3000/\")",
+      "Bash(npx sass *)",
+      "Bash(rm -f /tmp/homepage-compiled.css /tmp/homepage-compiled2.css /tmp/main.css)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3000/\")",
+      "Bash(curl -s \"http://localhost:3000/static/js/bundle.js\" -o /dev/null -w \"bundle: %{http_code}\\\\n\")"
     ],
     "additionalDirectories": [
-      "/private/tmp"
+      "/private/tmp",
+      "/tmp"
     ]
   }
 }

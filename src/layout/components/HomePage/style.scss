@@ -27,132 +27,6 @@
 
 /* Only targets HomePage */
 .home-page {
-
-  /* ---------- TABLET (< 1024px) ---------- */
-  @include down(md) {
-    &-hero {
-      padding: 3.5rem 0;
-      padding-top: calc(3.5rem + 3rem);
-    }
-
-    &-hero-content {
-      gap: 2rem;
-    }
-
-    &-hero-graphic {
-      flex: 0 0 250px;
-
-      &-img,
-      .home-page-hero-graphic-img {
-        max-width: 250px;
-      }
-    }
-
-    &-title {
-      font-size: 3rem;
-    }
-
-    &-text {
-      font-size: 1.2rem;
-    }
-
-    &-adoption-title {
-      font-size: 2.15rem;
-    }
-
-    &-adoption-text {
-      font-size: 1rem;
-    }
-  }
-
-  /* ---------- MOBILE (< 768px) ---------- */
-  @include down(sm) {
-    &-hero {
-      padding: 2.25rem 0;
-      padding-top: calc(3.5rem + 1.75rem);
-    }
-
-    &-hero-content {
-      align-items: center;
-      flex-direction: column;
-      gap: 1.5rem;
-      text-align: center;
-    }
-
-    &-hero-text {
-      order: 2;
-      width: 100%;
-    }
-
-    &-hero-graphic {
-      flex: 0 0 auto;
-      order: 1;
-      width: 100%;
-
-      &-img,
-      .home-page-hero-graphic-img {
-        max-width: 190px;
-      }
-    }
-
-    &-title {
-      font-size: 2.75rem;
-    }
-
-    &-text {
-      font-size: 1.15rem;
-      margin-bottom: 1rem;
-    }
-
-    &-hero-buttons {
-      align-items: center;
-      flex-direction: column;
-      gap: 0.5rem;
-      width: 100%;
-    }
-
-    &-adoption-card {
-      padding: 2rem 0;
-    }
-
-    &-adoption-title {
-      font-size: 1.8rem;
-    }
-
-    &-adoption-text {
-      font-size: 0.95rem;
-    }
-
-    &-adoption-buttons {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-  }
-
-  /* ---------- SMALL PHONES (< 480px) ---------- */
-  @include down(xs) {
-    &-title {
-      font-size: 2.25rem;
-    }
-
-    &-text {
-      font-size: 1.05rem;
-    }
-
-    &-hero-graphic {
-      &-img,
-      .home-page-hero-graphic-img {
-        max-width: 150px;
-      }
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      font-size: 0.875rem;
-      padding: 0.625rem 1rem;
-    }
-  }
-
   &-hero {
     @include hero-mesh-bg;
     padding: 5rem 0;
@@ -160,6 +34,16 @@
     position: relative;
     text-align: left;
     width: 100%;
+
+    @include down(md) {
+      padding: 3.5rem 0;
+      padding-top: calc(3.5rem + 3rem);
+    }
+
+    @include down(sm) {
+      padding: 2.25rem 0;
+      padding-top: calc(3.5rem + 1.75rem);
+    }
   }
 
   &-hero-content {
@@ -172,10 +56,25 @@
     max-width: 1550px;
     padding: 0 1rem;
     width: 100%;
+
+    @include down(md) {
+      gap: 2rem;
+    }
+
+    @include down(sm) {
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+    }
   }
 
   &-hero-text {
     flex: 0 0 calc(60% - 1.5rem);
+
+    @include down(sm) {
+      order: 2;
+      width: 100%;
+    }
   }
 
   &-hero-graphic {
@@ -185,21 +84,56 @@
     justify-content: center;
     padding: 0;
 
+    @include down(md) {
+      flex: 0 0 250px;
+    }
+
+    @include down(sm) {
+      flex: 0 0 auto;
+      order: 1;
+      width: 100%;
+    }
+
     &-img,
     .home-page-hero-graphic-img {
       display: block;
       height: auto;
       max-width: 320px;
       width: 100%;
+
+      @include down(md) {
+        max-width: 250px;
+      }
+
+      @include down(sm) {
+        max-width: 190px;
+      }
+
+      @include down(xs) {
+        max-width: 150px;
+      }
     }
   }
 
   &-title {
     @include heading-1;
-    @include font-heading-1-kefir;
     color: $color-tag-white;
+    font-family: 'MBGrotesk', sans-serif;
     font-size: 3.5rem;
+    font-weight: 400;
     margin-bottom: 0.75rem;
+
+    @include down(md) {
+      font-size: 3rem;
+    }
+
+    @include down(sm) {
+      font-size: 2.75rem;
+    }
+
+    @include down(xs) {
+      font-size: 2.25rem;
+    }
   }
 
   &-text {
@@ -210,12 +144,31 @@
     margin: 0 0 1.5rem;
     max-width: 100%;
     opacity: 0.95;
+
+    @include down(md) {
+      font-size: 1.2rem;
+    }
+
+    @include down(sm) {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    @include down(xs) {
+      font-size: 1.05rem;
+    }
   }
 
   &-hero-buttons {
     align-items: center;
     display: flex;
     gap: 0.75rem;
+
+    @include down(sm) {
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+    }
   }
 
   &-cards {
@@ -226,6 +179,11 @@
   .btn-primary,
   .btn-secondary {
     @include btn-base;
+
+    @include down(xs) {
+      font-size: 0.875rem;
+      padding: 0.625rem 1rem;
+    }
   }
 
   /* Primary button */
@@ -249,6 +207,10 @@
     padding: 3.5rem 0;
     position: relative;
     width: 100%;
+
+    @include down(sm) {
+      padding: 2rem 0;
+    }
   }
 
   &-adoption-inner {
@@ -265,6 +227,14 @@
     font-family: 'MBGrotesk', sans-serif;
     font-size: 2.6rem;
     margin-bottom: 0.75rem;
+
+    @include down(md) {
+      font-size: 2.15rem;
+    }
+
+    @include down(sm) {
+      font-size: 1.8rem;
+    }
   }
 
   &-adoption-text {
@@ -272,12 +242,25 @@
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1.25rem;
+
+    @include down(md) {
+      font-size: 1rem;
+    }
+
+    @include down(sm) {
+      font-size: 0.95rem;
+    }
   }
 
   &-adoption-buttons {
     display: flex;
     gap: 0.75rem;
     justify-content: flex-start;
+
+    @include down(sm) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
 
     .btn-primary,
     .btn-secondary {
