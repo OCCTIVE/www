@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/www/static/css/main.1420aaec.css",
-    "main.js": "/www/static/js/main.236d358e.js",
+    "main.css": "/www/static/css/main.5eb23ce4.css",
+    "main.js": "/www/static/js/main.90dfaf49.js",
     "static/media/kefir-regular.otf": "/www/static/media/kefir-regular.3b3d57883fef1b86ff39.otf",
     "static/media/SpaceGrotesk-SemiBold.otf": "/www/static/media/SpaceGrotesk-SemiBold.63d05cfd2eaac0be6085.otf",
     "static/media/SpaceGrotesk-Regular.otf": "/www/static/media/SpaceGrotesk-Regular.107ef1bf316015682af9.otf",
@@ -10,12 +10,12 @@
     "index.html": "/www/index.html",
     "static/media/CopyIcon.svg": "/www/static/media/CopyIcon.c30d5500c729475848fe4df405e1d02d.svg",
     "static/media/HeaderMenu.svg": "/www/static/media/HeaderMenu.e0d3b8325f9f2ace541d5f6a05486c09.svg",
-    "static/media/LinkedArrow.svg": "/www/static/media/LinkedArrow.5602fcf2807f4fd533c35d3cc5971487.svg",
-    "main.1420aaec.css.map": "/www/static/css/main.1420aaec.css.map",
-    "main.236d358e.js.map": "/www/static/js/main.236d358e.js.map"
+    "static/media/VideoIcon.svg": "/www/static/media/VideoIcon.871f334efbd63807bab5ab60a7f46abf.svg",
+    "main.5eb23ce4.css.map": "/www/static/css/main.5eb23ce4.css.map",
+    "main.90dfaf49.js.map": "/www/static/js/main.90dfaf49.js.map"
   },
   "entrypoints": [
-    "static/css/main.1420aaec.css",
-    "static/js/main.236d358e.js"
+    "static/css/main.5eb23ce4.css",
+    "static/js/main.90dfaf49.js"
   ]
 }
