@@ -3,8 +3,9 @@
 
 import React, { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import LinkedArrow from '../../../assets/LinkedArrow.svg';
+import VideoIcon from '../../../assets/VideoIcon.svg';
 import CopyIcon from '../../../assets/CopyIcon.svg';
+import { getUnitIcon } from '../../../utils/unitIcons';
 import './style.scss';
 
 /* Video metadata rendered inside the card */
@@ -17,6 +18,7 @@ interface VideoItem {
 
 /* Props for a single Home unit card */
 interface HomeCardProps {
+  unitId: string;
   name: string;
   description: string;
   note?: string;
@@ -35,14 +37,15 @@ const cleanUnitName = (raw: string) => {
 
 /* Converts unit name into a hash-safe anchor id */
 const toAnchorId = (name: string) => name.replace(/\s+/g, '-').replace(/:/g, '');
-const HomeCard: React.FC<HomeCardProps> = ({
+function HomeCard({
+  unitId,
   name,
   description,
   note,
   videos,
   allVideosCopy,
   topicColor,
-}) => {
+}: HomeCardProps) {
   /* Toast state for copy feedback */
   const [toast, setToast] = useState<string | null>(null);
 
@@ -64,6 +67,7 @@ const HomeCard: React.FC<HomeCardProps> = ({
   const cleanedName = cleanUnitName(name);
   const anchorId = toAnchorId(cleanedName);
   const displayName = name.trim();
+  const UnitIcon = getUnitIcon(unitId);
 
   /* Renders the list of videos for this unit */
   const renderVideos = (items: VideoItem[]) => {
@@ -85,12 +89,12 @@ const HomeCard: React.FC<HomeCardProps> = ({
                 rel="noopener noreferrer"
                 className="home-card-video-link"
               >
-                {video.title}
                 <img
-                  src={LinkedArrow}
-                  alt="External link"
-                  className="home-card-link-arrow"
+                  src={VideoIcon}
+                  alt=""
+                  className="home-card-video-icon"
                 />
+                {video.title}
               </a>
 
               {/* Copy button scoped to a single video link */}
@@ -117,10 +121,16 @@ const HomeCard: React.FC<HomeCardProps> = ({
   /* ───────────────────────── render ───────────────────────── */
   return (
     <>
-      <article className="home-card">
+      <article
+        className="home-card"
+        style={{ '--topic-color': topicColor } as React.CSSProperties}
+      >
         {/* ---------- Header ---------- */}
         <header className="home-card-top">
           <div className="home-card-heading-container">
+            {/* Topic icon — dedicated per unit, generic default otherwise */}
+            <UnitIcon className="home-card-unit-icon" style={{ color: topicColor }} />
+
             {/* Title links to Library anchor with consistent topic color */}
             <Link
               smooth
@@ -176,6 +186,6 @@ const HomeCard: React.FC<HomeCardProps> = ({
       )}
     </>
   );
-};
+}
 
 export default HomeCard;

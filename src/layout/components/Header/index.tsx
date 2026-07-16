@@ -7,7 +7,7 @@ import HeaderMenu from '../../../assets/HeaderMenu.svg';
 import { pages } from '../../../vars';
 import './style.scss';
 
-const Header: React.FC = () => {
+function Header() {
   /* Controls visibility of the mobile navigation menu */
   const [menu, setMenu] = useState(false);
   const { pathname } = useLocation();
@@ -98,6 +98,6 @@ const Header: React.FC = () => {
       </header>
     </>
   );
-};
+}
 
 export default Header;

@@ -3,6 +3,9 @@
 .footer {
   align-items: flex-start;
   background-color: #37555b;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 30%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08);
   color: $color-neutrals-white;
   column-gap: 4rem;
   /* 3-column grid:
@@ -11,7 +14,7 @@
   flex: 0 0 auto;
   grid-template-columns: 100px 100px 1fr; /* tweak as you like */
   min-height: 10rem;
-  padding: 2rem 7rem 0; /* top, right, bottom, left */
+  padding: 2.5rem 7rem; /* top/bottom, left/right */
 }
 
 /* unify footer link styles (email + issue + grant) */
@@ -67,17 +70,23 @@
 
   /* key changes */
   align-self: start;
-         
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 10px;
 
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: $radius-md;
+  box-shadow: 0 8px 24px rgba(10, 20, 24, 0.15);
   box-sizing: border-box;
   grid-column: 3;
   justify-self: stretch;
   margin-bottom: 1rem;
   max-width: none;
-  padding: 1rem 1.25rem;   
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.2s ease-out, background-color 0.2s ease-out;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
 }
 
 /* NSF grant: logo + text side-by-side */

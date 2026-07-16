@@ -26,8 +26,8 @@
 /* Desktop+ scaling (keep minimal) */
 @include up(md) {
   :root {
-    --font-size-h1: 2.625rem;  /* 42px */
-    --font-size-h2: 2.125rem;  /* 34px */
+    --font-size-h1: 2.875rem;  /* 46px — more editorial confidence */
+    --font-size-h2: 2.25rem;   /* 36px */
     --font-size-h3: 1.625rem;  /* 26px */
   }
 }
@@ -37,19 +37,27 @@
 @mixin heading-1 {
   font-size: var(--font-size-h1);
   font-weight: 700;
+  letter-spacing: -0.015em;
   line-height: var(--line-height-heading);
 }
 
 @mixin heading-2 {
   font-size: var(--font-size-h2);
   font-weight: 600;
+  letter-spacing: -0.01em;
   line-height: var(--line-height-heading);
 }
 
 @mixin heading-3 {
   font-size: var(--font-size-h3);
   font-weight: 600;
+  letter-spacing: -0.005em;
   line-height: var(--line-height-heading);
+}
+
+/* Constrains long-form copy to a comfortable reading measure */
+@mixin measure {
+  max-width: 68ch;
 }
 
 @mixin body-text {

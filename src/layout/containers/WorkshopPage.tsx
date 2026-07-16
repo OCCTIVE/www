@@ -6,18 +6,20 @@ import PageLayout from './PageLayout';
 import WorkshopPage from '../components/WorkshopPage';
 import Footer from '../components/Footer';
 
-const WorkshopPageContainer: React.FC = () => (
-  <>
-    {/* no heroURL prop now */}
-    <Header />
+function WorkshopPageContainer() {
+  return (
+    <>
+      {/* no heroURL prop now */}
+      <Header />
 
-    <PageLayout>
-      {/* <HomePage heroURL={header} /> prop removed inside HomePage */}
-      <WorkshopPage />
-    </PageLayout>
+      <PageLayout>
+        {/* <HomePage heroURL={header} /> prop removed inside HomePage */}
+        <WorkshopPage />
+      </PageLayout>
 
-    <Footer />
-  </>
-);
+      <Footer />
+    </>
+  );
+}
 
 export default WorkshopPageContainer;

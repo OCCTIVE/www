@@ -42,6 +42,106 @@
   }
 }
 
+/* ------------------------- Shared Motion ---------------- */
+/* Single hover language for content cards site-wide: a gentle lift + deeper
+   shadow. Buttons/links use a separate scale+brightness language instead
+   (see .btn-primary/.btn-secondary etc.) so cards and controls never compete. */
+@mixin card-elevate {
+  transition: box-shadow 0.25s ease-out, transform 0.25s ease-out;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+    transform: translateY(-3px);
+  }
+}
+
+/* ------------------------- Premium Card ---------------- */
+/* Single source of truth for the "editorial card" look used across
+   HomeCard, UnitCard, About/Adopt/Workshop content cards. Radius, border,
+   background and resting shadow are unified here; hover motion is layered
+   on separately via card-elevate so callers can opt out if needed. */
+@mixin premium-card {
+  background: #fff;
+  border: 1px solid $color-border-subtle;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+}
+
+/* ------------------------- Hero Mesh Background ---------------- */
+/* Layers soft radial highlights over a base linear-gradient to give hero
+   sections a sense of depth without introducing new hues or markup. */
+@mixin hero-mesh-bg($base-from: #3d6169, $base-to: #2e484d) {
+  background-color: $base-to;
+  background-image:
+    radial-gradient(ellipse 900px 500px at 12% -10%, rgba(207, 241, 255, 0.16), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 105% 15%, rgba(240, 229, 0, 0.08), transparent 55%),
+    linear-gradient(135deg, $base-from 0%, $base-to 100%);
+}
+
+/* ------------------------- Shared Buttons ---------------- */
+/* Single button language reused by Home/About/Adopt CTAs. Colors are kept
+   identical to the previous per-page rules; only the hover language and
+   depth change (lift + shadow bloom instead of scale). */
+@mixin btn-base {
+  align-items: center;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-sm;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-decoration: none !important;
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out, filter 0.2s ease-out;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    filter: brightness(1.03);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: $shadow-sm;
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+  }
+}
+
+/* ------------------------- Section Rhythm ---------------- */
+/* Consistent vertical rhythm for long-form content sections
+   (About/Adopt/Workshop). */
+@mixin section-rhythm {
+  padding-bottom: $space-7;
+  padding-top: $space-7;
+
+  @include down(md) {
+    padding-bottom: $space-6;
+    padding-top: $space-6;
+  }
+
+  @include down(sm) {
+    padding-bottom: $space-4;
+    padding-top: $space-4;
+  }
+}
+
+/* Cascades the slideUp mount animation across repeated siblings (card grids)
+   instead of letting every item pop in at once. */
+@mixin stagger-children($count: 6, $step: 0.06s) {
+  @for $i from 1 through $count {
+    &:nth-child(#{$i}) {
+      animation-delay: $step * ($i - 1);
+    }
+  }
+}
+
 /* Mobile hero stacking */
 .hero-stack {
   @include down(sm) {

@@ -5,18 +5,20 @@ import PageLayout from './PageLayout';
 import AdoptPage from '../components/AdoptPage';
 import Footer from '../components/Footer';
 
-const AdoptPageContainer: React.FC = () => (
-  <>
-    {/* no heroURL prop now */}
-    <Header />
+function AdoptPageContainer() {
+  return (
+    <>
+      {/* no heroURL prop now */}
+      <Header />
 
-    <PageLayout>
-      {/* <HomePage heroURL={header} /> prop removed inside HomePage */}
-      <AdoptPage />
-    </PageLayout>
+      <PageLayout>
+        {/* <HomePage heroURL={header} /> prop removed inside HomePage */}
+        <AdoptPage />
+      </PageLayout>
 
-    <Footer />
-  </>
-);
+      <Footer />
+    </>
+  );
+}
 
 export default AdoptPageContainer;

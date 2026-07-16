@@ -5,10 +5,12 @@ interface PageLayoutContainerProps {
   children: React.ReactNode
 }
 
-const PageLayoutContainer: React.FC<PageLayoutContainerProps> = ({ children }) => (
-  <PageLayout>
-    {children}
-  </PageLayout>
-);
+function PageLayoutContainer({ children }: PageLayoutContainerProps) {
+  return (
+    <PageLayout>
+      {children}
+    </PageLayout>
+  );
+}
 
 export default PageLayoutContainer;

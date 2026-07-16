@@ -32,7 +32,7 @@ type VideoRow = {
 };
 /* eslint-enable camelcase */
 
-const HomePage: React.FC = () => {
+function HomePage() {
   /* Units + videos data loaded from CSVs */
   const [units, setUnits] = useState<UnitRow[]>([]);
   const [videos, setVideos] = useState<VideoRow[]>([]);
@@ -221,6 +221,7 @@ const HomePage: React.FC = () => {
             return (
               <HomeCard
                 key={unitId || u.name}
+                unitId={unitId}
                 name={u.name}
                 description={u.description}
                 note={u.note || ''}
@@ -265,6 +266,6 @@ const HomePage: React.FC = () => {
       </section>
     </section>
   );
-};
+}
 
 export default HomePage;

@@ -9,6 +9,7 @@ import ReactFlow, { Background, ReactFlowProvider } from 'reactflow';
 import dagre from '@dagrejs/dagre';
 import 'reactflow/dist/style.css';
 import { useGraphFromSheet } from '../../../useGraphFromSheet';
+import { useData, DataTypes } from '../../../utils/data';
 
 /* ───────── helpers ───────── */
 
@@ -92,12 +93,12 @@ interface LegendProps {
   onToggle: () => void;
 }
 
-const Legend: React.FC<LegendProps> = ({
+function Legend({
   colourOf,
   groupLabels,
   collapsed,
   onToggle,
-}) => {
+}: LegendProps) {
   const rowStyle: React.CSSProperties = {
     display: 'flex',
     alignItems: 'center',
@@ -129,13 +130,14 @@ const Legend: React.FC<LegendProps> = ({
         aria-expanded={!collapsed}
         aria-controls="dependency-legend-panel"
         style={{
-          padding: '4px 10px',
+          padding: '5px 12px',
           borderRadius: 999,
-          border: '1px solid #d1d5db',
+          border: '1px solid #e2e8ea',
           background: '#ffffff',
           fontSize: 13,
+          fontWeight: 600,
           cursor: 'pointer',
-          boxShadow: '0 1px 2px rgba(0,0,0,0.06)',
+          boxShadow: '0 1px 2px rgba(20,30,35,0.05), 0 6px 16px rgba(20,30,35,0.08)',
         }}
       >
         Color Key {collapsed ? '▸' : '▾'}
@@ -150,12 +152,12 @@ const Legend: React.FC<LegendProps> = ({
           style={{
             marginTop: 8,
             background: '#ffffff',
-            border: '1px solid #e5e7eb',
-            borderRadius: 10,
-            padding: '12px 14px',
+            border: '1px solid #e2e8ea',
+            borderRadius: 12,
+            padding: '14px 16px',
             fontSize: 14,
             lineHeight: 1.4,
-            boxShadow: '0 1px 2px rgba(0,0,0,0.06)',
+            boxShadow: '0 1px 2px rgba(20,30,35,0.05), 0 6px 16px rgba(20,30,35,0.08)',
             maxWidth: 260,
             maxHeight: 260,
             overflowY: 'auto',
@@ -228,13 +230,13 @@ const Legend: React.FC<LegendProps> = ({
       )}
     </div>
   );
-};
+}
 
 /* ------------------------------------------------------------------ */
 /*                              COMPONENT                             */
 /* ------------------------------------------------------------------ */
 
-const DependencyGraph: React.FC<DependencyGraphProps> = ({
+function DependencyGraph({
   flowId,
   highlightId,
   isOpen,
@@ -242,7 +244,7 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
   groupLabels,
   groupColorKeys,
   topicColorMap,
-}) => {
+}: DependencyGraphProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
 
@@ -333,6 +335,23 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
 
   const { nodes: rawNodes, edges: rawEdges } = useGraphFromSheet();
   const [legendCollapsed, setLegendCollapsed] = useState(true);
+
+  /* Maps a normalised video title to its URL, so graph nodes can link out */
+  const [videoUrlByTitle, setVideoUrlByTitle] = useState<Map<string, string>>(new Map());
+
+  useEffect(() => {
+    useData(DataTypes.Videos)
+      .then((rows: any[]) => {
+        const map = new Map<string, string>();
+        (rows || []).forEach((row) => {
+          const videoTitle = (row.video_title || '').trim().toLowerCase();
+          const url = (row.video_url || '').trim();
+          if (videoTitle && url && !map.has(videoTitle)) map.set(videoTitle, url);
+        });
+        setVideoUrlByTitle(map);
+      })
+      .catch(() => setVideoUrlByTitle(new Map()));
+  }, []);
   const nodes = uniqById(rawNodes);
   const nodeIds = new Set(nodes.map((n) => n.id));
   const edges = rawEdges.filter((e) => nodeIds.has(e.source) && nodeIds.has(e.target));
@@ -382,27 +401,37 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
     const borderWidth = 5;
     const borderColor = colourOf.get(n.data.topicKey);
 
+    const hasVideoLink = videoUrlByTitle.has(n.data.label.trim().toLowerCase());
+
     const base = {
       background: hasTarget ? '#d3d3d3' : '#ffffff',
       borderRadius: 6,
       padding: 12,
       fontSize: 16,
       border: `${borderWidth}px ${borderStyle} ${borderColor}`,
+      cursor: hasVideoLink ? 'pointer' : 'default',
     } as React.CSSProperties;
 
     // Highlight target node with star and purple border
     return isTarget
       ? {
         ...n,
-        data: { ...n.data, label: `⭐ ${n.data.label}` },
+        data: { ...n.data, label: `⭐ ${n.data.label}`, rawLabel: n.data.label },
         style: {
           ...base,
           border: '4px solid #a855f7',
           background: '#ffffff',
         },
       }
-      : { ...n, style: base };
+      : { ...n, data: { ...n.data, rawLabel: n.data.label }, style: base };
   });
+
+  /* Opens the video linked to the clicked node, if one exists */
+  const handleNodeClick = useCallback((_event: React.MouseEvent, node: any) => {
+    const rawLabel = (node.data?.rawLabel ?? node.data?.label ?? '').trim().toLowerCase();
+    const url = videoUrlByTitle.get(rawLabel);
+    if (url) window.open(url, '_blank', 'noopener,noreferrer');
+  }, [videoUrlByTitle]);
 
   // Unique flow ID for React Flow instance
   const id = React.useMemo(
@@ -424,10 +453,10 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
         style={{
           position: 'fixed',
           inset: 0,
-          background: 'rgba(0,0,0,0.55)',
-          backdropFilter: 'blur(1px)',
+          background: 'rgba(16,26,30,0.6)',
+          backdropFilter: 'blur(4px)',
           zIndex: 2000,
-          animation: 'fadeIn 0.15s ease-out',
+          animation: 'fadeIn 0.2s ease-out',
         }}
       />
 
@@ -446,12 +475,12 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
           maxWidth: 1200,
           height: '80%',
           background: '#fff',
-          borderRadius: 12,
+          borderRadius: 16,
           padding: 20,
           overflow: 'hidden',
-          boxShadow: '0 10px 25px rgba(0,0,0,0.3)',
+          boxShadow: '0 2px 4px rgba(20,30,35,0.08), 0 24px 64px rgba(10,20,24,0.35)',
           zIndex: 2001,
-          animation: 'fadeIn 0.15s ease-out',
+          animation: 'fadeIn 0.2s ease-out',
         }}
       >
         {/* Visually hidden title for screen readers */}
@@ -481,11 +510,23 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
             position: 'absolute',
             top: 10,
             right: 14,
-            fontSize: 26,
-            background: 'none',
+            fontSize: 20,
+            lineHeight: 1,
+            width: 36,
+            height: 36,
+            borderRadius: 999,
+            background: 'rgba(20,30,35,0.05)',
             border: 'none',
+            color: '#2b3f45',
             cursor: 'pointer',
+            transition: 'background-color 0.2s ease-out',
             zIndex: 4000,
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'rgba(20,30,35,0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'rgba(20,30,35,0.05)';
           }}
         >
           ✕
@@ -500,7 +541,13 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
               collapsed={legendCollapsed}
               onToggle={() => setLegendCollapsed((v) => !v)}
             />
-            <ReactFlow id={id} nodes={graphNodes} edges={edges} fitView>
+            <ReactFlow
+              id={id}
+              nodes={graphNodes}
+              edges={edges}
+              onNodeClick={handleNodeClick}
+              fitView
+            >
               <Background />
             </ReactFlow>
           </div>
@@ -509,6 +556,6 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
     </>,
     document.body,
   );
-};
+}
 
 export default DependencyGraph;

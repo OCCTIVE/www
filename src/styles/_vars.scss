@@ -28,3 +28,35 @@ $color-background-grey: #f3f8f9;
 // Numbers
 $site-min-width: 320px;
 $site-size-small: 1199px;
+
+// ─────────────────────────────────────────────
+// Premium editorial refresh — additive tokens
+// (existing colors above are untouched; these
+// build refined surfaces/shadows/rhythm on top)
+// ─────────────────────────────────────────────
+
+// Spacing scale
+$space-1: 0.25rem;  // 4px
+$space-2: 0.5rem;   // 8px
+$space-3: 0.75rem;  // 12px
+$space-4: 1rem;     // 16px
+$space-5: 1.5rem;   // 24px
+$space-6: 2rem;     // 32px
+$space-7: 3rem;     // 48px
+$space-8: 4rem;     // 64px
+
+// Radius scale
+$radius-sm: 0.5rem;    // 8px
+$radius-md: 0.75rem;   // 12px
+$radius-lg: 1rem;      // 16px
+$radius-pill: 999px;
+
+// Layered shadows — soft ambient + tighter key light
+$shadow-sm: 0 1px 2px rgba(20, 30, 35, 0.06);
+$shadow-md: 0 1px 2px rgba(20, 30, 35, 0.05), 0 6px 16px rgba(20, 30, 35, 0.07);
+$shadow-lg: 0 2px 4px rgba(20, 30, 35, 0.06), 0 12px 32px rgba(20, 30, 35, 0.1);
+$shadow-hover: 0 4px 8px rgba(20, 30, 35, 0.07), 0 16px 40px rgba(20, 30, 35, 0.12);
+
+// Refined neutrals
+$color-border-subtle: rgba(20, 30, 35, 0.08);
+$color-surface: #f5f9fa;

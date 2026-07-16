@@ -5,18 +5,20 @@ import PageLayout from './PageLayout';
 import HomePage from '../components/HomePage';
 import Footer from '../components/Footer';
 
-const HomePageContainer: React.FC = () => (
-  <>
-    {/* no heroURL prop now */}
-    <Header />
+function HomePageContainer() {
+  return (
+    <>
+      {/* no heroURL prop now */}
+      <Header />
 
-    <PageLayout>
-      {/* <HomePage heroURL={header} /> prop removed inside HomePage */}
-      <HomePage />
-    </PageLayout>
+      <PageLayout>
+        {/* <HomePage heroURL={header} /> prop removed inside HomePage */}
+        <HomePage />
+      </PageLayout>
 
-    <Footer />
-  </>
-);
+      <Footer />
+    </>
+  );
+}
 
 export default HomePageContainer;
