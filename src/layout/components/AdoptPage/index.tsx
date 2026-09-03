@@ -191,9 +191,7 @@ function AdoptPage() {
             className="adopt-nsf-footnote-logo"
           />
           <p>
-            OCCTIVE is supported by the NSF grant &ldquo;The efficacy of OCCTIVE:
-            A computing-concepts video library for students and peer tutors in
-            multidisciplinary contexts&rdquo; (award nos. 2337251, 2337252,
+            OCCTIVE is supported by the NSF grant &ldquo;The efficacy of a computing-concepts video library for students and peer tutors in multidisciplinary contexts&rdquo; (award nos. 2337251, 2337252,
             2337253, 2337254). The first version was developed as part of the
             NSF grant &ldquo;Evaluating Frameworks for Incorporating Computing
             Across the Curriculum&rdquo; (award nos. 1935113, 1935099, 1935061).

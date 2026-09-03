@@ -237,9 +237,7 @@ function AboutPage() {
             className="about-nsf-bar-logo"
           />
           <p>
-            OCCTIVE is supported by the NSF grant &ldquo;The efficacy of OCCTIVE:
-            A computing-concepts video library for students and peer tutors in
-            multidisciplinary contexts&rdquo; (Award Numbers: 2337251, 2337252,
+            OCCTIVE is supported by the NSF grant &ldquo;The efficacy of a computing-concepts video library for students and peer tutors in multidisciplinary contexts&rdquo; (Award Numbers: 2337251, 2337252,
             2337253, 2337254).
           </p>
         </div>
