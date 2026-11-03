@@ -99,6 +99,19 @@ function AdoptPage() {
             </div>
 
             <div className="adopt-resource-item">
+              <h3>Workshop Materials</h3>
+              <p>
+                Download a copy of the worksheet for OCCTIVE workshop participants. 
+                <a
+                  className="adopt-link"
+                  href="https://occtive.github.io/www/gfx/OCCTIVEWorksheetforWorkshopParticipantsTEMPLATE.docx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+              </p>
+            </div>
+            
+            <div className="adopt-resource-item">
               <h3>Video Captions</h3>
               <p>
                 If interested in searching for coverage of a particular topic, the complete captions
