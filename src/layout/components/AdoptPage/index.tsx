@@ -113,7 +113,7 @@ function AdoptPage() {
                 is a sample worksheet from the OCCTIVE workshops.
               </p>
             </div>
-            
+
             <div className="adopt-resource-item">
               <h3>Video Captions</h3>
               <p>
