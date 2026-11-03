@@ -111,6 +111,7 @@ function AdoptPage() {
                   document<span className="sr-only"> (opens in new tab)</span>
                 </a>{' '}
                 is a sample worksheet from the OCCTIVE workshops.
+              </p>
             </div>
             
             <div className="adopt-resource-item">
