@@ -104,10 +104,10 @@ function AdoptPage() {
                 Download a copy of the worksheet for OCCTIVE workshop participants. 
                 <a
                   className="adopt-link"
-                  href="https://occtive.github.io/www/gfx/OCCTIVEWorksheetforWorkshopParticipantsTEMPLATE.docx"
+                  href="https://docs.google.com/document/d/1-6EV33SYWgg2bgQgK7ZcAIMT9UtGDIQANoHqZQqn1ps"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
+                >Link to document here</a>
               </p>
             </div>
             
