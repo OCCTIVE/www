@@ -104,7 +104,7 @@ function AdoptPage() {
                 This{' '}
                 <a
                   className="adopt-link"
-                  href="https://docs.google.com/document/d/1-6EV33SYWgg2bgQgK7ZcAIMT9UtGDIQANoHqZQqn1ps"
+                  href="https://docs.google.com/document/d/1P--pgnVTGsaz4ICDA84wjZ3SKNpzY9Tv/export?format=docx"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -140,13 +140,13 @@ function AdoptPage() {
               </p>
             </div>
 
-            <div className="adopt-resource-item adopt-resource-item--muted">
+            {/* <div className="adopt-resource-item adopt-resource-item--muted">
               <h3>
                 Evaluating Code
                 <span className="adopt-resource-badge">Coming soon</span>
               </h3>
               <p>Guidance on how to evaluate student code is in development.</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="adopt-further-reading">
