@@ -101,16 +101,25 @@ function AdoptPage() {
             <div className="adopt-resource-item">
               <h3>Workshop Materials</h3>
               <p>
-                This{' '}
+                A{' '}
                 <a
                   className="adopt-link"
                   href="https://docs.google.com/document/d/1P--pgnVTGsaz4ICDA84wjZ3SKNpzY9Tv/export?format=docx"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  document<span className="sr-only"> (opens in new tab)</span>
+                  sample worksheet<span className="sr-only"> (opens in new tab)</span>
                 </a>{' '}
-                is a sample worksheet from the OCCTIVE workshops.
+                and{' '}
+                <a
+                  className="adopt-link"
+                  href="https://drive.google.com/uc?export=download&id=1lj5_xF8RGKId6b8cVqBvftrEP9KUn5mH"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  sample slides<span className="sr-only"> (opens in new tab)</span>
+                </a>
+                from the OCCTIVE workshops.
               </p>
             </div>
 
